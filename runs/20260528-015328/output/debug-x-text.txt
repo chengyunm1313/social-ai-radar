@@ -1,0 +1,233 @@
+若要查看鍵盤快速鍵，請按問號
+查看鍵盤快速鍵
+20+
+熱門
+最新
+人物
+媒體
+列表
+查看新貼文
+搜尋時間軸
+Google Gemini
+@GeminiApp
+·
+40 分鐘
+From the #GoogleIO stage straight to the Gemini Discord Stage, join us for our next community event as we dive into two new agentic tools (Gemini Spark and Daily Brief) with members of the team who brought them to life.
+
+See these new features in action with live demos, plus get
+顯示更多
+Join the Google Gemini Discord Server!
+來自 discord.com
+18
+13
+58
+4,789
+GitTrend
+@GitTrend0x
+·
+5月26日
+今天 GitHub 继续被 Agent & AI 基础设施狂屠榜 
+
+5 个星标暴增最猛的项目，深度拆解送上！（数据实时，链接直达可用）
+
+1. Lum1104/Understand-Anything
+ 把任意代码瞬间变成可交互、可搜索、可提问的知识图谱。完美适配 Claude Code、Cursor、Gemini CLI 等。
+ 以前读大型 codebase
+顯示更多
+引用
+GitTrend
+@GitTrend0x
+·
+5月25日
+今天 GitHub 又被 Agent 基建军团屠榜了
+
+5 个星标暴增最狠的项目，专业拆解下：
+
+1. multica-ai/multica
+ 开源托管 Agent 平台，把编码 Agent 变成真正队友——分配任务、跟踪进度、技能复合。
+  直达：
+https://
+github.com/multica-ai/mul
+tica
+…
+ 以前 Agent 各自为战，现在直接组团打boss。项目管理 + AI
+5
+15
+4,388
+GitTrend
+@GitTrend0x
+·
+15 小時
+今天 GitHub 被智慧型 AI Agent 军团全面屠榜了
+
+5 个星标暴增最狠的项目，专业拆解下：
+
+1. Lum1104/Understand-Anything
+ 把任意代码或知识库变成可交互的知识图谱，能探索、搜索、直接问问题。完美支持 Claude Code、Cursor、Copilot、Gemini 等。
+顯示更多
+引用
+GitTrend
+@GitTrend0x
+·
+5月25日
+今天 GitHub 又被 Agent 基建军团屠榜了
+
+5 个星标暴增最狠的项目，专业拆解下：
+
+1. multica-ai/multica
+ 开源托管 Agent 平台，把编码 Agent 变成真正队友——分配任务、跟踪进度、技能复合。
+  直达：
+https://
+github.com/multica-ai/mul
+tica
+…
+ 以前 Agent 各自为战，现在直接组团打boss。项目管理 + AI
+3
+6
+21
+3,793
+松果先森
+@songguoxiansen
+·
+4月21日
+https://
+x.com/Google/status/
+2046343346994770217/video/1
+… 突发，谷歌大善人又发福利了。
+
+谷歌AI Studio现在可以免费玩。
+
+只要是Google AI的Pro或Ultra会员
+
+就可以使用Nano Banana 2、Nano Banana Pro和Gemini Pro等等模型
+
+不需要再绑卡和设置API Key了
+
+直接去AI Studio官网就可以玩耍了
+
+https://
+aistudio.google.com/prompts/new_ch
+at
+…
+39
+51
+318
+6.2萬
+kabikabi
+@jakevin7
+·
+3月16日
+OpenCLI v0.6.0 发布了 欢迎关注！
+Contributor的数量马上就要破 10 啦！
+
+新增 opencli setup & docter 命令，交互式 TUI 一键配置 Playwright MCP token 到所有 AI coding 工具（Claude Code、Gemini CLI、Cursor、Codex、Antigravity 等）。
+
+还加了从 Chrome extension 自动发现 token
+顯示更多
+GitHub - jackwener/OpenCLI: Make Any Website into CLI & Use your logged-in browser by AI agent.
+來自 github.com
+20
+12
+122
+3.7萬
+Google Gemini
+@GeminiApp
+·
+5月20日
+Gemini 3.5 Flash is here and it's our best model yet for getting things done quickly and efficiently.
+
+Whether you need help with everyday tasks or multi-step creative projects, Gemini 3.5 Flash navigates real-world complexity to help you take action. #GoogleIO
+來自 google.com
+107
+222
+1,302
+71萬
+0xToshi 
+@0xToshio_O
+·
+1月4日
+【新】Gemini 过学生认证，白嫖 Gemini 一年会员
+
+符合条件的国家和地区
+首先你需要准备一个支持本次活动地区的谷歌账号，比如美国地区，这是符合条件的所有国家地区：
+顯示更多
+4
+8
+55
+1.2萬
+Joruno
+@wsl8297
+·
+12 小時
+做 AI Agent Demo 不难，难的是把它真正部署到云上：环境、评估、CI、数据接入，每一步都能劝退人。
+
+Google 开源的 agents-cli，思路是把这些工程化流程做成 AI 编程助手可以调用的技能包。
+
+GitHub：
+http://
+github.com/google/agents-
+cli
+…
+
+它可以接入 Claude Code、Gemini CLI、Codex 等工具，让编程 Agent
+顯示更多
+15
+12
+48
+3,063
+GitHubDaily
+@GitHub_Daily
+·
+4月11日
+用 AI 辅助编程，项目一大就头疼，代码之间的依赖关系、架构决策的来龙去脉，光靠翻文件根本理不清。
+
+可以试下 graphify 这个开源项目，它能自动把整个代码库构建成知识图谱，让 AI 助手真正「看懂」项目结构。
+
+只需在 Claude Code、Cursor、Gemini CLI 等主流 AI
+顯示更多
+9
+52
+280
+2.6萬
+搜尋篩選
+人物
+來自任何人
+你跟隨的人
+位置
+任何地方
+在你附近
+進階搜尋
+流行趨勢
+有什麼新鮮事
+台灣 的流行趨勢
+Freedom of Money
+商業・金融 · 流行趨勢
+TSMC
+台灣 的流行趨勢
+#foma
+台灣 的流行趨勢
+CHARMISS X ORM KORNNAPHAT
+顯示更多
+跟隨誰
+小小东
+@xiaoxiaodong01
+跟隨
+小海豚笔记 (AI & 副业探索)
+@gaoren7716
+跟隨
+STRRL.gpt
+@strrlthedev
+跟隨
+顯示更多
+服務條款
+ |
+隱私政策
+ |
+Cookie 使用政策
+ |
+協助工具
+ |
+廣告資訊
+ |
+更多
+© 2026 X Corp.

@@ -8,7 +8,18 @@ const MAX_MESSAGE_LENGTH = 3500;
 type LinePayload = {
   title?: string;
   generatedAt?: string;
+  runId?: string | null;
   topics?: string[];
+  strongestTopic?: {
+    name?: string;
+    score?: number;
+    postCount?: number;
+  } | null;
+  strongestKeyword?: {
+    keyword?: string;
+    score?: number;
+    highScorePostCount?: number;
+  } | null;
   topPosts?: Array<{
     rank?: number;
     author?: string;
@@ -20,9 +31,12 @@ type LinePayload = {
   }>;
   contentIdeas?: string[];
   sourceStatus?: {
+    runId?: string | null;
     sourceMode?: string;
     inputFile?: string;
     totalPosts?: number;
+    preset?: string | null;
+    keywords?: string[];
     collectiblePosts?: number;
     isFallback?: boolean;
   };
@@ -78,7 +92,10 @@ function formatTelegramMessage(payload: LinePayload) {
 
   lines.push(payload.title ?? "Social AI Radar 今日快報");
   lines.push("");
+  lines.push(`runId：${payload.runId ?? sourceStatus.runId ?? "none"}`);
   lines.push(`今日主題：${topics}`);
+  lines.push(`今日最強 topic：${formatStrongestTopic(payload.strongestTopic)}`);
+  lines.push(`今日最強 keyword：${formatStrongestKeyword(payload.strongestKeyword)}`);
   lines.push("");
   lines.push("TOP 5");
 
@@ -110,8 +127,11 @@ function formatTelegramMessage(payload: LinePayload) {
   lines.push("");
   lines.push("資料狀態");
   lines.push(`generatedAt: ${payload.generatedAt ?? "unknown"}`);
+  lines.push(`runId: ${payload.runId ?? sourceStatus.runId ?? "none"}`);
   lines.push(`sourceMode: ${sourceStatus.sourceMode ?? "unknown"}`);
   lines.push(`inputFile: ${sourceStatus.inputFile ?? LINE_JSON_PATH}`);
+  lines.push(`preset: ${sourceStatus.preset ?? "none"}`);
+  lines.push(`keywords: ${sourceStatus.keywords?.join(", ") ?? "none"}`);
   lines.push(`totalPosts: ${sourceStatus.totalPosts ?? 0}`);
   lines.push(`collectiblePosts: ${sourceStatus.collectiblePosts ?? 0}`);
   lines.push(`isFallback: ${sourceStatus.isFallback ?? false}`);
@@ -153,6 +173,17 @@ function compact(value: unknown, maxLength: number) {
 
 function formatScore(value: number | null | undefined) {
   return value == null ? "null" : value;
+}
+
+function formatStrongestTopic(topic: LinePayload["strongestTopic"]) {
+  if (!topic?.name) return "資料不足";
+  return `${topic.name}${topic.score == null ? "" : `（score ${topic.score}）`}`;
+}
+
+function formatStrongestKeyword(keyword: LinePayload["strongestKeyword"]) {
+  if (!keyword?.keyword) return "資料不足";
+  const highScoreText = keyword.highScorePostCount == null ? "" : `，高分 ${keyword.highScorePostCount} 篇`;
+  return `${keyword.keyword}${keyword.score == null ? "" : `（score ${keyword.score}${highScoreText}）`}`;
 }
 
 function maskChatId(value: string) {

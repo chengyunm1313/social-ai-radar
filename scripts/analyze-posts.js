@@ -16,7 +16,7 @@ async function main() {
 
   const normalizedRaw = {
     ...raw,
-    schema_version: "0.3",
+    schema_version: "0.5",
     normalized_at: new Date().toISOString(),
     posts: posts.map((post, index) => ({
       ...post,
@@ -523,6 +523,8 @@ function renderReport(raw, posts) {
   const lines = [];
   const topPosts = posts.slice(0, 10);
   const dataStatus = buildDataStatus(raw, posts);
+  const topicStats = buildTopicStats(posts);
+  const keywordStats = buildKeywordStats(posts);
 
   lines.push(`# Social AI Radar - X Phase 3`);
   lines.push("");
@@ -533,9 +535,12 @@ function renderReport(raw, posts) {
   lines.push("## 資料狀態");
   lines.push("");
   lines.push(`- generatedAt: ${dataStatus.generatedAt}`);
+  lines.push(`- runId: ${dataStatus.runId ?? "none"}`);
   lines.push(`- sourceMode: ${dataStatus.sourceMode}`);
   lines.push(`- inputFile: ${dataStatus.inputFile}`);
   lines.push(`- totalPosts: ${dataStatus.totalPosts}`);
+  lines.push(`- preset: ${dataStatus.preset ?? "none"}`);
+  lines.push(`- keywords: ${dataStatus.keywords.join(", ") || "none"}`);
   lines.push(`- unknownAuthorCount: ${dataStatus.unknownAuthorCount}`);
   lines.push(`- hasTimestampCount: ${dataStatus.hasTimestampCount}`);
   lines.push(`- isFallback: ${dataStatus.isFallback}`);
@@ -543,6 +548,10 @@ function renderReport(raw, posts) {
   lines.push("## 今日 TOP 10 熱門貼文");
   lines.push("");
   renderHotPostTable(posts).forEach((line) => lines.push(line));
+  lines.push("");
+  lines.push("## Topic / Keyword 熱度");
+  lines.push("");
+  renderTopicKeywordStats(topicStats, keywordStats).forEach((line) => lines.push(line));
   lines.push("");
   lines.push("## 爆文模式分析");
   lines.push("");
@@ -720,6 +729,28 @@ function renderDataLimitations(dataStatus, posts) {
   ];
 }
 
+function renderTopicKeywordStats(topicStats, keywordStats) {
+  const lines = [];
+  const strongestTopic = topicStats[0];
+  const strongestKeyword = keywordStats[0];
+
+  lines.push(`- 今日最強 topic：${strongestTopic ? `${strongestTopic.name}（${strongestTopic.postCount} 篇，score ${strongestTopic.score}）` : "資料不足"}`);
+  lines.push(`- 今日最強 keyword：${strongestKeyword ? `${strongestKeyword.keyword}（高分貼文 ${strongestKeyword.highScorePostCount} 篇，score ${strongestKeyword.score}）` : "資料不足"}`);
+  lines.push("");
+  lines.push("| 排名 | Topic | 貼文數 | 高分貼文 | 熱度分數 |");
+  lines.push("| --- | --- | ---: | ---: | ---: |");
+  topicStats.slice(0, 5).forEach((topic, index) => {
+    lines.push(`| ${index + 1} | ${topic.name} | ${topic.postCount} | ${topic.highScorePostCount} | ${topic.score} |`);
+  });
+  lines.push("");
+  lines.push("| 排名 | Keyword | 貼文數 | 高分貼文 | 熱度分數 |");
+  lines.push("| --- | --- | ---: | ---: | ---: |");
+  keywordStats.slice(0, 8).forEach((keyword, index) => {
+    lines.push(`| ${index + 1} | ${keyword.keyword} | ${keyword.postCount} | ${keyword.highScorePostCount} | ${keyword.score} |`);
+  });
+  return lines;
+}
+
 function topByHotScore(posts) {
   return [...posts].sort((a, b) => {
     const aHasScore = a.hotScore != null;
@@ -747,6 +778,77 @@ function calculateLineScore(post, maxHotScore) {
   const hotScore = post.hotScore ?? 0;
   const normalizedHotScore = maxHotScore > 0 ? (hotScore / maxHotScore) * 100 : 0;
   return Math.round((normalizedHotScore * 0.6 + (post.qualityScore ?? 0) * 0.4) * 10) / 10;
+}
+
+function buildTopicStats(posts) {
+  const maxHotScore = Math.max(1, ...posts.map((post) => post.hotScore ?? 0));
+  const definitions = [
+    {
+      name: "Agent 工程化部署",
+      pattern: /deploy|ci|production|cloud|browser|terminal|cli|部署|上線|雲|瀏覽器|終端/i
+    },
+    {
+      name: "Agent 失敗與安全",
+      pattern: /fail|broken|risk|attack|security|hallucination|detect|壞|失敗|風險|攻擊|安全|幻覺|檢測|检测/i
+    },
+    {
+      name: "Agent 學習路線",
+      pattern: /guide|tutorial|roadmap|learn|course|step|學|教學|教程|指南|路線|步驟/i
+    },
+    {
+      name: "Money / Career Agent",
+      pattern: /portfolio|yield|hiring|money|startup|saas|business|revenue|投資|收益|招聘|創業|商業|營收/i
+    },
+    {
+      name: "AI Agent 工作流",
+      pattern: /workflow|automation|agent|task|workspace|tool|自動化|工作流|任務|工具|智能體/i
+    },
+    {
+      name: "模型與平台動態",
+      pattern: /openai|gemini|claude|cursor|mcp|notion|github/i
+    }
+  ];
+
+  const stats = definitions.map((definition) => {
+    const matchedPosts = posts.filter((post) => definition.pattern.test(`${post.text} ${post.keyword ?? ""}`));
+    return buildGroupedStat(definition.name, matchedPosts, maxHotScore);
+  });
+
+  return stats
+    .filter((stat) => stat.postCount > 0)
+    .sort((a, b) => b.score - a.score || b.highScorePostCount - a.highScorePostCount || b.postCount - a.postCount);
+}
+
+function buildKeywordStats(posts) {
+  const maxHotScore = Math.max(1, ...posts.map((post) => post.hotScore ?? 0));
+  const groups = new Map();
+  for (const post of posts) {
+    const keyword = post.keyword ?? "unknown";
+    groups.set(keyword, [...(groups.get(keyword) ?? []), post]);
+  }
+
+  return [...groups.entries()]
+    .map(([keyword, groupPosts]) => ({
+      keyword,
+      ...buildGroupedStat(keyword, groupPosts, maxHotScore)
+    }))
+    .sort((a, b) => b.highScorePostCount - a.highScorePostCount || b.score - a.score || b.postCount - a.postCount);
+}
+
+function buildGroupedStat(name, groupPosts, maxHotScore) {
+  const scoredPosts = groupPosts.map((post) => ({
+    post,
+    lineScore: calculateLineScore(post, maxHotScore)
+  }));
+  const score = Math.round(scoredPosts.reduce((sum, item) => sum + item.lineScore, 0) * 10) / 10;
+  const highScorePostCount = scoredPosts.filter((item) => item.lineScore >= 40 || (item.post.hotScore ?? 0) >= 100 || (item.post.qualityScore ?? 0) >= 80).length;
+
+  return {
+    name,
+    postCount: groupPosts.length,
+    highScorePostCount,
+    score
+  };
 }
 
 function timestampSortValue(post) {
@@ -787,9 +889,12 @@ function buildDataStatus(raw, posts) {
 
   return {
     generatedAt: new Date().toISOString(),
+    runId: process.env.SOCIAL_RADAR_RUN_ID ?? raw.runId ?? null,
     sourceMode,
     inputFile,
     totalPosts: posts.length,
+    preset: raw.preset ?? null,
+    keywords: Array.isArray(raw.keywords) ? raw.keywords : [raw.query].filter(Boolean),
     unknownAuthorCount: posts.filter((post) => !(post.author_handle ?? post.author)).length,
     hasTimestampCount: posts.filter((post) => post.timestampConfidence !== "low").length,
     isFallback: envFallback === "true" || (envFallback !== "false" && isManualSource)
@@ -805,6 +910,8 @@ function renderLineBrief(raw, posts) {
   const lines = [];
   lines.push(payload.title);
   lines.push(`主題：${topics}`);
+  lines.push(`最強 topic：${payload.strongestTopic?.name ?? "資料不足"}`);
+  lines.push(`最強 keyword：${payload.strongestKeyword?.keyword ?? "資料不足"}`);
   lines.push("");
   lines.push("TOP 5：");
 
@@ -829,13 +936,19 @@ function renderLineBrief(raw, posts) {
 
 function renderLineJson(raw, posts) {
   const dataStatus = buildDataStatus(raw, posts);
-  const topics = inferTopics(posts).slice(0, 3);
+  const topicStats = buildTopicStats(posts);
+  const keywordStats = buildKeywordStats(posts);
+  const topics = (topicStats.length > 0 ? topicStats : inferTopics(posts)).slice(0, 3);
   const topPosts = topByLineScore(posts).slice(0, 5);
 
   return {
     title: "Social AI Radar 今日快報",
     generatedAt: new Date().toISOString(),
+    runId: dataStatus.runId,
     topics: topics.map((topic) => topic.name),
+    strongestTopic: topicStats[0] ?? null,
+    strongestKeyword: keywordStats[0] ?? null,
+    keywordStats,
     topPosts: topPosts.map((post, index) => ({
       rank: index + 1,
       author: post.author_handle ?? post.author ?? "unknown",
@@ -853,9 +966,12 @@ function renderLineJson(raw, posts) {
     contentIdeas: buildPostIdeas(posts).slice(0, 3),
     sourceStatus: {
       ...dataStatus,
+      runId: dataStatus.runId,
       inputFile: dataStatus.inputFile,
       totalPosts: posts.length,
       collectiblePosts: posts.filter((post) => post.isCollectible).length,
+      preset: dataStatus.preset,
+      keywords: dataStatus.keywords,
       scoring: "lineScore = normalizedHotScore * 0.6 + qualityScore * 0.4"
     }
   };

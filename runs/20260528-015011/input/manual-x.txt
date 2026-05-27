@@ -1,0 +1,253 @@
+若要查看鍵盤快速鍵，請按問號
+查看鍵盤快速鍵
+
+
+"AI Agent" since:2026-05-27 until:2026-05-28
+熱門
+最新
+人物
+媒體
+列表
+
+查看新貼文
+搜尋時間軸
+HDN
+@HDN_sol
+·
+2 小時
+回覆 
+@HDN_sol
+8// Banyak yang mulai membandingkan MiMo dengan:
+
+Claude
+GPT
+DeepSeek
+Qwen
+Kimi
+
+Karena Xiaomi bermain agresif di:
+💰 harga murah
+⚡ performa coding
+🧠 token/context besar
+8// 許多人開始將 MiMo 與以下作品比較：
+
+克勞德
+GPT
+深尋
+Qwen
+尋找
+
+因為小米在以下領域積極參與：
+ 💰  便宜價格
+ ⚡  編碼效能
+ 🧠  大型標記/上下文
+HDN
+@HDN_sol
+·
+2 小時
+回覆 
+@HDN_sol
+9// Apakah MiMo sudah lebih bagus dari Claude?
+
+Belum sepenuhnya.
+
+Claude masih unggul di:
+
+reasoning premium
+writing natural
+enterprise quality
+
+Tapi untuk:
+✅ coding
+✅ AI agent
+✅ automation
+✅ harga hemat
+MiMo mulai jadi ancaman serius.
+9// MiMo 比 Claude 好嗎？
+
+不完全是。
+
+克勞德仍然擅長：
+
+理性高級
+寫作自然
+企業品質
+
+但對於：
+ ✅  編碼
+ ✅  AI 代理人
+ ✅  自動化
+ ✅  成本效益
+MiMo 正逐漸成為嚴重威脅。
+HDN
+@HDN_sol
+·
+2 小時
+回覆 
+@HDN_sol
+2// Xiaomi resmi masuk perang AI lewat MiMo, model AI baru yang mulai disebut-sebut sebagai “penantang Claude” 👀
+
+Yang bikin heboh:
+• Harga jauh lebih murah
+• Context window super besar
+• Fokus kuat di coding & AI agent
+2// 小米正式透過 MiMo 正式加入 AI 戰爭，這款新 AI 模型開始被譽為「Claude 挑戰者」  👀 
+
+令人興奮的地方：
+• 價格便宜許多
+• 超大上下文視窗
+• 高度重視程式設計與人工智慧代理
+RubelIslam 🟦
+@rubelislam0461
+·
+4 小時
+The Future of the Onchain Economy
+The next stage of the onchain economy is starting to look very different. We've seen a clear evolution:
+
+• Wallets
+• Apps
+• Ecosystems
+
+Now, we are moving toward agents.
+
+Introducing 
+@base
+ MCP
+Imagine connecting your AI agent directly to your
+鏈上經濟的未來
+鏈上經濟的下一階段開始變得大不相同。我們已經看到明顯的演變：
+
+• 錢包
+• 應用程式
+• 生態系統
+
+現在，我們正朝著代理人的方向發展。
+
+介紹 
+ @base 
+ MCP
+想像一下，直接將你的 AI 代理連接到你的
+顯示更多
+Machine Learning- Data Science
+機器學習-資料科學
+Dr. Theophano Mitsa ☦️🇬🇷🇺🇸
+@theomitsa
+·
+3 小時
+https://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter
+The Ultimate Beginners’ Guide to Building an AI Agent in Python!
+ https://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter 
+終極初學者指南：如何在 Python 中打造 AI 代理 ！
+
+Python 新手打造 AI 代理的終極指南 |邁向資料科學
+來自 towardsdatascience.com
+Cell 细胞
+@cellinlab
+·
+7 小時
+Codex 提示词：
+
+请帮我完成一个详细的教程，主题是 「 Pi Agent 的原理与实现：从零到一实现一个 AI Agent」。
+
+参考 [earendil-works/pi](https://github.com/earendil-works/pi) 和 https://pi.dev/docs/latest 等，进行联网搜索，先完整理解它的核心原理、架构设计、关键模块和实现链路，然后为它生成一个基于
+顯示更多
+引用
+參考資料
+Cell 细胞
+@cellinlab
+·
+5月26日
+时间线 刷到 好几个 Pi Agent 的推荐，
+让 Codex 帮我学了下，做了个手把手教程
+
+👉 Pi Agent 原理与实现：从零到一实现一个 AI Agent
+🔗 在线学习：https://how-pi-agent-works.vercel.app
+🌍 文档源码：https://github.com/cellinlab/how-pi-agent-works
+小众软件
+@appinn
+·
+1 小時
+没卡没资源？复旦NLP直接把免费GPU塞进AI，科研全自动时代来了！ https://appinn.com/fudan-nlp-gpu-ai-agent/
+OriginAI
+@Origin_AI_01
+·
+4 小時
+Most AI agents fail for one reason:
+
+People build them without a system.
+
+A good AI agent is not just a prompt.
+It’s a structured pipeline from idea → execution.
+Here’s the framework that actually works:
+
+Define the job
+
+What problem is the agent solving?
+Who is the end user?
+顯示更多
+蓝狐
+@lanhubiji
+·
+7 小時
+Pieverse AI网关直接和BNB Chain的“代理生存包”（Agent survival Pack）打通，本质上是将“大脑”和“钱包/支付”进行整合。
+
+AI agent之前“大脑”和“钱包/支付”往往是分开的。
+
+现在，Pieverse将其打通，一个安全网关，可以同时整合AI模型（大脑）+钱包/支付。
+
+主要功能是，用钱包直接充值、生成“限额API
+顯示更多
+引用
+pieverse
+@pieverse_io
+·
+5月25日
+🦾 Agent Survival Pack from @BNBCHAIN is now live with Pieverse AI Gateway!
+
+Access leading frontier models from OpenAI, Anthropic, DeepSeek, Meta, and more through one secure gateway with wallet funding, scoped API keys, usage limits, and spend tracking.
+
+To celebrate launch,
+搜尋篩選
+人物
+來自任何人
+你跟隨的人
+位置
+任何地方
+在你附近
+進階搜尋
+流行趨勢
+有什麼新鮮事
+台灣 的流行趨勢
+Canada
+台灣 的流行趨勢
+Jesus
+商業・金融 · 流行趨勢
+TSMC
+台灣 的流行趨勢
+#CharmissOrmazingParty
+顯示更多
+跟隨誰
+STRRL.gpt
+@strrlthedev
+Kōda
+@aimikoda
+Hive
+@hive_ai
+顯示更多
+服務條款
+ |
+隱私政策
+ |
+Cookie 使用政策
+ |
+協助工具
+ |
+廣告資訊
+ |
+
+更多
+© 2026 X Corp.
+
+長文翻譯前後不一致？
+試用 AI 精翻，結合已讀語境，譯文更連貫。
+本次免費試用

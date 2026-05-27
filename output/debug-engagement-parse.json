@@ -1,58 +1,1186 @@
 {
-  "generated_at": "2026-05-27T17:19:15.926Z",
+  "generated_at": "2026-05-27T17:55:22.506Z",
   "engagementParseDebug": [
     {
       "index": 1,
-      "author": "@Luckyjudy666",
-      "url": "https://x.com/Luckyjudy666/status/2059443635859738879",
+      "author": "@li18875786",
+      "url": "https://x.com/li18875786/status/2059446602637738030",
       "before": {
-        "replies": 45,
-        "reposts": 4,
-        "likes": 34,
+        "replies": 14,
+        "reposts": 3,
+        "likes": 15,
         "bookmarks": null,
-        "views": 3053
+        "views": 1283
       },
       "after": {
-        "replies": 45,
-        "reposts": 4,
-        "likes": 34,
+        "replies": 14,
+        "reposts": 3,
+        "likes": 15,
         "bookmarks": null,
-        "views": 3053
+        "views": 1283
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "白嫖党最爱，\n这个github项目整理了全球最优质的、完全免费的软件和应用程序，\n他帮助用户省去在海量网络信息中筛选安全、好用软件的时间。\n这个项目的分类极为详尽，几乎覆盖了我们使用电脑的方方面面。\n1. 开发者工具 ：\n包括 API x.com/Luckyjudy666/s…\n45\n4\n34\n3,053",
-      "hotScore": 177
+      "rawTail": "Java转 AI高薪领域必备-从0到1打通生产级AI Agent开发\nhttps://\npan.quark.cn/s/8a86ec9b4a75\n拉钩-22讲通关Go语言-Go语言布道者的入门笔记\nhttps://\npan.quark.cn/s/a862e97f3be7\n14\n3\n15\n1,283",
+      "hotScore": 63
     },
     {
       "index": 2,
-      "author": "@GitHub_Daily",
-      "url": "https://x.com/GitHub_Daily/status/2050062696612258108",
+      "author": "@Honcia13",
+      "url": "https://x.com/Honcia13/status/2059491535499207037",
       "before": {
-        "replies": 34,
-        "reposts": 94,
-        "likes": 514,
+        "replies": 21,
+        "reposts": 10,
+        "likes": 34,
         "bookmarks": null,
-        "views": 39000
+        "views": 3507
       },
       "after": {
-        "replies": 34,
-        "reposts": 94,
-        "likes": 514,
+        "replies": 21,
+        "reposts": 10,
+        "likes": 34,
         "bookmarks": null,
-        "views": 39000
+        "views": 3507
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "·\n5月1日\n用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特征。\n最近刷到 camofox-browser 这个项目，直接在浏览器底层伪装指纹，不是靠 JavaScript 补丁去糊弄检测。\n基于 Camoufox 封装了一套专为 AI\n顯示更多\n34\n94\n514\n3.9萬",
-      "hotScore": 804
+      "rawTail": "一个文档让全球开发者集体沸腾！\nOpenAI 创始成员 Andrej Karpathy\n在 GitHub 扔出一份 CLAUDE.md，一周直接狂揽 44k Star，总星数杀到 98k！  Stack Overflow 都没这待遇。\n他发现 AI 编程最大的问题不是不会干，而是太爱发挥：\n让你改个\n顯示更多\n21\n10\n34\n3,507",
+      "hotScore": 117
     },
     {
       "index": 3,
-      "author": "@libukai",
-      "url": "https://x.com/libukai/status/2029366552655741103",
+      "author": "@GitTrend0x",
+      "url": "https://x.com/GitTrend0x/status/2059142729758888184",
+      "before": {
+        "replies": 8,
+        "reposts": 33,
+        "likes": 125,
+        "bookmarks": null,
+        "views": 14000
+      },
+      "after": {
+        "replies": 8,
+        "reposts": 33,
+        "likes": 125,
+        "bookmarks": null,
+        "views": 14000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "AI Agent 从小白变大神进阶神器\nhttps://\ngithub.com/pguso/ai-agent\ns-from-scratch\n…\n这就是 ai-agents-from-scratch，3.9k star 爆款「真正把 AI Agent 讲明白」的开源教程项目！它不是又一个封装好的 Agent 框架，而是手把手教你从零开始自己造 Agent，用本地 LLM + Node.js，把 LLM + System Prompt + Tools + Memory +\n8\n33\n125\n1.4萬",
+      "hotScore": 215
+    },
+    {
+      "index": 4,
+      "author": "@wsl8297",
+      "url": "https://x.com/wsl8297/status/2046107110371709059",
+      "before": {
+        "replies": 5,
+        "reposts": 132,
+        "likes": 514,
+        "bookmarks": null,
+        "views": 37000
+      },
+      "after": {
+        "replies": 5,
+        "reposts": 132,
+        "likes": 514,
+        "bookmarks": null,
+        "views": 37000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n4月20日\n想让玩具、公仔开口说话、带点情绪和性格？市面方案不是贵得离谱、配置复杂，就是得一直绑着手机，用起来很难真正“随手陪伴”。\n开源项目 ElatoAI 给了一条更轻量的路：用一块 ESP32 微控制器，接入 OpenAI Realtime API，就能把你的玩具升级成随时在线的 AI 伙伴。\n它支持超过 10\n顯示更多\n5\n132\n514\n3.7萬",
+      "hotScore": 793
+    },
+    {
+      "index": 5,
+      "author": "@portertech",
+      "url": "https://x.com/portertech/status/2057084259610091923",
+      "before": {
+        "replies": 3,
+        "reposts": 4,
+        "likes": 50,
+        "bookmarks": null,
+        "views": 5493
+      },
+      "after": {
+        "replies": 3,
+        "reposts": 4,
+        "likes": 50,
+        "bookmarks": null,
+        "views": 5493
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "pixel认证教程：\nhttps://\nyoutu.be/MclykciSVGQ?si\n=O3ISlRI5KHRopmFA\n…，来自\n@YouTube\n3\n4\n50\n5,493",
+      "hotScore": 67
+    },
+    {
+      "index": 6,
+      "author": "@WY_mask",
+      "url": "https://x.com/WY_mask/status/2045306315699093870",
+      "before": {
+        "replies": 41,
+        "reposts": 532,
+        "likes": 2030,
+        "bookmarks": null,
+        "views": 440000
+      },
+      "after": {
+        "replies": 41,
+        "reposts": 532,
+        "likes": 2030,
+        "bookmarks": null,
+        "views": 440000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "玩龙虾的强烈建议去收藏一下 OpenClaw 的精彩应用案例\nhttps://\ngithub.com/hesamsheikh/aw\nesome-openclaw-usecases\n…\n这是一个收集了OpenClaw真实应用案例的社区合集，收录了几十个真实可落地的自动化案例，每一个都有详细配置和实操截图，按照教程复制粘贴就可以拥有自己的超级AI助手\n41\n532\n2,030\n44萬",
+      "hotScore": 3217
+    },
+    {
+      "index": 7,
+      "author": "@cellinlab",
+      "url": "https://x.com/cellinlab/status/2059213908091539627",
+      "before": {
+        "replies": 57,
+        "reposts": 123,
+        "likes": 600,
+        "bookmarks": null,
+        "views": 69000
+      },
+      "after": {
+        "replies": 57,
+        "reposts": 123,
+        "likes": 600,
+        "bookmarks": null,
+        "views": 69000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "how-pi-agent-works.vercel.app\n文档源码：\nhttps://\ngithub.com/cellinlab/how-\npi-agent-works\n…\n57\n123\n600\n6.9萬",
+      "hotScore": 1017
+    },
+    {
+      "index": 8,
+      "author": "@GoJun315",
+      "url": "https://x.com/GoJun315/status/2029534246717812845",
+      "before": {
+        "replies": 63,
+        "reposts": 509,
+        "likes": 1931,
+        "bookmarks": null,
+        "views": 160000
+      },
+      "after": {
+        "replies": 63,
+        "reposts": 509,
+        "likes": 1931,
+        "bookmarks": null,
+        "views": 160000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "源自 Reddit 的一次深度讨论，作者把迭代了数月的 55 多个 AI Agent 人格全部开源。\n比如有如下这些：\n- 开发部： 前端、后端、DevOps、AI 工程师\n- 设计部： UI、UX 研究、甚至是 Image Prompt 专家\n- 营销部： 推特运营、TikTok 策划、Reddit\n顯示更多\n63\n509\n1,931\n16萬",
+      "hotScore": 3138
+    },
+    {
+      "index": 9,
+      "author": "@GitHub_Daily",
+      "url": "https://x.com/GitHub_Daily/status/2054151716690620879",
+      "before": {
+        "replies": 81,
+        "reposts": 146,
+        "likes": 612,
+        "bookmarks": null,
+        "views": 55000
+      },
+      "after": {
+        "replies": 81,
+        "reposts": 146,
+        "likes": 612,
+        "bookmarks": null,
+        "views": 55000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n5月12日\n最近看到，一个连马斯克都转发点赞过的开源项目：PraisonAI。\n仅需 5 行代码，就能部署一组自主协作的 AI 智能体，从单个到整支可 24 小时自主运行的 Agent 团队。\n支持 100 多个大语言模型，内置规划、记忆、自我反思等能力，智能体之间可以自动交接任务、互相纠错。\n顯示更多\n81\n146\n612\n5.5萬",
+      "hotScore": 1147
+    },
+    {
+      "index": 10,
+      "author": "@wanerfu",
+      "url": "https://x.com/wanerfu/status/2021857316862341329",
+      "before": {
+        "replies": 49,
+        "reposts": 265,
+        "likes": 820,
+        "bookmarks": null,
+        "views": 68000
+      },
+      "after": {
+        "replies": 49,
+        "reposts": 265,
+        "likes": 820,
+        "bookmarks": null,
+        "views": 68000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "应用篇：实战 LangChain、Prompt 工程\n深入篇：RAG、Agent、微调原理全覆盖\nhttps://\ngithub.com/ninehills/blog\n/issues/97\n…\n49\n265\n820\n6.8萬",
+      "hotScore": 1497
+    },
+    {
+      "index": 11,
+      "author": "@GoJun315",
+      "url": "https://x.com/GoJun315/status/2032381157271343546",
+      "before": {
+        "replies": 55,
+        "reposts": 256,
+        "likes": 1232,
+        "bookmarks": null,
+        "views": 110000
+      },
+      "after": {
+        "replies": 55,
+        "reposts": 256,
+        "likes": 1232,
+        "bookmarks": null,
+        "views": 110000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "https://\ngithub.com/lightpanda-io/\nbrowser\n…\n如果有大规模爬取、构建 AI Agent，以及自动化操作 Web\n顯示更多\n55\n256\n1,232\n11萬",
+      "hotScore": 1909
+    },
+    {
+      "index": 12,
+      "author": "@jiroucaigou",
+      "url": "https://x.com/jiroucaigou/status/2042800854387036274",
+      "before": {
+        "replies": 74,
+        "reposts": 490,
+        "likes": 1727,
+        "bookmarks": null,
+        "views": 160000
+      },
+      "after": {
+        "replies": 74,
+        "reposts": 490,
+        "likes": 1727,
+        "bookmarks": null,
+        "views": 160000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n4月8日\n59:51\n这套在闲鱼卖 698 的 Claude Code 入门视频视频，是我见过最好的入门教程。\n现在我不仅免费分享给你，而且还是中文版！\n只要静下心看完这一套教程，你就学会用 AI 搭建工作流、实现自动化、处理复杂任务。\n74\n490\n1,727\n16萬",
+      "hotScore": 2929
+    },
+    {
+      "index": 13,
+      "author": "@ClaudeDevs",
+      "url": "https://x.com/ClaudeDevs/status/2059385239781384341",
+      "before": {
+        "replies": 331,
+        "reposts": 1633,
+        "likes": 14000,
+        "bookmarks": null,
+        "views": 1460000
+      },
+      "after": {
+        "replies": 331,
+        "reposts": 1633,
+        "likes": 14000,
+        "bookmarks": null,
+        "views": 1460000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "ClaudeDevs\n@ClaudeDevs\n·\n20 小時\nWe’ve shipped a security-guidance plugin for Claude Code that helps identify and fix vulnerabilities as you’re writing code.\nAvailable for all Claude Code users. Install from the plugin marketplace (/plugins).\n331\n1,633\n1.4萬\n146萬",
+      "hotScore": 18259
+    },
+    {
+      "index": 14,
+      "author": "@LuBtc888",
+      "url": "https://x.com/LuBtc888/status/2049464465096384913",
+      "before": {
+        "replies": 53,
+        "reposts": 460,
+        "likes": 1398,
+        "bookmarks": null,
+        "views": 170000
+      },
+      "after": {
+        "replies": 53,
+        "reposts": 460,
+        "likes": 1398,
+        "bookmarks": null,
+        "views": 170000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "4月4日\n59:51\n刷到一位海外博主的硬核干货，整整一小时，把 Claude AI讲得通透又落地。\n停下来，别再让碎片化时间浪费你成长的机会。\n静下心看完这一套完整教程，你就能真正用 AI 搭建工作流、实现自动化、处理复杂任务。\n很多人还在观望 AI，而你只要花这一小时，就能直接拿到未来几年都能用的核心竞争力。\n53\n460\n1,398\n17萬",
+      "hotScore": 2477
+    },
+    {
+      "index": 15,
+      "author": "@jakevin7",
+      "url": "https://x.com/jakevin7/status/2036830235166216585",
+      "before": {
+        "replies": 30,
+        "reposts": 18,
+        "likes": 133,
+        "bookmarks": null,
+        "views": 25000
+      },
+      "after": {
+        "replies": 30,
+        "reposts": 18,
+        "likes": 133,
+        "bookmarks": null,
+        "views": 25000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "设置 base_url=localhost:4000\n任何 AI 客户端直接用\n零依赖、TypeScript、双协议、streaming 全支持\n顯示更多\nGitHub - jackwener/open-antigravity: Expose Antigravity as OpenAI & Anthropic compatible API...\n來自 github.com\n30\n18\n133\n2.5萬",
+      "hotScore": 259
+    },
+    {
+      "index": 16,
+      "author": "@rubenhassid",
+      "url": "https://x.com/rubenhassid/status/2047918531363442770",
+      "before": {
+        "replies": 92,
+        "reposts": 1455,
+        "likes": 7190,
+        "bookmarks": null,
+        "views": 980000
+      },
+      "after": {
+        "replies": 92,
+        "reposts": 1455,
+        "likes": 7190,
+        "bookmarks": null,
+        "views": 980000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "文章\nClaude For Dummies.\n98.75% of all humans have never tried Claude.\nNot even once.\nThis free guide solves this gap. Claude For Dummies.\nSkip this if you know Claude and have tried it. For the “pros”, I added a very last...\n92\n1,455\n7,190\n98萬",
+      "hotScore": 10376
+    },
+    {
+      "index": 17,
+      "author": "@jakevin7",
+      "url": "https://x.com/jakevin7/status/2033427964235219434",
+      "before": {
+        "replies": 20,
+        "reposts": 12,
+        "likes": 122,
+        "bookmarks": null,
+        "views": 37000
+      },
+      "after": {
+        "replies": 20,
+        "reposts": 12,
+        "likes": 122,
+        "bookmarks": null,
+        "views": 37000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "Contributor的数量马上就要破 10 啦！\n新增 opencli setup & docter 命令，交互式 TUI 一键配置 Playwright MCP token 到所有 AI coding 工具（Claude Code、Gemini CLI、Cursor、Codex、Antigravity 等）。\n还加了从 Chrome extension 自动发现 token\n顯示更多\nGitHub - jackwener/OpenCLI: Make Any Website into CLI & Use your logged-in browser by AI agent.\n來自 github.com\n20\n12\n122\n3.7萬",
+      "hotScore": 206
+    },
+    {
+      "index": 18,
+      "author": "@cursor_ai",
+      "url": "https://x.com/cursor_ai/status/2056415413077233983",
+      "before": {
+        "replies": 917,
+        "reposts": 2325,
+        "likes": 13000,
+        "bookmarks": null,
+        "views": 19930000
+      },
+      "after": {
+        "replies": 917,
+        "reposts": 2325,
+        "likes": 13000,
+        "bookmarks": null,
+        "views": 19930000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "@cursor_ai\n·\n5月19日\nIntroducing Composer 2.5, our most powerful model yet.\nIt's more intelligent, better at sustained work on long-running tasks, and more reliable at following complex instructions.\nFor the next week, we’re doubling the included usage of the model.\n917\n2,325\n1.3萬\n1,993萬",
+      "hotScore": 20401
+    },
+    {
+      "index": 19,
+      "author": "@daweifs",
+      "url": "https://x.com/daweifs/status/2057629579175735470",
+      "before": {
+        "replies": 94,
+        "reposts": 229,
+        "likes": 1257,
+        "bookmarks": null,
+        "views": 94000
+      },
+      "after": {
+        "replies": 94,
+        "reposts": 229,
+        "likes": 1257,
+        "bookmarks": null,
+        "views": 94000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "rej-karpathy-skills\n…\n直接把 CLAUDE.md 扔进项目，AI\n顯示更多\nGitHub - multica-ai/andrej-karpathy-skills: A single CLAUDE.md file to improve Claude Code behavi...\n來自 github.com\n94\n229\n1,257\n9.4萬",
+      "hotScore": 1997
+    },
+    {
+      "index": 20,
+      "author": "@BTCqzy1",
+      "url": "https://x.com/BTCqzy1/status/2059470177566351539",
+      "before": {
+        "replies": 74,
+        "reposts": 36,
+        "likes": 168,
+        "bookmarks": null,
+        "views": 20000
+      },
+      "after": {
+        "replies": 74,
+        "reposts": 36,
+        "likes": 168,
+        "bookmarks": null,
+        "views": 20000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "全篇没有一行废话，全是降维打击的硬逻辑：\n· 先想清楚再动笔，绝不瞎猜\n· 极简优先，拒绝过度设计\n· 外科手术式改动，只碰该碰的代码\n·\n顯示更多\n74\n36\n168\n2萬",
+      "hotScore": 462
+    },
+    {
+      "index": 21,
+      "author": "@sharbel",
+      "url": "https://x.com/sharbel/status/2058129659963843071",
+      "before": {
+        "replies": 62,
+        "reposts": 189,
+        "likes": 1564,
+        "bookmarks": null,
+        "views": 130000
+      },
+      "after": {
+        "replies": 62,
+        "reposts": 189,
+        "likes": 1564,
+        "bookmarks": null,
+        "views": 130000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "github.com/colbymchenry/c\nodegraph\n…\n2. openhuman (+17.1K stars)\nYour Personal\n顯示更多\n62\n189\n1,564\n13萬",
+      "hotScore": 2128
+    },
+    {
+      "index": 22,
+      "author": "@ai_xiaomu",
+      "url": "https://x.com/ai_xiaomu/status/2059202018682831129",
+      "before": {
+        "replies": 56,
+        "reposts": 73,
+        "likes": 177,
+        "bookmarks": null,
+        "views": 73000
+      },
+      "after": {
+        "replies": 56,
+        "reposts": 73,
+        "likes": 177,
+        "bookmarks": null,
+        "views": 73000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "5月26日\n文章\nMCP小白完整入门教程(搭建你的工作台)\n从前面的Claude Code学到Skill，你应该搭建起了一个自己的SOP：告诉 AI 遇到\"写公众号\"该走什么流程，遇到\"发飞书消息\"该按什么模板。\n但 Skill 不会让 AI 多长出一只手。\n让 AI 真的能去爬一个网页、操作你的...\n56\n73\n177\n7.3萬",
+      "hotScore": 491
+    },
+    {
+      "index": 23,
+      "author": "@OpenAIDevs",
+      "url": "https://x.com/OpenAIDevs/status/2057536706778378692",
+      "before": {
+        "replies": 496,
+        "reposts": 989,
+        "likes": 8312,
+        "bookmarks": null,
+        "views": 2480000
+      },
+      "after": {
+        "replies": 496,
+        "reposts": 989,
+        "likes": 8312,
+        "bookmarks": null,
+        "views": 2480000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "Now your Mac doesn’t have to be unlocked for Codex to use your computer.\nFrom your phone, Codex can securely use apps on your Mac, even when the screen is off and locked.\nhttps://\ndevelopers.openai.com/codex/app/comp\nuter-use#locked-use\n…\n496\n989\n8,312\n248萬",
+      "hotScore": 11778
+    },
+    {
+      "index": 24,
+      "author": "@GoogleDeepMind",
+      "url": "https://x.com/GoogleDeepMind/status/2059235181274202500",
+      "before": {
+        "replies": 88,
+        "reposts": 173,
+        "likes": 1235,
+        "bookmarks": null,
+        "views": 100000
+      },
+      "after": {
+        "replies": 88,
+        "reposts": 173,
+        "likes": 1235,
+        "bookmarks": null,
+        "views": 100000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "@OpenAI\n,\n@ElevenLabs\nand Kakao to add SynthID watermarking to their models – accelerating the industry-wide momentum we started with\n@NVIDIA\n.\n88\n173\n1,235\n10萬",
+      "hotScore": 1845
+    },
+    {
+      "index": 25,
+      "author": "@GitHub_Daily",
+      "url": "https://x.com/GitHub_Daily/status/2058903429653958867",
+      "before": {
+        "replies": 31,
+        "reposts": 7,
+        "likes": 30,
+        "bookmarks": null,
+        "views": 5530
+      },
+      "after": {
+        "replies": 31,
+        "reposts": 7,
+        "likes": 30,
+        "bookmarks": null,
+        "views": 5530
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n5月25日\n平时用各种 AI Agent，总感觉缺乏长时记忆，每次都要反复粘贴当前的工作上下文，沟通成本极高。\n在 GitHub 上看到 OpenChronicle 这个项目，给 AI 智能体加上本地记忆能力，类似 OpenAI Chronicle 的开源替代方案。\n它在后台监听你 Mac\n顯示更多\n31\n7\n30\n5,530",
+      "hotScore": 137
+    },
+    {
+      "index": 26,
+      "author": "@setyamickala",
+      "url": "https://x.com/setyamickala/status/2059479294162911670",
+      "before": {
+        "replies": 63,
+        "reposts": 166,
+        "likes": 1631,
+        "bookmarks": null,
+        "views": 100000
+      },
+      "after": {
+        "replies": 63,
+        "reposts": 166,
+        "likes": 1631,
+        "bookmarks": null,
+        "views": 100000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "https://\ntoken-plan-cn.xiaomimimo.com/v1\nBase URL Anthropic\nhttps://\ntoken-plan-cn.xiaomimimo.com/anthropic\nModel : mimo-v2.5-pro\n63\n166\n1,631\n10萬",
+      "hotScore": 2152
+    },
+    {
+      "index": 27,
+      "author": "@songguoxiansen",
+      "url": "https://x.com/songguoxiansen/status/2046401570414428472",
+      "before": {
+        "replies": 39,
+        "reposts": 51,
+        "likes": 318,
+        "bookmarks": null,
+        "views": 62000
+      },
+      "after": {
+        "replies": 39,
+        "reposts": 51,
+        "likes": 318,
+        "bookmarks": null,
+        "views": 62000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "不需要再绑卡和设置API Key了\n直接去AI Studio官网就可以玩耍了\nhttps://\naistudio.google.com/prompts/new_ch\nat\n…\n39\n51\n318\n6.2萬",
+      "hotScore": 537
+    },
+    {
+      "index": 28,
+      "author": "@GeminiApp",
+      "url": "https://x.com/GeminiApp/status/2056788115893993701",
+      "before": {
+        "replies": 107,
+        "reposts": 222,
+        "likes": 1302,
+        "bookmarks": null,
+        "views": 710000
+      },
+      "after": {
+        "replies": 107,
+        "reposts": 222,
+        "likes": 1302,
+        "bookmarks": null,
+        "views": 710000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "@GeminiApp\n·\n5月20日\nGemini 3.5 Flash is here and it's our best model yet for getting things done quickly and efficiently.\nWhether you need help with everyday tasks or multi-step creative projects, Gemini 3.5 Flash navigates real-world complexity to help you take action. #GoogleIO\n來自 google.com\n107\n222\n1,302\n71萬",
+      "hotScore": 2067
+    },
+    {
+      "index": 29,
+      "author": "@FakeMaidenMaker",
+      "url": "https://x.com/FakeMaidenMaker/status/2059458967097462990",
+      "before": {
+        "replies": 15,
+        "reposts": 13,
+        "likes": 38,
+        "bookmarks": null,
+        "views": 3080
+      },
+      "after": {
+        "replies": 15,
+        "reposts": 13,
+        "likes": 38,
+        "bookmarks": null,
+        "views": 3080
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "主题是 AI coding agent 的可靠性工程——也就是 OpenAI 和 Anthropic 最近几个月一直在讲的 harness engineering。\nhttps://\ngithub.com/walkinglabs/le\narn-harness-engineering\n…\n作者是清华 SIGS 的开源团队\n15\n13\n38\n3,080",
+      "hotScore": 109
+    },
+    {
+      "index": 30,
+      "author": "@GitTrend0x",
+      "url": "https://x.com/GitTrend0x/status/2059082150809673908",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (3 values)"
+      ],
+      "rawTail": "开源托管 Agent 平台，把编码 Agent 变成真正队友——分配任务、跟踪进度、技能复合。\n直达：\nhttps://\ngithub.com/multica-ai/mul\ntica\n…\n以前 Agent 各自为战，现在直接组团打boss。项目管理 + AI\n5\n15\n4,386",
+      "hotScore": null
+    },
+    {
+      "index": 31,
+      "author": "@GitTrend0x",
+      "url": "https://x.com/GitTrend0x/status/2059456304272556071",
+      "before": {
+        "replies": 3,
+        "reposts": 6,
+        "likes": 21,
+        "bookmarks": null,
+        "views": 3792
+      },
+      "after": {
+        "replies": 3,
+        "reposts": 6,
+        "likes": 21,
+        "bookmarks": null,
+        "views": 3792
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "直达：\nhttps://\ngithub.com/multica-ai/mul\ntica\n…\n以前 Agent 各自为战，现在直接组团打boss。项目管理 + AI\n3\n6\n21\n3,792",
+      "hotScore": 42
+    },
+    {
+      "index": 32,
+      "author": "@GoJun315",
+      "url": "https://x.com/GoJun315/status/2035708829334372514",
+      "before": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 8,
+        "bookmarks": null,
+        "views": 3498
+      },
+      "after": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 8,
+        "bookmarks": null,
+        "views": 3498
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n3月19日\n文章\n你不知道的 Agent：原理、架构与工程实践\n0. 太长不读\n在写完「你不知道的 Claude Code：架构、治理与工程实践」之后，发现自己对 Agent 底层的理解还不够深入，加上团队在 Agent...\n1\n3\n8\n3,498",
+      "hotScore": 17
+    },
+    {
+      "index": 33,
+      "author": "@yanhua1010",
+      "url": "https://x.com/yanhua1010/status/2052906959112958128",
+      "before": {
+        "replies": 3,
+        "reposts": 6,
+        "likes": 25,
+        "bookmarks": null,
+        "views": 7022
+      },
+      "after": {
+        "replies": 3,
+        "reposts": 6,
+        "likes": 25,
+        "bookmarks": null,
+        "views": 7022
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "Claude Code团队核心成员 Thariq 最近了一篇很有启发的文章，建议大家都读读。\n《The Unreasonable Effectiveness of HTML》\n核心观点是：在 AI Agent 时代，HTML 可能正在变成新的 Markdown。\n这句话一开始听起来有点夸张，但越想越合理。\n过去我们让 AI 输出\n顯示更多\n3\n6\n25\n7,022",
+      "hotScore": 46
+    },
+    {
+      "index": 34,
+      "author": "@Smartpigai",
+      "url": "https://x.com/Smartpigai/status/2059504461622780329",
+      "before": {
+        "replies": 8,
+        "reposts": 68,
+        "likes": 169,
+        "bookmarks": null,
+        "views": 20000
+      },
+      "after": {
+        "replies": 8,
+        "reposts": 68,
+        "likes": 169,
+        "bookmarks": null,
+        "views": 20000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n5月24日\n这套在闲鱼卖 698 的 Claude Code 入门视频视频，是我见过最好的入门教程。\n我现在免费分享给大家，还是中文版的！\n只要你可以耐心看完这一套教程，就可以学会用 AI 搭建工作流、实现自动化、处理复杂任务。\n记得收藏起来有时间看看\n8\n68\n169\n2萬",
+      "hotScore": 329
+    },
+    {
+      "index": 35,
+      "author": "@0xcrypto_max",
+      "url": "https://x.com/0xcrypto_max/status/2051393562638766332",
+      "before": {
+        "replies": 4,
+        "reposts": 2,
+        "likes": 28,
+        "bookmarks": null,
+        "views": 11000
+      },
+      "after": {
+        "replies": 4,
+        "reposts": 2,
+        "likes": 28,
+        "bookmarks": null,
+        "views": 11000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "raw.githubusercontent.com/ttyyss2233/Too\nl/main/shadowrocket/mokuai/Apns.module\n…\n打开复制进去就行\n打开隧道里的APNs 我全都开了\n关闭Vpn 打开飞行模式\n4\n2\n28\n1.1萬",
+      "hotScore": 44
+    },
+    {
+      "index": 36,
+      "author": "@GitHub_Daily",
+      "url": "https://x.com/GitHub_Daily/status/2042913446312972407",
+      "before": {
+        "replies": 9,
+        "reposts": 52,
+        "likes": 280,
+        "bookmarks": null,
+        "views": 26000
+      },
+      "after": {
+        "replies": 9,
+        "reposts": 52,
+        "likes": 280,
+        "bookmarks": null,
+        "views": 26000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n4月11日\n用 AI 辅助编程，项目一大就头疼，代码之间的依赖关系、架构决策的来龙去脉，光靠翻文件根本理不清。\n可以试下 graphify 这个开源项目，它能自动把整个代码库构建成知识图谱，让 AI 助手真正「看懂」项目结构。\n只需在 Claude Code、Cursor、Gemini CLI 等主流 AI\n顯示更多\n9\n52\n280\n2.6萬",
+      "hotScore": 411
+    },
+    {
+      "index": 37,
+      "author": "@mntruell",
+      "url": "https://x.com/mntruell/status/2056940715201220906",
+      "before": {
+        "replies": 104,
+        "reposts": 158,
+        "likes": 1265,
+        "bookmarks": null,
+        "views": 1450000
+      },
+      "after": {
+        "replies": 104,
+        "reposts": 158,
+        "likes": 1265,
+        "bookmarks": null,
+        "views": 1450000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n5月20日\nGemini Flash 3.5 is now on CursorBench, our main coding agent eval.\nWe’ll keep updating the leaderboard as new models come out.\nCursor · CursorBench\n來自 cursor.com\n104\n158\n1,265\n145萬",
+      "hotScore": 1893
+    },
+    {
+      "index": 38,
+      "author": "@chiroukyc",
+      "url": "https://x.com/chiroukyc/status/2059520916426748074",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (3 values)"
+      ],
+      "rawTail": "Cursor ultra 200刀 独享成品号月费 全程质保一个月 可用额度400-600刀\n上架发卡网\nhttp://\nweb3chirou.com\n一个月全程质保\n基础额度是和正常官方一样，可以超额，Pro一个号能用到65刀差不多，看运气，最高有人用到过两百刀。ultra\n顯示更多\n12\n1\n942",
+      "hotScore": null
+    },
+    {
+      "index": 39,
+      "author": "@runes_leo",
+      "url": "https://x.com/runes_leo/status/2059524756576059503",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (3 values)"
+      ],
+      "rawTail": "@runes_leo\n·\n11 小時\n大家没有人用 Cursor，没有重度 Cursor 用户吗？\n这个 Composer 2.5 模型感觉很好用耶，好像有一开始用 Claude 的那种感觉。它没有什么让你觉得做得不好的地方，一般都能比较好地交付你跟它说的这些任务。\n在这个 Cursor\n顯示更多\n6\n2\n2,301",
+      "hotScore": null
+    },
+    {
+      "index": 40,
+      "author": "@abskoop",
+      "url": "https://x.com/abskoop/status/1989696136207311320",
+      "before": {
+        "replies": 3,
+        "reposts": 44,
+        "likes": 196,
+        "bookmarks": null,
+        "views": 45000
+      },
+      "after": {
+        "replies": 3,
+        "reposts": 44,
+        "likes": 196,
+        "bookmarks": null,
+        "views": 45000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "2025年11月15日\n自动监控 X 推文，还能用 AI 情感分析？这个开源工具太强了！\n开源 X 推文监控系统：抓取、分析、MCP 一步到位\nhttps://\nahhhhfs.com/77521/\n#TwitterTools #AI\n3\n44\n196\n4.5萬",
+      "hotScore": 293
+    },
+    {
+      "index": 41,
+      "author": "@GitHub_Daily",
+      "url": "https://x.com/GitHub_Daily/status/1983129552869355837",
+      "before": {
+        "replies": 9,
+        "reposts": 70,
+        "likes": 308,
+        "bookmarks": null,
+        "views": 46000
+      },
+      "after": {
+        "replies": 9,
+        "reposts": 70,
+        "likes": 308,
+        "bookmarks": null,
+        "views": 46000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n2025年10月28日\n科大讯飞把星辰 Agent 开发平台开源了！\nAstron Agent 具备与商业版一致的核心功能，包括 AI 工作流编排、模型管理、AI 与 MCP 工具集、RPA 自动化等能力。\n通过直观的拖拽节点方式，可轻松快速地构建可落地 Agent 应用，还能利用第三方插件、知识库、数据库来增强 Agent 能力。\n顯示更多\n9\n70\n308\n4.6萬",
+      "hotScore": 475
+    },
+    {
+      "index": 42,
+      "author": "@code",
+      "url": "https://x.com/code/status/2059666498285629707",
+      "before": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 16,
+        "bookmarks": null,
+        "views": 3776
+      },
+      "after": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 16,
+        "bookmarks": null,
+        "views": 3776
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "Beyond tool lookups, MCP can connect Copilot to databases, APIs, and internal systems, plus power richer app-like experiences in chat.\nRegister:\nhttps://\nbuild.microsoft.com/en-US/sessions\n/LTG403?wt.mc_ID=msbuild26_gmee_corp_np_scl_All_VS_Code_CH\n…\n1\n3\n16\n3,776",
+      "hotScore": 25
+    },
+    {
+      "index": 43,
+      "author": "@realpython",
+      "url": "https://x.com/realpython/status/2059688602032812519",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (2 values)"
+      ],
+      "rawTail": "@realpython\n·\n24 分鐘\nBuild a Python MCP Client to Test Servers From Your Terminal\nFollow this Python project to build an MCP client that discovers MCP server capabilities and feeds an AI-powered chat with tool calls\n#python\nBuild a Python MCP Client to Test Servers From Your Terminal – Real Python\n來自 realpython.com\n1\n247",
+      "hotScore": null
+    },
+    {
+      "index": 44,
+      "author": "@ai_xiaomu",
+      "url": "https://x.com/ai_xiaomu/status/2059535191551689006",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (3 values)"
+      ],
+      "rawTail": "·\n5月26日\n文章\nMCP小白完整入门教程(搭建你的工作台)\n从前面的Claude Code学到Skill，你应该搭建起了一个自己的SOP：告诉 AI 遇到\"写公众号\"该走什么流程，遇到\"发飞书消息\"该按什么模板。\n但 Skill 不会让 AI 多长出一只手。\n让 AI 真的能去爬一个网页、操作你的...\n17\n77\n5,481",
+      "hotScore": null
+    },
+    {
+      "index": 45,
+      "author": "@CoderDaMing",
+      "url": "https://x.com/CoderDaMing/status/2059563333364400563",
+      "before": {
+        "replies": 14,
+        "reposts": 16,
+        "likes": 57,
+        "bookmarks": null,
+        "views": 5090
+      },
+      "after": {
+        "replies": 14,
+        "reposts": 16,
+        "likes": 57,
+        "bookmarks": null,
+        "views": 5090
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n8 小時\n哇...有人做了一个AI图像提示词的Pinterest,而且100%免费。\n叫MeiGen。一个庞大的库汇集了GPT Image 2、Nano Banana 2、Seedance 2.0、Veo 3.1和Midjourney的所有病毒式提示词。\n无需提示词工程。无需付费课程。直接用已经爆火的。\n100%免费。\n14\n16\n57\n5,090",
+      "hotScore": 131
+    },
+    {
+      "index": 46,
+      "author": "@CoderDaMing",
+      "url": "https://x.com/CoderDaMing/status/2059563339903389719",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (2 values)"
+      ],
+      "rawTail": "@CoderDaMing\n整个数据集100%开源。\nhttps://\ngithub.com/jau123/MeiGen-\nAI-Design-MCP\n…\n包含很多热门提示词和所有数据。可免费使用、复制或用于自己的项目。\n这才是提示词分享应有的样子。\n5\n486",
+      "hotScore": null
+    },
+    {
+      "index": 47,
+      "author": "@thsottiaux",
+      "url": "https://x.com/thsottiaux/status/2059651958710120733",
+      "before": {
+        "replies": 187,
+        "reposts": 89,
+        "likes": 966,
+        "bookmarks": null,
+        "views": 65000
+      },
+      "after": {
+        "replies": 187,
+        "reposts": 89,
+        "likes": 966,
+        "bookmarks": null,
+        "views": 65000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n2 小時\nTeam is investigating elevated latencies across the board for API and ChatGPT. Updates will be posted on\nstatus.openai.com\nOpenAI Status\nLatest service status for OpenAI\n187\n89\n966\n6.5萬",
+      "hotScore": 1705
+    },
+    {
+      "index": 48,
+      "author": "@Codex_Changelog",
+      "url": "https://x.com/Codex_Changelog/status/2059359428508586175",
+      "before": {
+        "replies": 8,
+        "reposts": 26,
+        "likes": 306,
+        "bookmarks": null,
+        "views": 20000
+      },
+      "after": {
+        "replies": 8,
+        "reposts": 26,
+        "likes": 306,
+        "bookmarks": null,
+        "views": 20000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "History search with content previews\n--profile unified across CLI, TUI, and sandbox\nMCP per-server env targeting and OAuth support\nChangelog:\nRelease 0.134.0 · openai/codex\n來自 github.com\n8\n26\n306\n2萬",
+      "hotScore": 382
+    },
+    {
+      "index": 49,
+      "author": "@kun70706",
+      "url": "https://x.com/kun70706/status/2059521429671206936",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (3 values)"
+      ],
+      "rawTail": "https://\napi.stepfun.ai/step_plan\nquick start document\nhttps://\nplatform.stepfun.ai/docs/en/step-p\nlan/quick-start\n…\n1\n27\n8,344",
+      "hotScore": null
+    },
+    {
+      "index": 50,
+      "author": "@songguoxiansen",
+      "url": "https://x.com/songguoxiansen/status/1973589039845613590",
       "before": {
         "replies": null,
         "reposts": null,
@@ -70,373 +1198,181 @@
       "sourceMethods": [
         "x numeric tail ignored (1 values)"
       ],
-      "rawTail": "@libukai\n·\n3月5日\n今天 openai 发了下面这个新玩意，算是官方下场做多 Agent 任务编排了。\n不过这个新产品不是重点，倒是某篇新闻稿中的一句话逗乐我了：目前它们都偏向于理念展示，功能还比较简陋，但它指向了下一个发展的方向，人类如何更好的培养和管理AI，并克服微操冲动是新的重要命题。\n我感觉这篇新闻稿应该是\n顯示更多\nGitHub - openai/symphony: Symphony turns project work into isolated, autonomous implementation...\n來自 github.com\n7,101",
+      "rawTail": "松果先森\n@songguoxiansen\n·\n2025年10月2日\nSora2 昨天刚发布了！（评论区有获取Invite Code邀请码的方法）\n今天又给大家整理了以下20个好玩的视频：\nSora2 创意无限，一切皆有可能，tiktok压力给到你了。\n同时：Sora2 会将大多数的人类创作者，挤出长短视频赛道。\nx.com/songguoxiansen…\n1.3萬",
       "hotScore": null
     },
     {
-      "index": 4,
-      "author": "@higgsfield",
-      "url": "https://x.com/higgsfield/status/2059337370114375969",
+      "index": 51,
+      "author": "@ilufie",
+      "url": "https://x.com/ilufie/status/2058455303499493382",
       "before": {
-        "replies": 70,
-        "reposts": 87,
-        "likes": 603,
+        "replies": 52,
+        "reposts": 119,
+        "likes": 1066,
         "bookmarks": null,
-        "views": 62000
+        "views": 220000
       },
       "after": {
-        "replies": 70,
-        "reposts": 87,
-        "likes": 603,
+        "replies": 52,
+        "reposts": 119,
+        "likes": 1066,
         "bookmarks": null,
-        "views": 62000
+        "views": 220000
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "@higgsfield\n·\n23 小時\nSanji shares his Higgsfield Supercomputer playbook to run marketing end-to-end.\nHe lets the agent analyze his niche, find the winning formula, generate 100+ variations, and run A/B tests at scale, with the agent learning from every run.\nHow do you use Supercomputer for scaling?\n70\n87\n603\n6.2萬",
-      "hotScore": 987
+      "rawTail": "t.me/PixelAuto_Xixi\n_Bot?start=ref_I685DBF7D7C0\n…\n教程参考\nhttps://\nb23.tv/j41cpeu\n52\n119\n1,066\n22萬",
+      "hotScore": 1460
     },
     {
-      "index": 5,
+      "index": 52,
       "author": "@GeminiApp",
-      "url": "https://x.com/GeminiApp/status/2056792333132460322",
+      "url": "https://x.com/GeminiApp/status/2059663425580695564",
       "before": {
-        "replies": 110,
-        "reposts": 546,
-        "likes": 2732,
+        "replies": 59,
+        "reposts": 35,
+        "likes": 206,
         "bookmarks": null,
-        "views": 710000
+        "views": 14000
       },
       "after": {
-        "replies": 110,
-        "reposts": 546,
-        "likes": 2732,
+        "replies": 59,
+        "reposts": 35,
+        "likes": 206,
         "bookmarks": null,
-        "views": 710000
+        "views": 14000
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "@GeminiApp\n·\n5月20日\nGemini Spark is your new 24/7 personal AI agent.\nGive it a task and it works autonomously in the background, even if your phone and laptop are turned off. You choose to turn it on and it's designed to check with you before taking major actions. #GoogleIO\n來自 google.com\n110\n546\n2,732\n71萬",
-      "hotScore": 4154
+      "rawTail": "Google Gemini\n@GeminiApp\n·\n2 小時\nAdd text, video, or up to five images as your ingredients and Gemini Omni can combine them all into one cohesive ten-second video.\nTry it today and share your creations in the replies.\n59\n35\n206\n1.4萬",
+      "hotScore": 453
     },
     {
-      "index": 6,
-      "author": "@shinzui",
-      "url": "https://x.com/shinzui/status/2059470634758054346",
+      "index": 53,
+      "author": "@wanerfu",
+      "url": "https://x.com/wanerfu/status/2056601503901819118",
       "before": {
-        "replies": 8,
-        "reposts": 1,
-        "likes": 16,
+        "replies": 65,
+        "reposts": 40,
+        "likes": 306,
         "bookmarks": null,
-        "views": 8298
+        "views": 54000
       },
       "after": {
-        "replies": 8,
-        "reposts": 1,
-        "likes": 16,
+        "replies": 65,
+        "reposts": 40,
+        "likes": 306,
         "bookmarks": null,
-        "views": 8298
+        "views": 54000
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "引用\nIvan Zhao\n@ivanhzhao\n·\n15 小時\nThis is Notion today (and the direction we are doubling down to build/rebuild) x.com/nbaschez/statu…\n8\n1\n16\n8,298",
-      "hotScore": 42
+      "rawTail": "→ 深度搜索：带来源的详细洞察\n→ NotebookLM：AI 学习助手\n→ 无限图片生成（Nano Banana Pro）\n→ 2TB 云存储空间\n步骤  打开\n顯示更多\n65\n40\n306\n5.4萬",
+      "hotScore": 581
     },
     {
-      "index": 7,
-      "author": "@gkxspace",
-      "url": "https://x.com/gkxspace/status/2051955060372877421",
+      "index": 54,
+      "author": "@GeminiApp",
+      "url": "https://x.com/GeminiApp/status/2059684636125794808",
       "before": {
-        "replies": 10,
-        "reposts": 2,
-        "likes": 11,
+        "replies": 18,
+        "reposts": 13,
+        "likes": 58,
         "bookmarks": null,
-        "views": 17000
+        "views": 4789
       },
       "after": {
-        "replies": 10,
-        "reposts": 2,
-        "likes": 11,
+        "replies": 18,
+        "reposts": 13,
+        "likes": 58,
         "bookmarks": null,
-        "views": 17000
+        "views": 4789
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "5月5日\n0:42\nToday, WorldClaw launches WorldRouter with @worldlibertyfi, one simple account to access 300+ AI models with competitive fees*.\nNo more jumping between ChatGPT, Claude and all the others. Same power, way cheaper.\nThis is your first step into the WorldClaw AgentOS.\n付費合作關係\n10\n2\n11\n1.7萬",
-      "hotScore": 45
+      "rawTail": "@GeminiApp\n·\n40 分鐘\nFrom the #GoogleIO stage straight to the Gemini Discord Stage, join us for our next community event as we dive into two new agentic tools (Gemini Spark and Daily Brief) with members of the team who brought them to life.\nSee these new features in action with live demos, plus get\n顯示更多\n18\n13\n58\n4,789",
+      "hotScore": 138
     },
     {
-      "index": 8,
-      "author": "@vincemask",
-      "url": "https://x.com/vincemask/status/2059504087453048922",
-      "before": {
-        "replies": 1,
-        "reposts": 7,
-        "likes": 24,
-        "bookmarks": null,
-        "views": 2945
-      },
-      "after": {
-        "replies": 1,
-        "reposts": 7,
-        "likes": 24,
-        "bookmarks": null,
-        "views": 2945
-      },
-      "sourceMethods": [
-        "x numeric tail"
-      ],
-      "rawTail": "Anthropic AI engineer just dropped a live masterclass on how to ship a team of production‑ready AI agents.\n37 minutes. Free. From the Anthropic team.\nhere’s what she covers:\n• 3 building blocks: brain, hands, sessions\n• server-side loop, so nothing breaks on refresh\n• agent  x.com/0xCodez/status…\n1\n7\n24\n2,945",
-      "hotScore": 41
-    },
-    {
-      "index": 9,
-      "author": "@GoJun315",
-      "url": "https://x.com/GoJun315/status/2053059906207613227",
+      "index": 55,
+      "author": "@0xToshio_O",
+      "url": "https://x.com/0xToshio_O/status/2007746796475580859",
       "before": {
         "replies": 4,
-        "reposts": 1,
-        "likes": 11,
+        "reposts": 8,
+        "likes": 55,
         "bookmarks": null,
-        "views": 898
+        "views": 12000
       },
       "after": {
         "replies": 4,
-        "reposts": 1,
-        "likes": 11,
+        "reposts": 8,
+        "likes": 55,
         "bookmarks": null,
-        "views": 898
+        "views": 12000
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "·\n5月9日\n检测 AI Agent 有没有在说谎或产生幻觉，现在只需一条命令就能搞定。\niFixAi 是一个全新的开源检测工具，专门用来给模型进行全方位的“安全体检”。\n它会给 AI 做 32 项深度体检，查查它有没有胡说八道、越权搞破坏或者偷偷瞒报信息，最后直接打出一个 A 到 F 的分数。\n顯示更多\n4\n1\n11\n898",
-      "hotScore": 25
+      "rawTail": "·\n1月4日\n【新】Gemini 过学生认证，白嫖 Gemini 一年会员\n符合条件的国家和地区\n首先你需要准备一个支持本次活动地区的谷歌账号，比如美国地区，这是符合条件的所有国家地区：\n顯示更多\n4\n8\n55\n1.2萬",
+      "hotScore": 83
     },
     {
-      "index": 10,
-      "author": "@GoSailGlobal",
-      "url": "https://x.com/GoSailGlobal/status/2059446178467426703",
+      "index": 56,
+      "author": "@wsl8297",
+      "url": "https://x.com/wsl8297/status/2059499352008343825",
       "before": {
-        "replies": 4,
-        "reposts": 21,
-        "likes": 99,
+        "replies": 15,
+        "reposts": 12,
+        "likes": 48,
         "bookmarks": null,
-        "views": 6968
+        "views": 3063
       },
       "after": {
-        "replies": 4,
-        "reposts": 21,
-        "likes": 99,
+        "replies": 15,
+        "reposts": 12,
+        "likes": 48,
         "bookmarks": null,
-        "views": 6968
+        "views": 3063
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "Anthropic-Cybersecurity-Skills（GitHub 9.6k ）\n一句话：把\"高级安全分析师的脑子\"打包成了 AI Agent 能调用的标准化 skills\n· 754 个结构化网络安全 skill\n· 覆盖 26 个安全领域（云安全、威胁狩猎、恶意软件分析、DFIR、红队…）\n· 每个 skill 同时映射到 5\n顯示更多\n4\n21\n99\n6,968",
-      "hotScore": 153
+      "rawTail": "http://\ngithub.com/google/agents-\ncli\n…\n它可以接入 Claude Code、Gemini CLI、Codex 等工具，让编程 Agent\n顯示更多\n15\n12\n48\n3,063",
+      "hotScore": 117
     },
     {
-      "index": 11,
-      "author": "@shao__meng",
-      "url": "https://x.com/shao__meng/status/2059639640647500263",
+      "index": 57,
+      "author": "@VincentLogic",
+      "url": "https://x.com/VincentLogic/status/2057255341054730484",
       "before": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "after": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "sourceMethods": [
-        "x numeric tail ignored (3 values)"
-      ],
-      "rawTail": "Sumanth\n@Sumanth_077\n·\n3 小時\nRun your personal AI company with a team of AI agents!\nAlook is an open-source collaboration platform for AI coding agents. Self-hosted and local-first.\nThe setup: Define an org structure. Give each agent a role - dev, ops, research, whatever you need. Set reporting lines.\n1\n12\n1,222",
-      "hotScore": null
-    },
-    {
-      "index": 12,
-      "author": "@seclink",
-      "url": "https://x.com/seclink/status/2059473108851884035",
-      "before": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "after": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "sourceMethods": [
-        "x numeric tail ignored (2 values)"
-      ],
-      "rawTail": "2. OpenRouter 估值翻倍至 13 亿美元\n来源: TechCrunch | 约 8.6 小时前\n关键信息：\n- AI 从训练 → 推理 → Agent 的趋势转移\n- OpenRouter 作为 AI 模型网关，提供 400+ 模型访问\n- 声称 800万全球用户，处理 100万亿 tokens\n信息差价值: 国内对 OpenRouter\n顯示更多\n1\n1,468",
-      "hotScore": null
-    },
-    {
-      "index": 13,
-      "author": "@songguoxiansen",
-      "url": "https://x.com/songguoxiansen/status/2034466788008947845",
-      "before": {
-        "replies": 4,
-        "reposts": 4,
-        "likes": 19,
-        "bookmarks": null,
-        "views": 6299
-      },
-      "after": {
-        "replies": 4,
-        "reposts": 4,
-        "likes": 19,
-        "bookmarks": null,
-        "views": 6299
-      },
-      "sourceMethods": [
-        "x numeric tail"
-      ],
-      "rawTail": "看了LibTV官网，和下面的教程\n野心很大，不仅仅是视频工具了，更像的是视频创作平台，一站式创作\n有3大亮点：\n1、开创性的双入口设计：人类与AI Agent的协同创作\n除了提供网页版的无限画布，还开放了AI Agent的入口：通过标准化的Skill，OpenClaw（小龙虾）、Claude Code等AI\n顯示更多\n4\n4\n19\n6,299",
-      "hotScore": 39
-    },
-    {
-      "index": 14,
-      "author": "@aelshimy_",
-      "url": "https://x.com/aelshimy_/status/2059671192118653040",
-      "before": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "after": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "sourceMethods": [
-        "x numeric tail ignored (2 values)"
-      ],
-      "rawTail": "@aelshimy_\n·\n58 分鐘\n回覆\n@shinzui\nthis is exactly the gap we’re thinking about at dart.\nan ai-native workspace can’t just be “chat with the knowledge base.”\nthe agent has to live in the workflow: assigned to tasks, producing output, handing work back, and leaving a trail the team can inspect.\n1\n11",
-      "hotScore": null
-    },
-    {
-      "index": 15,
-      "author": "@egorkabantsov",
-      "url": "https://x.com/egorkabantsov/status/2059579165142032894",
-      "before": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "after": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "sourceMethods": [
-        "x numeric tail ignored (3 values)"
-      ],
-      "rawTail": "7 小時\nHi, I'm new to X and looking to #connect with #founders, #buildinpublic builders & devtool people.\nespecially interested in:\nB2B SaaS & early-stage startups\nAI coding agents, terminals & MCPs\nCursor, Claude Code, Codex & workflows\nSay hi in replies. Let's be mutuals\n30\n22\n868",
-      "hotScore": null
-    },
-    {
-      "index": 16,
-      "author": "@freeCodeCamp",
-      "url": "https://x.com/freeCodeCamp/status/2059364211340243457",
-      "before": {
-        "replies": 5,
-        "reposts": 29,
-        "likes": 222,
-        "bookmarks": null,
-        "views": 8144
-      },
-      "after": {
-        "replies": 5,
-        "reposts": 29,
-        "likes": 222,
-        "bookmarks": null,
-        "views": 8144
-      },
-      "sourceMethods": [
-        "x numeric tail"
-      ],
-      "rawTail": "Modern systems generate a ton of logs - and these are key to understanding issues with the system.\nBut reading and understanding all this data requires a lot of effort and time. This is where an AI agent can help.\nIn this guide,\n@manishmshiva\nteaches you how to build and deploy\n顯示更多\n5\n29\n222\n8,144",
-      "hotScore": 295
-    },
-    {
-      "index": 17,
-      "author": "@GitHub_Daily",
-      "url": "https://x.com/GitHub_Daily/status/2054350928845873203",
-      "before": {
-        "replies": 7,
-        "reposts": 2,
-        "likes": 13,
-        "bookmarks": null,
-        "views": 4155
-      },
-      "after": {
-        "replies": 7,
-        "reposts": 2,
-        "likes": 13,
-        "bookmarks": null,
-        "views": 4155
-      },
-      "sourceMethods": [
-        "x numeric tail"
-      ],
-      "rawTail": "·\n5月13日\n让 AI Agent 访问多个外部服务，要对接不同的 SDK 和 API，还是不同的调用逻辑，维护起来很头疼。\n最近看到 Mirage 这个项目，挺有意思的。它把所有外部服务统一套在一个虚拟文件系统，让 AI 智能体用命令就能操作所有数据源。\n就是说，把 S3、Google Drive、Slack、GitHub、Redis\n顯示更多\n7\n2\n13\n4,155",
-      "hotScore": 38
-    },
-    {
-      "index": 18,
-      "author": "@LangChain",
-      "url": "https://x.com/LangChain/status/2059659923953172924",
-      "before": {
-        "replies": 3,
+        "replies": 12,
         "reposts": 3,
-        "likes": 17,
+        "likes": 23,
         "bookmarks": null,
-        "views": 1497
+        "views": 4477
       },
       "after": {
-        "replies": 3,
+        "replies": 12,
         "reposts": 3,
-        "likes": 17,
+        "likes": 23,
         "bookmarks": null,
-        "views": 1497
+        "views": 4477
       },
       "sourceMethods": [
         "x numeric tail"
       ],
-      "rawTail": "·\n1 小時\n@Lyft\naccelerated agent development from 6 months to just a few weeks with LangGraph and LangSmith.\nHallucinations decreased by 20%\nAI Resolution rate up by 16%\n3\n3\n17\n1,497",
-      "hotScore": 32
+      "rawTail": "直到上周才发现——我他妈是学生。\n教育邮箱 + 学生证照片，12 个月全免。\n博士生也算。\nhttp://\ncursor.com/students\n你还在交这笔钱吗？\n12\n3\n23\n4,477",
+      "hotScore": 65
     },
     {
-      "index": 19,
-      "author": "@createwithjenny",
-      "url": "https://x.com/createwithjenny/status/2059668025897582782",
+      "index": 58,
+      "author": "@CoderDaMing",
+      "url": "https://x.com/CoderDaMing/status/2059563338443702575",
       "before": {
         "replies": null,
         "reposts": null,
@@ -454,13 +1390,13 @@
       "sourceMethods": [
         "x numeric tail ignored (3 values)"
       ],
-      "rawTail": "Jenny Park\n@createwithjenny\n·\n1 小時\n回覆\n@egorkabantsov\nHi Egor, same here. I’m building around AI apps + agent workflows and trying to connect with more builders/product people. Happy to swap notes on Codex/Claude workflows.\n1\n1\n14",
+      "rawTail": "回覆\n@CoderDaMing\n最疯狂的是深度:\n→ MCP服务器直接对接Claude\n→ Figma插件供设计师在画布内使用\n→ OpenClaw技能让代理自动生成提示词\n这不只是画廊。这是AI设计的基础设施层。\n1\n1\n533",
       "hotScore": null
     },
     {
-      "index": 20,
-      "author": "@EricHaley88",
-      "url": "https://x.com/EricHaley88/status/2059677152279183731",
+      "index": 59,
+      "author": "@penpotapp",
+      "url": "https://x.com/penpotapp/status/2059596234688528854",
       "before": {
         "replies": null,
         "reposts": null,
@@ -476,10 +1412,34 @@
         "views": null
       },
       "sourceMethods": [
-        "x numeric tail ignored (2 values)"
+        "x numeric tail ignored (3 values)"
       ],
-      "rawTail": "Eric Haley\n@EricHaley88\n·\n34 分鐘\n回覆\n@alphafox\nDoing construction on a stadium.... while also talking to my AI agent which is working on a project for me at home.\n1\n3",
+      "rawTail": "@penpotapp\n·\n6 小時\nConnect AI agents to Penpot’s MCP Server\nBuild flexible, multi-directional workflows between design, automation, and development\nhttps://\npenpot.app/ai/mcp-server\n1\n5\n277",
       "hotScore": null
+    },
+    {
+      "index": 60,
+      "author": "@GeminiApp",
+      "url": "https://x.com/GeminiApp/status/2059663558288539658",
+      "before": {
+        "replies": 2,
+        "reposts": 5,
+        "likes": 58,
+        "bookmarks": null,
+        "views": 7582
+      },
+      "after": {
+        "replies": 2,
+        "reposts": 5,
+        "likes": 58,
+        "bookmarks": null,
+        "views": 7582
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "2 小時\n回覆\n@GeminiApp\nGemini Omni is available to all Google AI Plus, Pro, and Ultra subscribers globally at\nhttp://\ngemini.google and in the app.\n2\n5\n58\n7,582",
+      "hotScore": 74
     }
   ]
 }

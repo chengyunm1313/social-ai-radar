@@ -1,18 +1,101 @@
 {
   "title": "Social AI Radar 今日快報",
-  "generatedAt": "2026-05-27T17:19:15.929Z",
+  "generatedAt": "2026-05-27T17:55:22.510Z",
+  "runId": "20260528-015328",
   "topics": [
-    "Agent 工程化部署",
-    "Agent 學習路線",
-    "AI Agent 工作流"
+    "模型與平台動態",
+    "AI Agent 工作流",
+    "Agent 學習路線"
+  ],
+  "strongestTopic": {
+    "name": "模型與平台動態",
+    "postCount": 58,
+    "highScorePostCount": 45,
+    "score": 1991.5
+  },
+  "strongestKeyword": {
+    "keyword": "Claude Code",
+    "name": "Claude Code",
+    "postCount": 10,
+    "highScorePostCount": 9,
+    "score": 472.3
+  },
+  "keywordStats": [
+    {
+      "keyword": "Claude Code",
+      "name": "Claude Code",
+      "postCount": 10,
+      "highScorePostCount": 9,
+      "score": 472.3
+    },
+    {
+      "keyword": "AI Agent",
+      "name": "AI Agent",
+      "postCount": 10,
+      "highScorePostCount": 9,
+      "score": 369.1
+    },
+    {
+      "keyword": "OpenAI",
+      "name": "OpenAI",
+      "postCount": 10,
+      "highScorePostCount": 9,
+      "score": 330.2
+    },
+    {
+      "keyword": "Gemini",
+      "name": "Gemini",
+      "postCount": 10,
+      "highScorePostCount": 8,
+      "score": 283.5
+    },
+    {
+      "keyword": "Cursor",
+      "name": "Cursor",
+      "postCount": 10,
+      "highScorePostCount": 6,
+      "score": 320.6
+    },
+    {
+      "keyword": "MCP",
+      "name": "MCP",
+      "postCount": 10,
+      "highScorePostCount": 6,
+      "score": 299.4
+    }
   ],
   "topPosts": [
     {
       "rank": 1,
-      "author": "@GeminiApp",
-      "url": "https://x.com/GeminiApp/status/2056792333132460322",
-      "summary": "Gemini Spark is your new 24/7 personal AI agent. Give it a task and it works autonomousl...",
-      "hotScore": 4154,
+      "author": "@ClaudeDevs",
+      "url": "https://x.com/ClaudeDevs/status/2059385239781384341",
+      "summary": "We’ve shipped a security-guidance plugin for Claude Code that helps identify and fix vul...",
+      "hotScore": 18259,
+      "qualityScore": 76,
+      "lineScore": 84.1,
+      "qualitySignals": [
+        "資訊密度高",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "觀點不明確"
+      ],
+      "hookTypes": [
+        "Curiosity"
+      ],
+      "emotionTypes": [
+        "FOMO"
+      ],
+      "engagementSummary": "score: 18259；回覆 331、轉發 1633、喜歡 14000、收藏 未取得、觀看 1460000"
+    },
+    {
+      "rank": 2,
+      "author": "@cursor_ai",
+      "url": "https://x.com/cursor_ai/status/2056415413077233983",
+      "summary": "Introducing Composer 2.5, our most powerful model yet. It's more intelligent, better at ...",
+      "hotScore": 20401,
       "qualityScore": 48,
       "lineScore": 79.2,
       "qualitySignals": [
@@ -30,40 +113,16 @@
       "emotionTypes": [
         "FOMO"
       ],
-      "engagementSummary": "score: 4154；回覆 110、轉發 546、喜歡 2732、收藏 未取得、觀看 710000"
-    },
-    {
-      "rank": 2,
-      "author": "@GitHub_Daily",
-      "url": "https://x.com/GitHub_Daily/status/2050062696612258108",
-      "summary": "用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特征。 最近刷到 camofox-browser 这个项目，直接在浏览器底层...",
-      "hotScore": 804,
-      "qualityScore": 100,
-      "lineScore": 51.6,
-      "qualitySignals": [
-        "資訊密度高",
-        "觀點明確",
-        "可轉化成內容靈感",
-        "有具體例子或數字",
-        "Hook 可辨識"
-      ],
-      "qualityFlags": [],
-      "hookTypes": [
-        "Controversy"
-      ],
-      "emotionTypes": [
-        "FOMO"
-      ],
-      "engagementSummary": "score: 804；回覆 34、轉發 94、喜歡 514、收藏 未取得、觀看 39000"
+      "engagementSummary": "score: 20401；回覆 917、轉發 2325、喜歡 13000、收藏 未取得、觀看 19930000"
     },
     {
       "rank": 3,
-      "author": "@freeCodeCamp",
-      "url": "https://x.com/freeCodeCamp/status/2059364211340243457",
-      "summary": "Modern systems generate a ton of logs - and these are key to understanding issues with t...",
-      "hotScore": 295,
+      "author": "@rubenhassid",
+      "url": "https://x.com/rubenhassid/status/2047918531363442770",
+      "summary": "Instead of watching Netflix tonight. Spend a day mastering Claude here: http:// claude10...",
+      "hotScore": 10376,
       "qualityScore": 100,
-      "lineScore": 44.3,
+      "lineScore": 70.5,
       "qualitySignals": [
         "資訊密度高",
         "觀點明確",
@@ -74,48 +133,47 @@
       "qualityFlags": [],
       "hookTypes": [
         "Curiosity",
-        "Controversy",
         "Productivity",
         "Step-by-step"
       ],
       "emotionTypes": [
         "Inspiration"
       ],
-      "engagementSummary": "score: 295；回覆 5、轉發 29、喜歡 222、收藏 未取得、觀看 8144"
+      "engagementSummary": "score: 10376；回覆 92、轉發 1455、喜歡 7190、收藏 未取得、觀看 980000"
     },
     {
       "rank": 4,
-      "author": "@Luckyjudy666",
-      "url": "https://x.com/Luckyjudy666/status/2059443635859738879",
-      "summary": "Github狂揽19万星，AI Agent的优化系统来了！ ECC是一个用于优化 AI 编程助手性能的系统。 简单来说，它的主要目标是增强并规范各种主流AI Agent的行为和...",
-      "hotScore": 177,
-      "qualityScore": 100,
-      "lineScore": 42.6,
+      "author": "@OpenAIDevs",
+      "url": "https://x.com/OpenAIDevs/status/2057536706778378692",
+      "summary": "Codex anywhere and everywhere, all the time. Now your Mac doesn’t have to be unlocked fo...",
+      "hotScore": 11778,
+      "qualityScore": 48,
+      "lineScore": 53.8,
       "qualitySignals": [
         "資訊密度高",
-        "觀點明確",
-        "可轉化成內容靈感",
         "有具體例子或數字",
         "Hook 可辨識"
       ],
-      "qualityFlags": [],
+      "qualityFlags": [
+        "觀點不明確",
+        "轉化價值低"
+      ],
       "hookTypes": [
-        "Productivity",
-        "Personal Story"
+        "Curiosity"
       ],
       "emotionTypes": [
         "FOMO"
       ],
-      "engagementSummary": "score: 177；回覆 45、轉發 4、喜歡 34、收藏 未取得、觀看 3053"
+      "engagementSummary": "score: 11778；回覆 496、轉發 989、喜歡 8312、收藏 未取得、觀看 2480000"
     },
     {
       "rank": 5,
-      "author": "@shinzui",
-      "url": "https://x.com/shinzui/status/2059470634758054346",
-      "summary": "I’m a huge Notion fan. I use it for almost everything across work and personal life. But...",
-      "hotScore": 42,
+      "author": "@jiroucaigou",
+      "url": "https://x.com/jiroucaigou/status/2042800854387036274",
+      "summary": "想玩明白Claude Code，看这篇入门资源合集就够了 Claude Code就是一个拥有无限智能的超级助手 人都会有好点子，但因为各种限制无法变成实际成果 有了CC，普通人...",
+      "hotScore": 2929,
       "qualityScore": 100,
-      "lineScore": 40.6,
+      "lineScore": 48.6,
       "qualitySignals": [
         "資訊密度高",
         "觀點明確",
@@ -125,32 +183,39 @@
       ],
       "qualityFlags": [],
       "hookTypes": [
-        "Controversy",
-        "Fear",
         "Productivity",
         "Personal Story"
       ],
       "emotionTypes": [
-        "Anxiety",
         "FOMO"
       ],
-      "engagementSummary": "score: 42；回覆 8、轉發 1、喜歡 16、收藏 未取得、觀看 8298"
+      "engagementSummary": "score: 2929；回覆 74、轉發 490、喜歡 1727、收藏 未取得、觀看 160000"
     }
   ],
   "contentIdeas": [
     "你的 AI Agent 不是能跑就好，真正要測的是它在哪些情境會失敗。",
     "我把 AI Agent workflow 拆成 4 層：任務、工具、記憶、驗證。少一層都不穩。",
-    "如果今天從 0 開始學 AI Agent，我會先照 4 階段路線，而不是先追框架。"
+    "AI Agent 開始碰到交易、投資與招聘，但越接近錢，越需要權限邊界。"
   ],
   "sourceStatus": {
-    "generatedAt": "2026-05-27T17:19:15.929Z",
+    "generatedAt": "2026-05-27T17:55:22.510Z",
+    "runId": "20260528-015328",
     "sourceMode": "phase3_playwright_manual_read_only",
     "inputFile": "input/x-ai-agent-raw.json",
-    "totalPosts": 20,
+    "totalPosts": 60,
+    "preset": "ai-dev",
+    "keywords": [
+      "AI Agent",
+      "Claude Code",
+      "Cursor",
+      "MCP",
+      "OpenAI",
+      "Gemini"
+    ],
     "unknownAuthorCount": 0,
-    "hasTimestampCount": 11,
+    "hasTimestampCount": 40,
     "isFallback": false,
-    "collectiblePosts": 18,
+    "collectiblePosts": 53,
     "scoring": "lineScore = normalizedHotScore * 0.6 + qualityScore * 0.4"
   }
 }

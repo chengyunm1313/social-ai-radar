@@ -1,0 +1,18 @@
+Social AI Radar 今日快報
+主題：模型與平台動態、AI Agent 工作流、Agent 學習路線
+最強 topic：模型與平台動態
+最強 keyword：Claude Code
+
+TOP 5：
+1. @ClaudeDevs｜18259｜Q76｜We’ve shipped a security-guidance plugin for Claude…
+2. @cursor_ai｜20401｜Q48｜Introducing Composer 2.5, our most powerful model y…
+3. @rubenhassid｜10376｜Q100｜Instead of watching Netflix tonight. Spend a day ma…
+4. @OpenAIDevs｜11778｜Q48｜Codex anywhere and everywhere, all the time. Now yo…
+5. @jiroucaigou｜2929｜Q100｜想玩明白Claude Code，看这篇入门资源合集就够了 Claude Code就是一个拥有无限智能的…
+
+內容靈感：
+1. 你的 AI Agent 不是能跑就好，真正要測的是它在哪些情境會失敗。
+2. 我把 AI Agent workflow 拆成 4 層：任務、工具、記憶、驗證。少一層都不穩。
+3. AI Agent 開始碰到交易、投資與招聘，但越接近錢，越需要權限邊界。
+
+資料：phase3_playwright_manual_read_only，60 篇
