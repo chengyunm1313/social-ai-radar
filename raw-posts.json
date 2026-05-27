@@ -1,0 +1,663 @@
+{
+  "schema_version": "0.3",
+  "collection_mode": "computer_use_logged_in_browser_read_only",
+  "collected_by": "codex",
+  "date": "2026-05-27",
+  "timezone": "Asia/Taipei",
+  "captured_at": "2026-05-27T18:05:00+08:00",
+  "scope": {
+    "platforms": [
+      "x"
+    ],
+    "query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+    "tabs_checked": [
+      "top"
+    ],
+    "rules": [
+      "只讀取公開搜尋結果",
+      "不按讚",
+      "不留言",
+      "不轉貼",
+      "不追蹤",
+      "不讀取私人訊息",
+      "不修改帳號設定"
+    ]
+  },
+  "collection_notes": [
+    "使用 Computer Use 操作使用者已登入的 Google Chrome。",
+    "X 搜尋頁：x.com/search?q=%22AI%20Agent%22%20since%3A2026-05-27%20until%3A2026-05-28&src=typed_query&f=top。",
+    "publish_time 以 X 畫面顯示的相對時間或日期記錄；未點開個別貼文，因此未強制換算為絕對時間。",
+    "僅收集搜尋結果中可見的公開貼文與公開互動數，未操作任何互動按鈕。",
+    "X 搜尋結果會混入回覆、招聘、加密金融與低相關內容；已排除明顯無關的 MacBook 討論與純回覆。"
+  ],
+  "posts": [
+    {
+      "id": "x-2059473163172626913",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "Dharmik Harinkhede",
+      "author_handle": "@Dharmikpawar31",
+      "content": "Most developers treat CLAUDE.md like documentation. That’s the mistake. It’s not a README. It’s the control layer for your AI agent. If your outputs feel inconsistent, buggy, or random, the problem usually isn’t the model. It’s the instruction architecture.",
+      "url": "https://x.com/Dharmikpawar31/status/2059473163172626913",
+      "likes": 76,
+      "reposts": 37,
+      "replies": 16,
+      "views": 591,
+      "bookmarks": 24,
+      "publish_time": "6 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Controversy",
+        "Productivity",
+        "AI Replacement"
+      ],
+      "emotion_type": [
+        "FOMO",
+        "Anxiety",
+        "Surprise"
+      ],
+      "cta_type": "none_visible",
+      "why_candidate": "互動率非常高，且用「多數開發者都搞錯」建立強 Hook，把 CLAUDE.md 重新定位成 agent 控制層。",
+      "signal_scores": {
+        "viral_rank_score": 90,
+        "engagement": 204,
+        "engagement_rate": 0.3452,
+        "reply_rate": 0.0271,
+        "repost_rate": 0.0626,
+        "hook_strength": "high",
+        "emotion_strength": "high",
+        "controversy_or_new_point": true,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "高留言率",
+        "高轉發率",
+        "高互動率",
+        "強 Hook",
+        "情緒強烈",
+        "爭議性或新觀點"
+      ],
+      "hook_library_matches": [
+        "Curiosity",
+        "Productivity"
+      ],
+      "hook_library_reason": "「Most developers treat... That’s the mistake」先製造認知落差，再把 CLAUDE.md 定位成提升 agent 穩定性的控制層。",
+      "reusable_hook_formula": "Most developers treat {tool/file} like {common category}. That is the mistake. It is actually {control/productivity layer}."
+    },
+    {
+      "id": "x-2059534268184072552",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "Eiko",
+      "author_handle": "@eikofinance",
+      "content": "We are launching in a few hours. Fully integrated with Base MCP. $Eiko connects your AI agent directly to your portfolio to track assets, execute yield strategies, swap, and send payments from one dashboard.",
+      "url": "https://x.com/eikofinance/status/2059534268184072552",
+      "likes": 38,
+      "reposts": 19,
+      "replies": 10,
+      "views": 491,
+      "bookmarks": 1,
+      "publish_time": "2 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Money",
+        "Curiosity"
+      ],
+      "emotion_type": [
+        "FOMO",
+        "Excitement"
+      ],
+      "cta_type": "launch_anticipation",
+      "why_candidate": "瀏覽數不高但互動率極高，金融 + MCP + AI agent 的即將發布敘事帶動轉發。",
+      "signal_scores": {
+        "viral_rank_score": 90,
+        "engagement": 92.25,
+        "engagement_rate": 0.1879,
+        "reply_rate": 0.0204,
+        "repost_rate": 0.0387,
+        "hook_strength": "high",
+        "emotion_strength": "high",
+        "controversy_or_new_point": true,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "高留言率",
+        "高轉發率",
+        "高互動率",
+        "強 Hook",
+        "情緒強烈",
+        "爭議性或新觀點"
+      ],
+      "hook_library_matches": [
+        "Money",
+        "Curiosity"
+      ],
+      "hook_library_reason": "把 AI agent 直接連到 portfolio、yield、swap、payments，符合 Money hook，也用即將 launch 製造好奇。",
+      "reusable_hook_formula": "Your AI agent can now connect directly to {money workflow}, so it can {track/execute/optimize} from one dashboard."
+    },
+    {
+      "id": "x-2059458967097462990",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "Ren",
+      "author_handle": "@FakeMaidenMaker",
+      "content": "Datawhale 開源 AI Agent 學習路線 Agent Learning Hub，倉庫上線 9 天達 1.6K stars，整理社群分享、官方博客、論文與開源項目成可執行 todo list。",
+      "url": "https://x.com/FakeMaidenMaker/status/2059458967097462990",
+      "likes": 8,
+      "reposts": 3,
+      "replies": 10,
+      "views": 892,
+      "bookmarks": 9,
+      "publish_time": "7 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Curiosity",
+        "Step-by-step"
+      ],
+      "emotion_type": [
+        "FOMO",
+        "Inspiration"
+      ],
+      "cta_type": "resource_link",
+      "why_candidate": "stars 數與學習路線是強訊號，回覆數高於 likes，顯示具討論性。",
+      "signal_scores": {
+        "viral_rank_score": 40,
+        "engagement": 40.25,
+        "engagement_rate": 0.0451,
+        "reply_rate": 0.0112,
+        "repost_rate": 0.0034,
+        "hook_strength": "high",
+        "emotion_strength": "medium",
+        "controversy_or_new_point": false,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "高留言率",
+        "強 Hook",
+        "情緒強烈"
+      ],
+      "hook_library_matches": [
+        "Curiosity",
+        "Productivity"
+      ],
+      "hook_library_reason": "用「剛開源、9 天 1.6K stars、可打勾 todo list」製造探索慾與學習效率承諾。",
+      "reusable_hook_formula": "I found a {resource} that turns {large learning topic} into a checklist from {stage 0} to {real deployment}."
+    },
+    {
+      "id": "x-2059499352008343825",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "Joruno",
+      "author_handle": "@wsl8297",
+      "content": "做 AI Agent demo 不難，難的是部署到雲上：環境、評估、CI、資料接入。Google 開源 agents-cli，把工程化流程做成 AI 編程助手可調用的技能包，可接入 Claude Code、Gemini CLI、Codex。",
+      "url": "https://x.com/wsl8297/status/2059499352008343825",
+      "likes": 17,
+      "reposts": 3,
+      "replies": 6,
+      "views": 1030,
+      "bookmarks": 15,
+      "publish_time": "4 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Controversy",
+        "Productivity",
+        "Step-by-step"
+      ],
+      "emotion_type": [
+        "Anxiety",
+        "Inspiration"
+      ],
+      "cta_type": "resource_link",
+      "why_candidate": "用「demo 容易、上雲困難」切中 agent 工程化痛點，適合做長文拆解。",
+      "signal_scores": {
+        "viral_rank_score": 36,
+        "engagement": 50.75,
+        "engagement_rate": 0.0493,
+        "reply_rate": 0.0058,
+        "repost_rate": 0.0029,
+        "hook_strength": "high",
+        "emotion_strength": "medium",
+        "controversy_or_new_point": true,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "高收藏意圖",
+        "強 Hook",
+        "情緒強烈",
+        "爭議性或新觀點"
+      ],
+      "hook_library_matches": [
+        "Productivity",
+        "Fear"
+      ],
+      "hook_library_reason": "「Demo 不難，上雲才難」指出開發者可能低估的工程化風險，再提供 agents-cli 作解法。",
+      "reusable_hook_formula": "Building a {demo} is easy. Shipping it is hard because of {risk list}. Here is the workflow/tool that closes the gap."
+    },
+    {
+      "id": "x-2059428282672500867",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "Zekyure",
+      "author_handle": "@zekyure",
+      "content": "My Hermes agent is down, has any one else had this issue? I already tried restarting and updating Hermes, using openai-codex provider, chatgpt 5.5 model.",
+      "url": "https://x.com/zekyure/status/2059428282672500867",
+      "likes": 80,
+      "reposts": 3,
+      "replies": 53,
+      "views": 14367,
+      "bookmarks": 9,
+      "publish_time": "9 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Fear",
+        "Personal Story"
+      ],
+      "emotion_type": [
+        "Anxiety",
+        "Surprise"
+      ],
+      "cta_type": "ask_for_help",
+      "why_candidate": "留言率很高，問題型貼文直接觸發同工具使用者回覆與排錯。",
+      "signal_scores": {
+        "viral_rank_score": 32,
+        "engagement": 176.75,
+        "engagement_rate": 0.0123,
+        "reply_rate": 0.0037,
+        "repost_rate": 0.0002,
+        "hook_strength": "high",
+        "emotion_strength": "high",
+        "controversy_or_new_point": false,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "高留言量",
+        "強 Hook",
+        "情緒強烈"
+      ],
+      "hook_library_matches": [
+        "Fear",
+        "Curiosity"
+      ],
+      "hook_library_reason": "agent 掛掉是直接 Fear hook；「有人也遇到嗎」引發同工具使用者好奇與回覆。",
+      "reusable_hook_formula": "My {agent/tool} is down in {setup}. I tried {fixes}. Is anyone else seeing this?"
+    },
+    {
+      "id": "x-2059456304272556071",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "GitTrend",
+      "author_handle": "@GitTrend0x",
+      "content": "今天 GitHub 被智慧型 AI Agent 軍團全面屠榜。整理 5 個星標暴增最狠的項目，例如把任意代碼或知識庫變成可交互知識圖譜，支援 Claude Code、Cursor、Copilot、Gemini。",
+      "url": "https://x.com/GitTrend0x/status/2059456304272556071",
+      "likes": 13,
+      "reposts": 2,
+      "replies": 1,
+      "views": 1945,
+      "bookmarks": 19,
+      "publish_time": "7 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Curiosity",
+        "Step-by-step",
+        "FOMO"
+      ],
+      "emotion_type": [
+        "FOMO",
+        "Excitement"
+      ],
+      "cta_type": "resource_list",
+      "why_candidate": "GitHub 趨勢清單雖互動不高，但收藏高於 likes，代表工具清單仍有資料價值。",
+      "signal_scores": {
+        "viral_rank_score": 30,
+        "engagement": 42.25,
+        "engagement_rate": 0.0217,
+        "reply_rate": 0.0005,
+        "repost_rate": 0.001,
+        "hook_strength": "high",
+        "emotion_strength": "high",
+        "controversy_or_new_point": false,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "高收藏意圖",
+        "強 Hook",
+        "情緒強烈"
+      ],
+      "hook_library_matches": [
+        "Curiosity",
+        "Productivity"
+      ],
+      "hook_library_reason": "「GitHub 被 AI Agent 軍團屠榜」是 Curiosity；五個項目整理提供 Productivity。",
+      "reusable_hook_formula": "{Platform} is being taken over by {trend}. Here are the {N} fastest-growing projects and what each one does."
+    },
+    {
+      "id": "x-2059483549624107432",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "Ajay Bhakar",
+      "author_handle": "@ajay_2512x",
+      "content": "HIRING Product Solution Engineer at Ringg AI. Looking for someone who can build and deploy real AI-agent solutions end-to-end. Must have prompting, Python backend, and SQL experience.",
+      "url": "https://x.com/ajay_2512x/status/2059483549624107432",
+      "likes": 44,
+      "reposts": 0,
+      "replies": 2,
+      "views": 2224,
+      "bookmarks": 33,
+      "publish_time": "5 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Money",
+        "Productivity"
+      ],
+      "emotion_type": [
+        "FOMO",
+        "Inspiration"
+      ],
+      "cta_type": "hiring",
+      "why_candidate": "招聘文收藏偏高，顯示 AI-agent solution engineer 這類職能需求可作為趨勢切角。",
+      "signal_scores": {
+        "viral_rank_score": 26,
+        "engagement": 88.25,
+        "engagement_rate": 0.0397,
+        "reply_rate": 0.0009,
+        "repost_rate": 0,
+        "hook_strength": "high",
+        "emotion_strength": "medium",
+        "controversy_or_new_point": false,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "高收藏意圖",
+        "強 Hook",
+        "情緒強烈"
+      ],
+      "hook_library_matches": [
+        "Money",
+        "Productivity"
+      ],
+      "hook_library_reason": "招聘與職能需求是 Money/career signal；端到端 build/deploy real AI-agent solutions 是生產力承諾。",
+      "reusable_hook_formula": "Hiring for someone who can build {new workflow} end-to-end. The required skills reveal where the market is moving."
+    },
+    {
+      "id": "x-2059441958964084814",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "Amto",
+      "author_handle": "@XAMTO_AI",
+      "content": "AI Agent 復刻華爾街量化系統，專為 A 股市場定制。TradingAgents-CN 27.2K stars，基於 LangGraph，五個 agent 分工基本面、技術面、新聞、風控、交易。",
+      "url": "https://x.com/XAMTO_AI/status/2059441958964084814",
+      "likes": 0,
+      "reposts": 2,
+      "replies": 3,
+      "views": 416,
+      "bookmarks": 3,
+      "publish_time": "8 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Money",
+        "Curiosity"
+      ],
+      "emotion_type": [
+        "FOMO",
+        "Excitement"
+      ],
+      "cta_type": "resource_reference",
+      "why_candidate": "金融 agent + 多 agent 分工題材明確，但本次互動偏低，只作趨勢背景。",
+      "signal_scores": {
+        "viral_rank_score": 24,
+        "engagement": 12.25,
+        "engagement_rate": 0.0294,
+        "reply_rate": 0.0072,
+        "repost_rate": 0.0048,
+        "hook_strength": "high",
+        "emotion_strength": "high",
+        "controversy_or_new_point": false,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "強 Hook",
+        "情緒強烈"
+      ],
+      "hook_library_matches": [],
+      "hook_library_reason": "未列入主要 hook-library 對照。"
+    },
+    {
+      "id": "x-2059213908091539627",
+      "platform": "x",
+      "source_query": "\"AI Agent\"",
+      "search_tab": "top",
+      "author": "Cell 细胞",
+      "author_handle": "@cellinlab",
+      "content": "時間線刷到好幾個 Pi Agent 推薦，讓 Codex 幫我學了下，做了手把手教程：Pi Agent 原理與實現，從零到一實現 AI Agent，附在線學習與文檔源碼。",
+      "url": "https://x.com/cellinlab/status/2059213908091539627",
+      "likes": 533,
+      "reposts": 113,
+      "replies": 55,
+      "views": 50784,
+      "bookmarks": 882,
+      "publish_time": "23 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Step-by-step",
+        "Productivity"
+      ],
+      "emotion_type": [
+        "Inspiration",
+        "FOMO"
+      ],
+      "cta_type": "resource_link",
+      "why_candidate": "互動與收藏都高，手把手教程 + Codex 學習過程具可複製價值。",
+      "signal_scores": {
+        "viral_rank_score": 20,
+        "engagement": 1944,
+        "engagement_rate": 0.0383,
+        "reply_rate": 0.0011,
+        "repost_rate": 0.0022,
+        "hook_strength": "medium",
+        "emotion_strength": "medium",
+        "controversy_or_new_point": false,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "高留言量",
+        "高收藏意圖",
+        "情緒強烈"
+      ],
+      "hook_library_matches": [],
+      "hook_library_reason": "未列入主要 hook-library 對照。"
+    },
+    {
+      "id": "x-2059456055784927451",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "veyhon",
+      "author_handle": "@veyhon",
+      "content": "把 AI Agent 學習路徑拆成 4 個階段 + 6 個專題，每階段配可運行 Colab 和課程筆記，不依賴單一框架；涵蓋 RAG、MCP、多智能體、安全、評估等。",
+      "url": "https://x.com/veyhon/status/2059456055784927451",
+      "likes": 12,
+      "reposts": 3,
+      "replies": 1,
+      "views": 538,
+      "bookmarks": 9,
+      "publish_time": "7 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Step-by-step",
+        "Productivity"
+      ],
+      "emotion_type": [
+        "Inspiration",
+        "FOMO"
+      ],
+      "cta_type": "resource_link",
+      "why_candidate": "學習路線型內容具收藏價值，適合改寫為入門指南或階段圖。",
+      "signal_scores": {
+        "viral_rank_score": 16,
+        "engagement": 30.75,
+        "engagement_rate": 0.0572,
+        "reply_rate": 0.0019,
+        "repost_rate": 0.0056,
+        "hook_strength": "medium",
+        "emotion_strength": "medium",
+        "controversy_or_new_point": true,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "情緒強烈",
+        "爭議性或新觀點"
+      ],
+      "hook_library_matches": [],
+      "hook_library_reason": "未列入主要 hook-library 對照。"
+    },
+    {
+      "id": "x-2059568049611755945",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "Vaishnavi",
+      "author_handle": "@_vmlops",
+      "content": "Microsoft dropped a pytest framework to test if your AI agent can be broken. It is called RAMPART and fits into existing test suites, covering adversarial attacks and benign failures.",
+      "url": "https://x.com/_vmlops/status/2059568049611755945",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 4,
+      "bookmarks": 0,
+      "publish_time": "1 分鐘前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Fear",
+        "Controversy"
+      ],
+      "emotion_type": [
+        "Anxiety",
+        "Surprise"
+      ],
+      "cta_type": "resource_link",
+      "why_candidate": "發布時間很新、互動尚未起量；安全測試角度值得觀察後續成長。",
+      "signal_scores": {
+        "viral_rank_score": 10,
+        "engagement": 0,
+        "engagement_rate": 0,
+        "reply_rate": 0,
+        "repost_rate": 0,
+        "hook_strength": "high",
+        "emotion_strength": "high",
+        "controversy_or_new_point": true,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "direct"
+      },
+      "priority_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "爭議性或新觀點"
+      ],
+      "hook_library_matches": [],
+      "hook_library_reason": "未列入主要 hook-library 對照。"
+    },
+    {
+      "id": "x-2059546870494753208",
+      "platform": "x",
+      "source_query": "\"AI Agent\" since:2026-05-27 until:2026-05-28",
+      "search_tab": "top",
+      "author": "HDN",
+      "author_handle": "@HDN_sol",
+      "content": "Capek bayar langganan AI yang makin hari makin mahal? Kenalan sama Xiaomi Mimo, si penantang Claude yang siap guncang pasar.",
+      "url": "https://x.com/HDN_sol/status/2059546870494753208",
+      "likes": 2,
+      "reposts": 1,
+      "replies": 2,
+      "views": 237,
+      "bookmarks": 0,
+      "publish_time": "1 小時前",
+      "captured_at": "2026-05-27T18:05:00+08:00",
+      "hook_type": [
+        "Money",
+        "Controversy"
+      ],
+      "emotion_type": [
+        "Anxiety",
+        "FOMO"
+      ],
+      "cta_type": "link",
+      "why_candidate": "AI 訂閱成本焦慮是可延伸題，但貼文與 AI Agent 搜尋意圖的相關性較弱。",
+      "signal_scores": {
+        "viral_rank_score": 0,
+        "engagement": 7,
+        "engagement_rate": 0.0295,
+        "reply_rate": 0.0084,
+        "repost_rate": 0.0042,
+        "hook_strength": "high",
+        "emotion_strength": "high",
+        "controversy_or_new_point": true,
+        "account_size_signal": "unknown_follower_count_not_visible",
+        "relevance": "weak"
+      },
+      "priority_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "爭議性或新觀點",
+        "相關性偏弱"
+      ],
+      "hook_library_matches": [],
+      "hook_library_reason": "未列入主要 hook-library 對照。"
+    }
+  ],
+  "data_quality": {
+    "platforms_collected": [
+      "x"
+    ],
+    "posts_count": 12,
+    "max_posts_per_platform": 20,
+    "excluded_examples": [
+      "與 AI Agent 無直接關係的 MacBook 討論",
+      "純回覆且無獨立分析價值的低互動貼文",
+      "疑似資源導流或低品質廣告貼文"
+    ]
+  },
+  "scoring_model": {
+    "version": "signal-first-v2",
+    "note": "不依 likes 排序；優先看留言率、轉發率、互動率、強 Hook、情緒、爭議、新觀點。強 Hook 若尚未有互動，只列觀察，不進高分 TOP。小帳號需 follower 數，本次搜尋列表未顯示，保留 unknown。",
+    "weights": {
+      "high_reply_rate": 20,
+      "high_repost_rate": 18,
+      "high_engagement_rate": 18,
+      "strong_hook_with_interaction": 14,
+      "strong_emotion_with_interaction": 10,
+      "controversy_or_new_point": 10,
+      "high_reply_count_bonus": 8,
+      "high_bookmark_signal": 6,
+      "relevance_penalty": -15,
+      "no_interaction_cap": 18
+    }
+  },
+  "hook_library_reference": {
+    "path": "knowledge/hook-library.md",
+    "categories": [
+      "Curiosity",
+      "Fear",
+      "Productivity",
+      "Money"
+    ],
+    "applied_at": "2026-05-27T18:15:00+08:00"
+  }
+}

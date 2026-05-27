@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1",
+  "collection_mode": "manual_or_semi_automated",
+  "collected_by": "human",
+  "date": "YYYY-MM-DD",
+  "timezone": "Asia/Taipei",
+  "scope": {
+    "platforms": ["x", "threads"],
+    "topics": ["AI", "Tech", "ChatGPT", "AI Agent", "MCP"],
+    "rules": [
+      "只讀取公開貼文",
+      "不操作按讚、留言、轉貼、追蹤",
+      "不讀取私人訊息",
+      "不修改帳號設定",
+      "不繞過平台限制"
+    ]
+  },
+  "queries": [
+    {
+      "platform": "x",
+      "query": "AI Agent",
+      "time_window": "last_24_hours",
+      "notes": "優先收集高互動、強 Hook、具體案例或工具清單貼文。"
+    },
+    {
+      "platform": "threads",
+      "query": "ChatGPT",
+      "time_window": "last_24_hours",
+      "notes": "優先收集自然口語、留言活躍、可引發共鳴的貼文。"
+    }
+  ],
+  "posts": [
+    {
+      "id": "x-001",
+      "platform": "x",
+      "source_query": "AI Agent",
+      "author_display_name": "Example Author",
+      "author_handle": "@example",
+      "author_profile_url": "https://x.com/example",
+      "post_text": "貼上公開貼文內容摘要或短摘錄。避免放入不必要的長段全文。",
+      "post_url": "https://x.com/example/status/0000000000000000000",
+      "published_at": "YYYY-MM-DDTHH:mm:ss+08:00",
+      "captured_at": "YYYY-MM-DDTHH:mm:ss+08:00",
+      "language": "zh-TW",
+      "media_type": ["text", "image"],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "replies": 0,
+        "views": 0,
+        "saves": null
+      },
+      "candidate_signals": {
+        "hook_strength": "medium",
+        "emotion": ["curiosity", "fomo"],
+        "cta_type": "none",
+        "topic_timeliness": "high",
+        "practical_value": "medium"
+      },
+      "why_candidate": "範例：發布後短時間互動高，且開頭承諾明確成果。",
+      "collector_notes": "人工備註：例如截圖顯示留言區有多個追問。"
+    },
+    {
+      "id": "threads-001",
+      "platform": "threads",
+      "source_query": "ChatGPT",
+      "author_display_name": "Example Creator",
+      "author_handle": "@creator",
+      "author_profile_url": "https://www.threads.net/@creator",
+      "post_text": "貼上公開貼文內容摘要或短摘錄。",
+      "post_url": "https://www.threads.net/@creator/post/XXXXXXXX",
+      "published_at": "YYYY-MM-DDTHH:mm:ss+08:00",
+      "captured_at": "YYYY-MM-DDTHH:mm:ss+08:00",
+      "language": "zh-TW",
+      "media_type": ["text"],
+      "metrics": {
+        "likes": 0,
+        "reposts": null,
+        "quotes": null,
+        "replies": 0,
+        "views": null,
+        "saves": null
+      },
+      "candidate_signals": {
+        "hook_strength": "high",
+        "emotion": ["surprise", "relatability"],
+        "cta_type": "comment",
+        "topic_timeliness": "medium",
+        "practical_value": "high"
+      },
+      "why_candidate": "範例：語氣自然，留言區有大量共鳴與追問。",
+      "collector_notes": "人工備註：Threads 指標不足時，補充可觀察到的討論品質。"
+    }
+  ]
+}
