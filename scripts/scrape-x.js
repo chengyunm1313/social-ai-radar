@@ -1,8 +1,10 @@
 import fs from "node:fs/promises";
+import crypto from "node:crypto";
 import { chromium } from "playwright";
 
-const SEARCH_URL = "https://x.com/search?q=AI%20Agent&src=typed_query&f=top";
+const DEFAULT_KEYWORD = process.env.SOCIAL_RADAR_QUERY ?? "AI Agent";
 const OUTPUT_PATH = "input/x-ai-agent-raw.json";
+const TOPIC_PRESETS_PATH = "config/topic-presets.json";
 const DEBUG_HTML_PATH = "output/debug-x-page.html";
 const DEBUG_SCREENSHOT_PATH = "output/debug-x-screenshot.png";
 const DEBUG_TEXT_PATH = "output/debug-x-text.txt";
@@ -13,6 +15,8 @@ const BROWSER_CHANNEL = process.env.SOCIAL_RADAR_BROWSER_CHANNEL ?? "chrome";
 const WAIT_MS = Number(process.env.SOCIAL_RADAR_WAIT_MS ?? 60_000);
 const SCROLL_TIMES = Number(process.env.SOCIAL_RADAR_SCROLL_TIMES ?? 5);
 const SCROLL_DELAY_MS = Number(process.env.SOCIAL_RADAR_SCROLL_DELAY_MS ?? 2_000);
+const POSTS_PER_KEYWORD = Number(process.env.SOCIAL_RADAR_POSTS_PER_KEYWORD ?? 10);
+const SEARCH_TAB = process.env.X_SEARCH_TAB ?? "top";
 
 const RULES = [
   "只讀取公開可見貼文",
@@ -31,13 +35,18 @@ async function main() {
   await fs.mkdir("input", { recursive: true });
   await fs.mkdir("output", { recursive: true });
 
+  const searchPlan = await buildSearchPlan();
   const browserSession = await openBrowserSession();
   const { page } = browserSession;
   const capturedAt = new Date().toISOString();
-  const seen = new Set();
+  const seen = {
+    urls: new Set(),
+    textHashes: new Set()
+  };
   const posts = [];
 
-  console.log(`[scrape-x] Opening ${SEARCH_URL}`);
+  console.log(`[scrape-x] Search mode: ${searchPlan.preset ? `preset:${searchPlan.preset}` : "single keyword"}`);
+  console.log(`[scrape-x] Keywords: ${searchPlan.keywords.join(", ")}`);
   console.log(`[scrape-x] Browser mode: ${BROWSER_MODE}`);
   if (BROWSER_MODE === "cdp") console.log(`[scrape-x] CDP endpoint: ${CDP_URL}`);
   if (BROWSER_MODE !== "cdp") {
@@ -47,23 +56,33 @@ async function main() {
   console.log("[scrape-x] Read-only rules:");
   for (const rule of RULES) console.log(`- ${rule}`);
 
-  if (!page.url().includes("/search")) {
-    await page.goto(SEARCH_URL, {
+  for (const [keywordIndex, keyword] of searchPlan.keywords.entries()) {
+    const searchUrl = buildSearchUrl(keyword);
+    const beforeCount = posts.length;
+
+    console.log(`[scrape-x] Opening ${searchUrl}`);
+    await page.goto(searchUrl, {
       waitUntil: "domcontentloaded",
       timeout: 60_000
     });
-  }
 
-  console.log(`[scrape-x] Waiting ${Math.round(WAIT_MS / 1000)} seconds for manual login or page adjustment...`);
-  await page.waitForTimeout(WAIT_MS);
+    if (keywordIndex === 0) {
+      console.log(`[scrape-x] Waiting ${Math.round(WAIT_MS / 1000)} seconds for manual login or page adjustment...`);
+      await page.waitForTimeout(WAIT_MS);
+    } else {
+      await page.waitForTimeout(SCROLL_DELAY_MS);
+    }
 
-  await collectFromPage(page, posts, seen);
+    await collectFromPage(page, posts, seen, keyword, POSTS_PER_KEYWORD);
 
-  for (let i = 1; i <= SCROLL_TIMES; i += 1) {
-    console.log(`[scrape-x] Scrolling ${i}/${SCROLL_TIMES}`);
-    await page.mouse.wheel(0, 1200);
-    await page.waitForTimeout(SCROLL_DELAY_MS);
-    await collectFromPage(page, posts, seen);
+    for (let i = 1; i <= SCROLL_TIMES && countKeywordPosts(posts, keyword) < POSTS_PER_KEYWORD; i += 1) {
+      console.log(`[scrape-x] ${keyword}: scrolling ${i}/${SCROLL_TIMES}`);
+      await page.mouse.wheel(0, 1200);
+      await page.waitForTimeout(SCROLL_DELAY_MS);
+      await collectFromPage(page, posts, seen, keyword, POSTS_PER_KEYWORD);
+    }
+
+    console.log(`[scrape-x] ${keyword}: saved ${posts.length - beforeCount} new posts (${countKeywordPosts(posts, keyword)} total for keyword)`);
   }
 
   const debug = await writeDebugArtifacts(page);
@@ -75,21 +94,25 @@ async function main() {
 
   if (posts.length === 0 && debug.bodyText.trim()) {
     console.log("[scrape-x] No structured tweets found. Falling back to body text blocks.");
-    collectFromBodyText(debug.bodyText, posts, seen);
+    collectFromBodyText(debug.bodyText, posts, seen, searchPlan.keywords[0], POSTS_PER_KEYWORD);
   }
 
   const payload = {
-    schema_version: "0.3",
+    schema_version: "0.5",
     collection_mode: "phase3_playwright_manual_read_only",
+    search_mode: searchPlan.preset ? "preset" : "single_keyword",
+    preset: searchPlan.preset,
     platform: "x",
-    query: "AI Agent",
-    url: SEARCH_URL,
+    query: searchPlan.keywords.length === 1 ? searchPlan.keywords[0] : searchPlan.keywords,
+    keywords: searchPlan.keywords,
+    url: buildSearchUrl(searchPlan.keywords[0]),
     captured_at: capturedAt,
     rules: RULES,
     limits: {
       wait_ms: WAIT_MS,
       scroll_times: SCROLL_TIMES,
-      scroll_delay_ms: SCROLL_DELAY_MS
+      scroll_delay_ms: SCROLL_DELAY_MS,
+      posts_per_keyword: POSTS_PER_KEYWORD
     },
     posts
   };
@@ -98,6 +121,36 @@ async function main() {
   console.log(`[scrape-x] Saved ${posts.length} posts to ${OUTPUT_PATH}`);
 
   await closeBrowserSession(browserSession);
+}
+
+async function buildSearchPlan() {
+  const preset = getCliOption("preset") ?? process.env.SOCIAL_RADAR_PRESET ?? process.env.npm_config_preset ?? null;
+  if (!preset) {
+    return {
+      preset: null,
+      keywords: [getCliOption("keyword") ?? DEFAULT_KEYWORD]
+    };
+  }
+
+  const presets = JSON.parse(await fs.readFile(TOPIC_PRESETS_PATH, "utf8"));
+  const keywords = presets[preset];
+  if (!Array.isArray(keywords) || keywords.length === 0) {
+    throw new Error(`找不到 topic preset：${preset}。請檢查 ${TOPIC_PRESETS_PATH}`);
+  }
+
+  return {
+    preset,
+    keywords
+  };
+}
+
+function getCliOption(name) {
+  const prefix = `--${name}=`;
+  return process.argv.find((arg) => arg.startsWith(prefix))?.slice(prefix.length) ?? null;
+}
+
+function buildSearchUrl(keyword) {
+  return `https://x.com/search?q=${encodeURIComponent(keyword)}&src=typed_query&f=${encodeURIComponent(SEARCH_TAB)}`;
 }
 
 async function openBrowserSession() {
@@ -162,7 +215,9 @@ async function closeBrowserSession(session) {
   await session.context.close();
 }
 
-async function collectFromPage(page, posts, seen) {
+async function collectFromPage(page, posts, seen, keyword, maxPostsForKeyword) {
+  if (countKeywordPosts(posts, keyword) >= maxPostsForKeyword) return;
+
   const strategies = [
     {
       name: 'article[data-testid="tweet"]',
@@ -183,8 +238,10 @@ async function collectFromPage(page, posts, seen) {
     console.log(`[scrape-x] ${strategy.name} count: ${elements.length}`);
 
     for (const element of elements) {
+      if (countKeywordPosts(posts, keyword) >= maxPostsForKeyword) return;
+
       const text = await element.innerText().catch(() => "");
-      if (!looksLikePostText(text)) continue;
+      if (!looksLikePostText(text, keyword)) continue;
 
       const url = await element
         .locator('a[href*="/status/"]')
@@ -194,6 +251,7 @@ async function collectFromPage(page, posts, seen) {
       addPost({
         posts,
         seen,
+        keyword,
         text,
         url,
         sourceMethod: strategy.name
@@ -224,15 +282,17 @@ async function writeDebugArtifacts(page) {
   };
 }
 
-function collectFromBodyText(bodyText, posts, seen) {
+function collectFromBodyText(bodyText, posts, seen, keyword, maxPostsForKeyword) {
   const blocks = splitCandidateBlocks(bodyText);
   console.log(`[scrape-x] body text candidate block count: ${blocks.length}`);
 
   for (const block of blocks) {
-    if (!looksLikePostText(block)) continue;
+    if (countKeywordPosts(posts, keyword) >= maxPostsForKeyword) return;
+    if (!looksLikePostText(block, keyword)) continue;
     addPost({
       posts,
       seen,
+      keyword,
       text: block,
       url: firstMatch(block, /(https?:\/\/\S+)/),
       sourceMethod: "document.body.innerText fallback"
@@ -263,23 +323,26 @@ function splitCandidateBlocks(bodyText) {
   }
 
   if (current.length > 0) blocks.push(current.join("\n"));
-  return blocks.filter((block) => /AI Agent|agent|Agent|人工智慧|智能體/i.test(block));
+  return blocks;
 }
 
-function addPost({ posts, seen, text, url, sourceMethod }) {
+function addPost({ posts, seen, keyword, text, url, sourceMethod }) {
   const cleanedText = text.trim();
-  const key = url || cleanedText.slice(0, 220);
-  if (!cleanedText || seen.has(key)) return;
-  seen.add(key);
+  const textHash = hashText(cleanedText);
+  if (!cleanedText) return;
+  if (url && seen.urls.has(url)) return;
+  if (seen.textHashes.has(textHash)) return;
+  if (url) seen.urls.add(url);
+  seen.textHashes.add(textHash);
 
-  const metrics = parseMetrics(cleanedText);
+  const engagement = parseEngagement(cleanedText);
   const authorHandle = firstMatch(cleanedText, /@([A-Za-z0-9_]+)/);
   const publishTime = firstMatch(cleanedText, /(\d+\s*(?:秒|分鐘|小時)前|\d+月\d+日|\d{4}年\d+月\d+日)/);
 
   posts.push({
     index: posts.length + 1,
     platform: "x",
-    keyword: "AI Agent",
+    keyword,
     author: parseAuthor(cleanedText),
     author_handle: authorHandle ? `@${authorHandle}` : null,
     publish_time: publishTime,
@@ -288,43 +351,158 @@ function addPost({ posts, seen, text, url, sourceMethod }) {
     url,
     captured_at: new Date().toISOString(),
     source_method: sourceMethod,
-    metrics
+    text_hash: textHash,
+    metrics: engagement.metrics,
+    engagementParseDebug: engagement.debug
   });
 }
 
-function looksLikePostText(text) {
+function looksLikePostText(text, keyword = DEFAULT_KEYWORD) {
   const cleaned = String(text ?? "").trim();
   if (cleaned.length < 20) return false;
-  if (!/AI Agent|agent|Agent|人工智慧|智能體/i.test(cleaned)) return false;
+  if (!matchesKeyword(cleaned, keyword) && !/AI|agent|Claude|Cursor|MCP|OpenAI|Gemini|SaaS|startup|automation|workflow|人工智慧|智能體/i.test(cleaned)) return false;
   if (/搜尋篩選|跟隨誰|流行趨勢|服務條款|隱私政策/.test(cleaned)) return false;
   return true;
 }
 
-function parseMetrics(text) {
+function matchesKeyword(text, keyword) {
+  return keyword
+    .split(/\s+/)
+    .filter(Boolean)
+    .some((part) => new RegExp(escapeRegex(part), "i").test(text));
+}
+
+function countKeywordPosts(posts, keyword) {
+  return posts.filter((post) => post.keyword === keyword).length;
+}
+
+function hashText(text) {
+  return crypto
+    .createHash("sha1")
+    .update(String(text ?? "").replace(/\s+/g, " ").trim().toLowerCase())
+    .digest("hex");
+}
+
+function parseEngagement(text) {
+  const labeled = parseLabeledMetrics(text);
+  const tail = parseXMetricTail(text);
+  const metrics = mergeMetrics(labeled.metrics, tail.metrics);
+
   return {
-    replies: metricBefore(text, /則回覆|repl(?:y|ies)/i),
-    reposts: metricBefore(text, /次轉發|reposts?/i),
-    likes: metricBefore(text, /個喜歡|likes?/i),
-    bookmarks: metricBefore(text, /個書籤|bookmarks?/i),
-    views: metricBefore(text, /次觀看|views?/i)
+    metrics,
+    debug: {
+      before: emptyMetrics(),
+      after: metrics,
+      sourceMethods: [
+        ...labeled.methods,
+        ...tail.methods
+      ],
+      rawTail: String(text ?? "").split(/\r?\n/).map((line) => line.trim()).filter(Boolean).slice(-10).join("\n")
+    }
   };
 }
 
-function metricBefore(text, labelPattern) {
-  const normalized = text.replace(/,/g, "");
-  const regex = new RegExp(`([0-9]+(?:\\.[0-9]+)?\\s*(?:萬|K|M)?)\\s*(?:${labelPattern.source})`, "i");
-  const match = normalized.match(regex);
+function parseLabeledMetrics(text) {
+  const metrics = {
+    replies: metricNearLabel(text, ["replies", "reply", "回覆", "則回覆"]),
+    reposts: metricNearLabel(text, ["reposts", "repost", "retweets", "retweet", "轉貼", "轉發", "次轉發"]),
+    likes: metricNearLabel(text, ["likes", "like", "喜歡", "個喜歡"]),
+    bookmarks: metricNearLabel(text, ["bookmarks", "bookmark", "書籤", "收藏", "個書籤"]),
+    views: metricNearLabel(text, ["views", "view", "觀看", "次觀看", "次瀏覽"])
+  };
+
+  return {
+    metrics,
+    methods: hasAnyMetric(metrics) ? ["labeled engagement text"] : []
+  };
+}
+
+function metricNearLabel(text, labels) {
+  const labelPattern = labels.map(escapeRegex).join("|");
+  const numberPattern = "([0-9][0-9,]*(?:\\.[0-9]+)?\\s*(?:萬|K|M)?)";
+  const normalized = String(text ?? "");
+  const beforeLabel = new RegExp(`${numberPattern}\\s*(?:${labelPattern})`, "i");
+  const afterLabel = new RegExp(`(?:${labelPattern})\\s*${numberPattern}`, "i");
+  const match = normalized.match(beforeLabel) ?? normalized.match(afterLabel);
   return match ? parseCount(match[1]) : null;
 }
 
+function parseXMetricTail(text) {
+  const lines = String(text ?? "")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const values = [];
+
+  for (let index = lines.length - 1; index >= 0; index -= 1) {
+    const line = lines[index];
+    if (!isMetricToken(line)) {
+      if (values.length > 0) break;
+      continue;
+    }
+    values.unshift(parseCount(line));
+  }
+
+  if (values.length < 4) {
+    return {
+      metrics: emptyMetrics(),
+      methods: values.length > 0 ? [`x numeric tail ignored (${values.length} values)`] : []
+    };
+  }
+
+  const [replies, reposts, likes, views] = values.slice(-4);
+  return {
+    metrics: {
+      replies,
+      reposts,
+      likes,
+      bookmarks: null,
+      views
+    },
+    methods: ["x numeric tail"]
+  };
+}
+
+function isMetricToken(value) {
+  return /^[0-9][0-9,]*(?:\.[0-9]+)?\s*(?:萬|K|M)?$/i.test(String(value ?? "").trim());
+}
+
+function mergeMetrics(primary = emptyMetrics(), fallback = emptyMetrics()) {
+  return {
+    replies: primary.replies ?? fallback.replies ?? null,
+    reposts: primary.reposts ?? fallback.reposts ?? null,
+    likes: primary.likes ?? fallback.likes ?? null,
+    bookmarks: primary.bookmarks ?? fallback.bookmarks ?? null,
+    views: primary.views ?? fallback.views ?? null
+  };
+}
+
+function emptyMetrics() {
+  return {
+    replies: null,
+    reposts: null,
+    likes: null,
+    bookmarks: null,
+    views: null
+  };
+}
+
+function hasAnyMetric(metrics) {
+  return Object.values(metrics ?? {}).some((value) => value != null);
+}
+
 function parseCount(value) {
-  const raw = String(value).trim();
+  const raw = String(value ?? "").trim().replace(/,/g, "");
   const number = Number.parseFloat(raw);
   if (Number.isNaN(number)) return null;
   if (raw.includes("萬")) return Math.round(number * 10000);
   if (/K/i.test(raw)) return Math.round(number * 1000);
   if (/M/i.test(raw)) return Math.round(number * 1_000_000);
   return Math.round(number);
+}
+
+function escapeRegex(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function parseAuthor(text) {

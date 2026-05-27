@@ -8,225 +8,204 @@
 列表
 查看新貼文
 搜尋時間軸
-Cell 细胞
-@cellinlab
+Nadeem Bitar
+@shinzui
 ·
-5月26日
-时间线 刷到 好几个 Pi Agent 的推荐，
-让 Codex 帮我学了下，做了个手把手教程
+14 小時
+I’m a huge Notion fan. I use it for almost everything across work and personal life.
 
- Pi Agent 原理与实现：从零到一实现一个 AI Agent
- 在线学习：
-https://
-how-pi-agent-works.vercel.app
- 文档源码：
-https://
-github.com/cellinlab/how-
-pi-agent-works
-…
-56
-119
-584
-6.7萬
-Geek Lite
-@QingQ77
-·
-5月26日
-开源架构知识库，收录 25 个真实系统架构模板和一套系统化架构思维教程。
+But their AI and agent experience feels fundamentally limited. I had to build a custom CLI and app to properly leverage claude and codex with my knowledge base.
 
-
-https://
-github.com/study8677/awes
-ome-architecture
-…
-
-这个仓库不讲代码，只讲架构。收录了 25 个热门系统的架构模板，从电商、社交信息流、支付到 AI 网关、RAG、AI Agent，再到 Claude Code、Codex 等 AI 编码产品，每个模板拆解核心决策和常见坑。
-GitHub - study8677/awesome-architecture:  Think like a software architect, not just a coder — 21...
-來自 github.com
-8
-107
-509
-2.6萬
-xAI
-@xai
-·
-5月20日
-Starting today, use your Grok or X Premium subscription in 
-@openclaw
-. 
-
-Chat with your agent, generate images and videos, or search for X posts.
-
-
-http://
-x.ai/news/grok-open
-claw
-…
-847
-1,896
-8,784
-206萬
-付费资源分享
-@li18875786
+Notion is great as a workspace,
+顯示更多
+引用
+Ivan Zhao
+@ivanhzhao
 ·
 15 小時
-AI漫剧艺术美学，视觉叙事学习宝典
-
-https://
-pan.quark.cn/s/3ed7dce2d99b
-设计师的AI绘画商业系统课｜SD+MJ+ChatGPT全工具实操落地课
-
-https://
-pan.quark.cn/s/68849b822a64
-Java转 AI高薪领域必备-从0到1打通生产级AI Agent开发
-
-https://
-pan.quark.cn/s/8a86ec9b4a75
-拉钩-22讲通关Go语言-Go语言布道者的入门笔记
-
-https://
-pan.quark.cn/s/a862e97f3be7
-14
-3
-15
-1,229
-GitTrend
-@GitTrend0x
-·
-14 小時
-今天 GitHub 被智慧型 AI Agent 军团全面屠榜了
-
-5 个星标暴增最狠的项目，专业拆解下：
-
-1. Lum1104/Understand-Anything
- 把任意代码或知识库变成可交互的知识图谱，能探索、搜索、直接问问题。完美支持 Claude Code、Cursor、Copilot、Gemini 等。
-顯示更多
-引用
-GitTrend
-@GitTrend0x
-·
-5月25日
-今天 GitHub 又被 Agent 基建军团屠榜了
-
-5 个星标暴增最狠的项目，专业拆解下：
-
-1. multica-ai/multica
- 开源托管 Agent 平台，把编码 Agent 变成真正队友——分配任务、跟踪进度、技能复合。
-  直达：
-https://
-github.com/multica-ai/mul
-tica
-…
- 以前 Agent 各自为战，现在直接组团打boss。项目管理 + AI
-3
-5
-17
-3,606
-Ren
-@FakeMaidenMaker
-·
-14 小時
- Datawhale 刚开源了一份 AI Agent 学习路线宝藏——Agent Learning Hub
-
-仓库才上线 9 天，GitHub 就飙到 1.6K Star，还在持续飙升中
-
-它把社区分享、官方博客、论文、开源项目整理成一份能照着打勾执行的 AI Agent 学习 todo list，从 Stage 0「理解 agent 是什么」一路推到 Stage 8「上线一个真实
-顯示更多
-引用
-Ren
-@FakeMaidenMaker
-·
-5月21日
-GitHub 上一个叫《Learn Harness Engineering》的开源课程最近上了 Hacker News 首页（155 分、5.1k stars），
-主题是 AI coding agent 的可靠性工程——也就是 OpenAI 和 Anthropic 最近几个月一直在讲的 harness engineering。
-
-
-https://
-github.com/walkinglabs/le
-arn-harness-engineering
-…
-
-作者是清华 SIGS 的开源团队
-15
-9
-36
-2,772
-GitTrend
-@GitTrend0x
-·
-5月26日
-网站抓取永不被封杀手级开源神器
-
-
-https://
-github.com/unclecode/craw
-l4ai
-…
-
-这就是 Crawl4AI，专为 AI Agent 设计的下一代智能爬虫神器！把任意网站秒变成干净、可直接喂给 LLM 的 Markdown / 结构化数据，内置超强反封锁机制，再也不用担心被 Cloudflare、Akamai、PerimeterX、DataDome 等各种防护狂封了！
-引用
-GitTrend
-@GitTrend0x
-·
-5月26日
-AI Agent 从小白变大神进阶神器
-
-
-https://
-github.com/pguso/ai-agent
-s-from-scratch
-…
-
-这就是 ai-agents-from-scratch，3.9k star 爆款「真正把 AI Agent 讲明白」的开源教程项目！它不是又一个封装好的 Agent 框架，而是手把手教你从零开始自己造 Agent，用本地 LLM + Node.js，把 LLM + System Prompt + Tools + Memory +
+This is Notion today (and the direction we are doubling down to build/rebuild) x.com/nbaschez/statu…
 8
-33
-125
-1.4萬
-高军
-@GoJun315
+1
+16
+8,298
+Ahmed E.
+@aelshimy_
 ·
-5月12日
-终于有人把微信数据接入 AI Agent 这件事做了。
+58 分鐘
+回覆 
+@shinzui
+this is exactly the gap we’re thinking about at dart.
 
-wx-cli，一个命令行工具，能让 Claude Code、Codex 这些 Agent 直接读取我们本地的微信数据，做查询、分析和总结。
+an ai-native workspace can’t just be “chat with the knowledge base.”
 
-- 全库聊天记录搜索，支持按时间、按群组过滤
-- 朋友圈历史回溯，点赞、评论、原帖都能翻
-- 聊天记录一键导出 Markdown 或 JSON
--
-顯示更多
-10
-5
-60
-4,585
-GitHubDaily
-@GitHub_Daily
+the agent has to live in the workflow: assigned to tasks, producing output, handing work back, and leaving a trail the team can inspect.
+1
+11
+李不凯正在研究
+@libukai
 ·
-5月25日
-平时用各种 AI Agent，总感觉缺乏长时记忆，每次都要反复粘贴当前的工作上下文，沟通成本极高。
+3月5日
+今天 openai 发了下面这个新玩意，算是官方下场做多 Agent 任务编排了。
 
-在 GitHub 上看到 OpenChronicle 这个项目，给 AI 智能体加上本地记忆能力，类似 OpenAI Chronicle 的开源替代方案。
+不过这个新产品不是重点，倒是某篇新闻稿中的一句话逗乐我了：目前它们都偏向于理念展示，功能还比较简陋，但它指向了下一个发展的方向，人类如何更好的培养和管理AI，并克服微操冲动是新的重要命题。
 
-它在后台监听你 Mac
+我感觉这篇新闻稿应该是
 顯示更多
-31
-7
+GitHub - openai/symphony: Symphony turns project work into isolated, autonomous implementation...
+來自 github.com
+7,101
+Egor K.
+@egorkabantsov
+·
+7 小時
+Hi, I'm new to X and looking to #connect with #founders, #buildinpublic builders & devtool people.
+
+especially interested in: 
+ B2B SaaS & early-stage startups 
+ AI coding agents, terminals & MCPs
+ Cursor, Claude Code, Codex & workflows
+
+Say hi in replies. Let's be mutuals
 30
-5,522
+22
+868
+Jenny Park
+@createwithjenny
+·
+1 小時
+回覆 
+@egorkabantsov
+Hi Egor, same here. I’m building around AI apps + agent workflows and trying to connect with more builders/product people. Happy to swap notes on Codex/Claude workflows.
+1
+1
+14
+freeCodeCamp.org
+@freeCodeCamp
+·
+21 小時
+Modern systems generate a ton of logs - and these are key to understanding issues with the system.
+
+But reading and understanding all this data requires a lot of effort and time. This is where an AI agent can help.
+
+In this guide, 
+@manishmshiva
+ teaches you how to build and deploy
+顯示更多
+5
+29
+222
+8,144
 GitHubDaily
 @GitHub_Daily
 ·
-5月25日
-平时刷抖音看到一些电影解说视频，自己想做得找素材、写脚本、配音再剪辑，实在耗时耗力直接被劝退。
+5月1日
+用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特征。
 
-偶然看到 narrator-ai-cli-skill 这个项目，让 AI Agent 学会做电影解说视频，全程自动化。
+最近刷到 camofox-browser 这个项目，直接在浏览器底层伪装指纹，不是靠 JavaScript 补丁去糊弄检测。
 
-只需对着 AI 说一句「帮我做一个电影解说」，就会自动搜索影片、选模板、配音乐、生成脚本、合成视频。
+基于 Camoufox 封装了一套专为 AI
 顯示更多
-33
+34
+94
+514
+3.9萬
+余温
+@gkxspace
+·
+5月6日
+推特现在最火的就是AI中转站！几乎人均一个，连孙哥都下场做了
+http://
+B.AI，尽管有人吐槽“价格不透明、缓存读翻倍、随时加价”……
+
+但这些还是“工具级”竞争，大家只会比谁的价格更低。
+
+WorldClaw 也在搞中转，但同时也在搭建 “Agent经济的操作系统”。
+
+想象一下：
+顯示更多
+引用
+WorldClaw
+@WorldClawAI
+·
+5月5日
+0:42
+Today, WorldClaw launches WorldRouter with @worldlibertyfi, one simple account to access 300+ AI models with competitive fees*.
+
+No more jumping between ChatGPT, Claude and all the others. Same power, way cheaper.
+
+This is your first step into the WorldClaw AgentOS.
+
+
+ 付費合作關係
+10
+2
+11
+1.7萬
+Vince 聊开发
+@vincemask
+·
+12 小時
+Anthropic 的 AI 工程师刚放出了一场直播大师课，讲怎么把一整套生产级 AI Agent 团队交付上线。
+
+Anthropic 团队亲自讲的建议看下
+
+她聊了这些：
+
+1、三个核心组件：大脑（人格）、双手（环境）、会话
+2、服务端循环，页面刷新也不会崩
+3、Agent 团队上线速度快 10–15 倍
+4、为什么大多数 Agent
+顯示更多
+引用
+Movez
+@0xMovez
+·
+22 小時
+Anthropic AI engineer just dropped a live masterclass on how to ship a team of production‑ready AI agents.
+
+37 minutes. Free. From the Anthropic team.
+
+here’s what she covers:
+
+• 3 building blocks: brain, hands, sessions
+• server-side loop, so nothing breaks on refresh
+• agent  x.com/0xCodez/status…
+1
+7
+24
+2,945
+AlphaFox
+@alphafox
+·
+2 小時
+People that have to work today - what are you even doing? 
+30
+2
+37
+2,791
+Eric Haley
+@EricHaley88
+·
+34 分鐘
+回覆 
+@alphafox
+Doing construction on a stadium.... while also talking to my AI agent which is working on a project for me at home.
+1
+3
+GitHubDaily
+@GitHub_Daily
+·
+5月13日
+让 AI Agent 访问多个外部服务，要对接不同的 SDK 和 API，还是不同的调用逻辑，维护起来很头疼。
+
+最近看到 Mirage 这个项目，挺有意思的。它把所有外部服务统一套在一个虚拟文件系统，让 AI 智能体用命令就能操作所有数据源。
+
+就是说，把 S3、Google Drive、Slack、GitHub、Redis
+顯示更多
+7
+2
 13
-51
-5,739
+4,155
 搜尋篩選
 人物
 來自任何人
@@ -239,12 +218,12 @@ GitHubDaily
 有什麼新鮮事
 台灣 的流行趨勢
 freedom of money
-台灣 的流行趨勢
-#foma
 商業・金融 · 流行趨勢
 TSMC
-商業・金融 · 流行趨勢
-Base
+台灣 的流行趨勢
+CHARMISS X ORM KORNNAPHAT
+台灣 的流行趨勢
+#foma
 顯示更多
 跟隨誰
 小小东

@@ -1,14 +1,15 @@
 {
-  "schema_version": "0.4",
-  "collection_mode": "hybrid_computer_use_manual_text",
+  "schema_version": "0.3",
+  "collection_mode": "phase3_playwright_manual_read_only",
   "platform": "x",
-  "keyword": "AI Agent",
-  "captured_at": "2026-05-27T16:44:02.977Z",
-  "source_input": "input/manual-x.txt",
+  "query": "AI Agent",
+  "url": "https://x.com/search?q=AI%20Agent&src=typed_query&f=top",
+  "captured_at": "2026-05-27T17:17:57.301Z",
   "rules": [
-    "使用平常 Chrome 登入 X",
-    "Codex 使用 Computer Use 操作 Chrome",
-    "只讀取公開可見內容",
+    "只讀取公開可見貼文",
+    "允許使用者手動登入或調整頁面",
+    "不自動登入",
+    "不繞過平台限制",
     "不按讚",
     "不留言",
     "不轉貼",
@@ -16,54 +17,169 @@
     "不讀私人訊息",
     "不修改帳號設定"
   ],
+  "limits": {
+    "wait_ms": 60000,
+    "scroll_times": 5,
+    "scroll_delay_ms": 2000
+  },
   "posts": [
     {
       "index": 1,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n8// Banyak yang mulai membandingkan MiMo dengan:\nClaude\nGPT\nDeepSeek\nQwen\nKimi\nKarena Xiaomi bermain agresif di:\n💰 harga murah\n⚡ performa coding\n🧠 token/context besar\n8// 許多人開始將 MiMo 與以下作品比較：\n克勞德\nGPT\n深尋\nQwen\n尋找\n因為小米在以下領域積極參與：\n💰  便宜價格\n⚡  編碼效能\n🧠  大型標記/上下文",
-      "text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n8// Banyak yang mulai membandingkan MiMo dengan:\nClaude\nGPT\nDeepSeek\nQwen\nKimi\nKarena Xiaomi bermain agresif di:\n💰 harga murah\n⚡ performa coding\n🧠 token/context besar\n8// 許多人開始將 MiMo 與以下作品比較：\n克勞德\nGPT\n深尋\nQwen\n尋找\n因為小米在以下領域積極參與：\n💰  便宜價格\n⚡  編碼效能\n🧠  大型標記/上下文",
-      "url": null,
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "加密小韭菜",
+      "author_handle": "@Luckyjudy666",
+      "publish_time": "5月26日",
+      "post_text": "加密小韭菜\n@Luckyjudy666\n·\n16 小時\nGithub狂揽19万星，AI Agent的优化系统来了！ \n\nECC是一个用于优化 AI 编程助手性能的系统。 \n\n 简单来说，它的主要目标是增强并规范各种主流AI Agent的行为和能力，如 Claude Code, Cursor, GitHub Copilot, Codex, OpenCode 等。  \n\n有了ECC，这些 AI\n顯示更多\n引用\n加密小韭菜\n@Luckyjudy666\n·\n5月26日\n白嫖党最爱，\n\n这个github项目整理了全球最优质的、完全免费的软件和应用程序，\n\n他帮助用户省去在海量网络信息中筛选安全、好用软件的时间。\n\n这个项目的分类极为详尽，几乎覆盖了我们使用电脑的方方面面。\n\n1. 开发者工具 ：\n\n包括 API x.com/Luckyjudy666/s…\n45\n4\n34\n3,053",
+      "text": "Github狂揽19万星，AI Agent的优化系统来了！ ECC是一个用于优化 AI 编程助手性能的系统。 简单来说，它的主要目标是增强并规范各种主流AI Agent的行为和能力，如 Claude Code, Cursor, GitHub Copilot, Codex, OpenCode 等。 有了ECC，这些 AI 顯示更多 引用 加密小韭菜 @Luckyjudy666 · 5月26日 白嫖党最爱， 这个github项目整理了全球最优质的、完全免费的软件和应用程序， 他帮助用户省去在海量网络信息中筛选安全、好用软件的时间。 这个项目的分类极为详尽，几乎覆盖了我们使用电脑的方方面面。 1. 开发者工具 ： 包括 API x.com/Luckyjudy666/s… 45 4 34 3,053",
+      "url": "https://x.com/Luckyjudy666/status/2059443635859738879",
+      "captured_at": "2026-05-27T17:18:57.375Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 45,
+        "reposts": 4,
+        "likes": 34,
         "bookmarks": null,
-        "views": null
+        "views": 3053
       },
-      "author_handle": "@HDN_sol",
-      "publish_time": "2 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 45,
+          "reposts": 4,
+          "likes": 34,
+          "bookmarks": null,
+          "views": 3053
+        },
+        "after": {
+          "replies": 45,
+          "reposts": 4,
+          "likes": 34,
+          "bookmarks": null,
+          "views": 3053
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "白嫖党最爱，\n这个github项目整理了全球最优质的、完全免费的软件和应用程序，\n他帮助用户省去在海量网络信息中筛选安全、好用软件的时间。\n这个项目的分类极为详尽，几乎覆盖了我们使用电脑的方方面面。\n1. 开发者工具 ：\n包括 API x.com/Luckyjudy666/s…\n45\n4\n34\n3,053",
+        "hotScore": 177
+      },
+      "hotScore": 177,
+      "timestampConfidence": "high",
+      "engagementSummary": "score: 177；回覆 45、轉發 4、喜歡 34、收藏 未取得、觀看 3053",
+      "summary": "Github狂揽19万星，AI Agent的优化系统来了！ ECC是一个用于优化 AI 编程助手性能的系统。 简单来说，它的主要目标是增强并规范各种主流AI Agent的行为和...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Productivity",
+        "Personal Story"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "click_link",
+      "viral_signals": [
+        "高留言率",
+        "高留言量",
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 56,
+      "viral_reason": "能引發回覆或排錯討論",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
     },
     {
       "index": 2,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n9// Apakah MiMo sudah lebih bagus dari Claude?\nBelum sepenuhnya.\nClaude masih unggul di:\nreasoning premium\nwriting natural\nenterprise quality\nTapi untuk:\n✅ coding\n✅ AI agent\n✅ automation\n✅ harga hemat\nMiMo mulai jadi ancaman serius.\n9// MiMo 比 Claude 好嗎？\n不完全是。\n克勞德仍然擅長：\n理性高級\n寫作自然\n企業品質\n但對於：\n✅  編碼\n✅  AI 代理人\n✅  自動化\n✅  成本效益\nMiMo 正逐漸成為嚴重威脅。",
-      "text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n9// Apakah MiMo sudah lebih bagus dari Claude?\nBelum sepenuhnya.\nClaude masih unggul di:\nreasoning premium\nwriting natural\nenterprise quality\nTapi untuk:\n✅ coding\n✅ AI agent\n✅ automation\n✅ harga hemat\nMiMo mulai jadi ancaman serius.\n9// MiMo 比 Claude 好嗎？\n不完全是。\n克勞德仍然擅長：\n理性高級\n寫作自然\n企業品質\n但對於：\n✅  編碼\n✅  AI 代理人\n✅  自動化\n✅  成本效益\nMiMo 正逐漸成為嚴重威脅。",
-      "url": null,
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "GitHubDaily",
+      "author_handle": "@GitHub_Daily",
+      "publish_time": "5月1日",
+      "post_text": "GitHubDaily\n@GitHub_Daily\n·\n5月1日\n用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特征。\n\n最近刷到 camofox-browser 这个项目，直接在浏览器底层伪装指纹，不是靠 JavaScript 补丁去糊弄检测。\n\n基于 Camoufox 封装了一套专为 AI\n顯示更多\n34\n94\n514\n3.9萬",
+      "text": "用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特征。 最近刷到 camofox-browser 这个项目，直接在浏览器底层伪装指纹，不是靠 JavaScript 补丁去糊弄检测。 基于 Camoufox 封装了一套专为 AI 顯示更多 34 94 514 3.9萬",
+      "url": "https://x.com/GitHub_Daily/status/2050062696612258108",
+      "captured_at": "2026-05-27T17:19:03.676Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 34,
+        "reposts": 94,
+        "likes": 514,
         "bookmarks": null,
-        "views": null
+        "views": 39000
       },
-      "author_handle": "@HDN_sol",
-      "publish_time": "2 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 34,
+          "reposts": 94,
+          "likes": 514,
+          "bookmarks": null,
+          "views": 39000
+        },
+        "after": {
+          "replies": 34,
+          "reposts": 94,
+          "likes": 514,
+          "bookmarks": null,
+          "views": 39000
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "·\n5月1日\n用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特征。\n最近刷到 camofox-browser 这个项目，直接在浏览器底层伪装指纹，不是靠 JavaScript 补丁去糊弄检测。\n基于 Camoufox 封装了一套专为 AI\n顯示更多\n34\n94\n514\n3.9萬",
+        "hotScore": 804
+      },
+      "hotScore": 804,
+      "timestampConfidence": "high",
+      "engagementSummary": "score: 804；回覆 34、轉發 94、喜歡 514、收藏 未取得、觀看 39000",
+      "summary": "用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特征。 最近刷到 camofox-browser 这个项目，直接在浏览器底层...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Controversy"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "高留言量",
+        "強 Hook",
+        "情緒強烈",
+        "爭議性或新觀點",
+        "高資訊密度"
+      ],
+      "signal_score": 46,
+      "viral_reason": "能引發回覆或排錯討論；有反常識或爭議觀點",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
     },
     {
       "index": 3,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n2// Xiaomi resmi masuk perang AI lewat MiMo, model AI baru yang mulai disebut-sebut sebagai “penantang Claude” 👀\nYang bikin heboh:\n• Harga jauh lebih murah\n• Context window super besar\n• Fokus kuat di coding & AI agent\n2// 小米正式透過 MiMo 正式加入 AI 戰爭，這款新 AI 模型開始被譽為「Claude 挑戰者」  👀\n令人興奮的地方：\n• 價格便宜許多\n• 超大上下文視窗\n• 高度重視程式設計與人工智慧代理",
-      "text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n2// Xiaomi resmi masuk perang AI lewat MiMo, model AI baru yang mulai disebut-sebut sebagai “penantang Claude” 👀\nYang bikin heboh:\n• Harga jauh lebih murah\n• Context window super besar\n• Fokus kuat di coding & AI agent\n2// 小米正式透過 MiMo 正式加入 AI 戰爭，這款新 AI 模型開始被譽為「Claude 挑戰者」  👀\n令人興奮的地方：\n• 價格便宜許多\n• 超大上下文視窗\n• 高度重視程式設計與人工智慧代理",
-      "url": null,
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "李不凯正在研究",
+      "author_handle": "@libukai",
+      "publish_time": "3月5日",
+      "post_text": "李不凯正在研究\n@libukai\n·\n3月5日\n今天 openai 发了下面这个新玩意，算是官方下场做多 Agent 任务编排了。\n\n不过这个新产品不是重点，倒是某篇新闻稿中的一句话逗乐我了：目前它们都偏向于理念展示，功能还比较简陋，但它指向了下一个发展的方向，人类如何更好的培养和管理AI，并克服微操冲动是新的重要命题。\n\n我感觉这篇新闻稿应该是\n顯示更多\nGitHub - openai/symphony: Symphony turns project work into isolated, autonomous implementation...\n來自 github.com\n7,101",
+      "text": "今天 openai 发了下面这个新玩意，算是官方下场做多 Agent 任务编排了。 不过这个新产品不是重点，倒是某篇新闻稿中的一句话逗乐我了：目前它们都偏向于理念展示，功能还比较简陋，但它指向了下一个发展的方向，人类如何更好的培养和管理AI，并克服微操冲动是新的重要命题。 我感觉这篇新闻稿应该是 顯示更多 GitHub - openai/symphony: Symphony turns project work into isolated, autonomous implementation... 來自 github.com 7,101",
+      "url": "https://x.com/libukai/status/2029366552655741103",
+      "captured_at": "2026-05-27T17:19:01.560Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
         "replies": null,
         "reposts": null,
@@ -71,151 +187,576 @@
         "bookmarks": null,
         "views": null
       },
-      "author_handle": "@HDN_sol",
-      "publish_time": "2 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "after": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "sourceMethods": [
+          "x numeric tail ignored (1 values)"
+        ],
+        "rawTail": "@libukai\n·\n3月5日\n今天 openai 发了下面这个新玩意，算是官方下场做多 Agent 任务编排了。\n不过这个新产品不是重点，倒是某篇新闻稿中的一句话逗乐我了：目前它们都偏向于理念展示，功能还比较简陋，但它指向了下一个发展的方向，人类如何更好的培养和管理AI，并克服微操冲动是新的重要命题。\n我感觉这篇新闻稿应该是\n顯示更多\nGitHub - openai/symphony: Symphony turns project work into isolated, autonomous implementation...\n來自 github.com\n7,101",
+        "hotScore": null
+      },
+      "hotScore": null,
+      "timestampConfidence": "high",
+      "engagementSummary": "互動數未取得；score: null",
+      "summary": "今天 openai 发了下面这个新玩意，算是官方下场做多 Agent 任务编排了。 不过这个新产品不是重点，倒是某篇新闻稿中的一句话逗乐我了：目前它们都偏向于理念展示，功能还比...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Controversy",
+        "Personal Story"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "click_link",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "爭議性或新觀點",
+        "高資訊密度"
+      ],
+      "signal_score": 38,
+      "viral_reason": "有反常識或爭議觀點",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
     },
     {
       "index": 4,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "RubelIslam 🟦\n@rubelislam0461\n·\n4 小時\nThe Future of the Onchain Economy\nThe next stage of the onchain economy is starting to look very different. We've seen a clear evolution:\n• Wallets\n• Apps\n• Ecosystems\nNow, we are moving toward agents.\nIntroducing\n@base\nMCP\nImagine connecting your AI agent directly to your\n鏈上經濟的未來\n鏈上經濟的下一階段開始變得大不相同。我們已經看到明顯的演變：\n• 錢包\n• 應用程式\n• 生態系統\n現在，我們正朝著代理人的方向發展。\n介紹\n@base\nMCP\n想像一下，直接將你的 AI 代理連接到你的",
-      "text": "RubelIslam 🟦\n@rubelislam0461\n·\n4 小時\nThe Future of the Onchain Economy\nThe next stage of the onchain economy is starting to look very different. We've seen a clear evolution:\n• Wallets\n• Apps\n• Ecosystems\nNow, we are moving toward agents.\nIntroducing\n@base\nMCP\nImagine connecting your AI agent directly to your\n鏈上經濟的未來\n鏈上經濟的下一階段開始變得大不相同。我們已經看到明顯的演變：\n• 錢包\n• 應用程式\n• 生態系統\n現在，我們正朝著代理人的方向發展。\n介紹\n@base\nMCP\n想像一下，直接將你的 AI 代理連接到你的",
-      "url": null,
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "Higgsfield AI",
+      "author_handle": "@higgsfield",
+      "publish_time": null,
+      "post_text": "Higgsfield AI \n@higgsfield\n·\n23 小時\nSanji shares his Higgsfield Supercomputer playbook to run marketing end-to-end.\n\nHe lets the agent analyze his niche, find the winning formula, generate 100+ variations, and run A/B tests at scale, with the agent learning from every run.\n\nHow do you use Supercomputer for scaling?\n70\n87\n603\n6.2萬",
+      "text": "Sanji shares his Higgsfield Supercomputer playbook to run marketing end-to-end. He lets the agent analyze his niche, find the winning formula, generate 100+ variations, and run A/B tests at scale, with the agent learning from every run. How do you use Supercomputer for scaling? 70 87 603 6.2萬",
+      "url": "https://x.com/higgsfield/status/2059337370114375969",
+      "captured_at": "2026-05-27T17:18:57.367Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 70,
+        "reposts": 87,
+        "likes": 603,
         "bookmarks": null,
-        "views": null
+        "views": 62000
       },
-      "author_handle": "@rubelislam0461",
-      "publish_time": "4 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 70,
+          "reposts": 87,
+          "likes": 603,
+          "bookmarks": null,
+          "views": 62000
+        },
+        "after": {
+          "replies": 70,
+          "reposts": 87,
+          "likes": 603,
+          "bookmarks": null,
+          "views": 62000
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "@higgsfield\n·\n23 小時\nSanji shares his Higgsfield Supercomputer playbook to run marketing end-to-end.\nHe lets the agent analyze his niche, find the winning formula, generate 100+ variations, and run A/B tests at scale, with the agent learning from every run.\nHow do you use Supercomputer for scaling?\n70\n87\n603\n6.2萬",
+        "hotScore": 987
+      },
+      "hotScore": 987,
+      "timestampConfidence": "low",
+      "engagementSummary": "score: 987；回覆 70、轉發 87、喜歡 603、收藏 未取得、觀看 62000",
+      "summary": "Sanji shares his Higgsfield Supercomputer playbook to run marketing end-to-end. He lets ...",
+      "qualityScore": 48,
+      "qualitySignals": [
+        "資訊密度高",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "觀點不明確",
+        "轉化價值低"
+      ],
+      "isCollectible": true,
+      "hook_types": [
+        "Curiosity"
+      ],
+      "emotion_types": [
+        "Inspiration"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "高留言量",
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 36,
+      "viral_reason": "能引發回覆或排錯討論",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
     },
     {
       "index": 5,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "Dr. Theophano Mitsa ☦️🇬🇷🇺🇸\n@theomitsa\n·\n3 小時\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\nThe Ultimate Beginners’ Guide to Building an AI Agent in Python!\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\n終極初學者指南：如何在 Python 中打造 AI 代理 ！\nPython 新手打造 AI 代理的終極指南 |邁向資料科學\n來自 towardsdatascience.com",
-      "text": "Dr. Theophano Mitsa ☦️🇬🇷🇺🇸\n@theomitsa\n·\n3 小時\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\nThe Ultimate Beginners’ Guide to Building an AI Agent in Python!\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\n終極初學者指南：如何在 Python 中打造 AI 代理 ！\nPython 新手打造 AI 代理的終極指南 |邁向資料科學\n來自 towardsdatascience.com",
-      "url": "https://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter",
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "Google Gemini",
+      "author_handle": "@GeminiApp",
+      "publish_time": "5月20日",
+      "post_text": "Google Gemini\n@GeminiApp\n·\n5月20日\nGemini Spark is your new 24/7 personal AI agent.\n\nGive it a task and it works autonomously in the background, even if your phone and laptop are turned off. You choose to turn it on and it's designed to check with you before taking major actions. #GoogleIO\n來自 google.com\n110\n546\n2,732\n71萬",
+      "text": "Gemini Spark is your new 24/7 personal AI agent. Give it a task and it works autonomously in the background, even if your phone and laptop are turned off. You choose to turn it on and it's designed to check with you before taking major actions. #GoogleIO 來自 google.com 110 546 2,732 71萬",
+      "url": "https://x.com/GeminiApp/status/2056792333132460322",
+      "captured_at": "2026-05-27T17:18:59.474Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 110,
+        "reposts": 546,
+        "likes": 2732,
         "bookmarks": null,
-        "views": null
+        "views": 710000
       },
-      "author_handle": "@theomitsa",
-      "publish_time": "3 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 110,
+          "reposts": 546,
+          "likes": 2732,
+          "bookmarks": null,
+          "views": 710000
+        },
+        "after": {
+          "replies": 110,
+          "reposts": 546,
+          "likes": 2732,
+          "bookmarks": null,
+          "views": 710000
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "@GeminiApp\n·\n5月20日\nGemini Spark is your new 24/7 personal AI agent.\nGive it a task and it works autonomously in the background, even if your phone and laptop are turned off. You choose to turn it on and it's designed to check with you before taking major actions. #GoogleIO\n來自 google.com\n110\n546\n2,732\n71萬",
+        "hotScore": 4154
+      },
+      "hotScore": 4154,
+      "timestampConfidence": "high",
+      "engagementSummary": "score: 4154；回覆 110、轉發 546、喜歡 2732、收藏 未取得、觀看 710000",
+      "summary": "Gemini Spark is your new 24/7 personal AI agent. Give it a task and it works autonomousl...",
+      "qualityScore": 48,
+      "qualitySignals": [
+        "資訊密度高",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "觀點不明確",
+        "轉化價值低"
+      ],
+      "isCollectible": true,
+      "hook_types": [
+        "Curiosity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "高留言量",
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 36,
+      "viral_reason": "能引發回覆或排錯討論",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
     },
     {
       "index": 6,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "Cell 细胞\n@cellinlab\n·\n7 小時\nCodex 提示词：\n请帮我完成一个详细的教程，主题是 「 Pi Agent 的原理与实现：从零到一实现一个 AI Agent」。\n参考 [earendil-works/pi](https://github.com/earendil-works/pi) 和 https://pi.dev/docs/latest 等，进行联网搜索，先完整理解它的核心原理、架构设计、关键模块和实现链路，然后为它生成一个基于",
-      "text": "Cell 细胞\n@cellinlab\n·\n7 小時\nCodex 提示词：\n请帮我完成一个详细的教程，主题是 「 Pi Agent 的原理与实现：从零到一实现一个 AI Agent」。\n参考 [earendil-works/pi](https://github.com/earendil-works/pi) 和 https://pi.dev/docs/latest 等，进行联网搜索，先完整理解它的核心原理、架构设计、关键模块和实现链路，然后为它生成一个基于",
-      "url": "https://github.com/earendil-works/pi)",
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "Nadeem Bitar",
+      "author_handle": "@shinzui",
+      "publish_time": null,
+      "post_text": "Nadeem Bitar\n@shinzui\n·\n14 小時\nI’m a huge Notion fan. I use it for almost everything across work and personal life.\n\nBut their AI and agent experience feels fundamentally limited. I had to build a custom CLI and app to properly leverage claude and codex with my knowledge base.\n\nNotion is great as a workspace,\n顯示更多\n引用\nIvan Zhao\n@ivanhzhao\n·\n15 小時\nThis is Notion today (and the direction we are doubling down to build/rebuild) x.com/nbaschez/statu…\n8\n1\n16\n8,298",
+      "text": "I’m a huge Notion fan. I use it for almost everything across work and personal life. But their AI and agent experience feels fundamentally limited. I had to build a custom CLI and app to properly leverage claude and codex with my knowledge base. Notion is great as a workspace, 顯示更多 引用 Ivan Zhao @ivanhzhao · 15 小時 This is Notion today (and the direction we are doubling down to build/rebuild) x.com/nbaschez/statu… 8 1 16 8,298",
+      "url": "https://x.com/shinzui/status/2059470634758054346",
+      "captured_at": "2026-05-27T17:19:01.555Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 8,
+        "reposts": 1,
+        "likes": 16,
         "bookmarks": null,
-        "views": null
+        "views": 8298
       },
-      "author_handle": "@cellinlab",
-      "publish_time": "7 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 8,
+          "reposts": 1,
+          "likes": 16,
+          "bookmarks": null,
+          "views": 8298
+        },
+        "after": {
+          "replies": 8,
+          "reposts": 1,
+          "likes": 16,
+          "bookmarks": null,
+          "views": 8298
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "引用\nIvan Zhao\n@ivanhzhao\n·\n15 小時\nThis is Notion today (and the direction we are doubling down to build/rebuild) x.com/nbaschez/statu…\n8\n1\n16\n8,298",
+        "hotScore": 42
+      },
+      "hotScore": 42,
+      "timestampConfidence": "medium",
+      "engagementSummary": "score: 42；回覆 8、轉發 1、喜歡 16、收藏 未取得、觀看 8298",
+      "summary": "I’m a huge Notion fan. I use it for almost everything across work and personal life. But...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Controversy",
+        "Fear",
+        "Productivity",
+        "Personal Story"
+      ],
+      "emotion_types": [
+        "Anxiety",
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 32,
+      "viral_reason": "有失敗、風險或落後焦慮；有反常識或爭議觀點",
+      "remix_angle": "改寫成「失敗情境 + 排查清單 + 你是否也遇到」"
     },
     {
       "index": 7,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "Cell 细胞\n@cellinlab\n·\n5月26日\n时间线 刷到 好几个 Pi Agent 的推荐，\n让 Codex 帮我学了下，做了个手把手教程\n👉 Pi Agent 原理与实现：从零到一实现一个 AI Agent\n🔗 在线学习：https://how-pi-agent-works.vercel.app\n🌍 文档源码：https://github.com/cellinlab/how-pi-agent-works",
-      "text": "Cell 细胞\n@cellinlab\n·\n5月26日\n时间线 刷到 好几个 Pi Agent 的推荐，\n让 Codex 帮我学了下，做了个手把手教程\n👉 Pi Agent 原理与实现：从零到一实现一个 AI Agent\n🔗 在线学习：https://how-pi-agent-works.vercel.app\n🌍 文档源码：https://github.com/cellinlab/how-pi-agent-works",
-      "url": "https://how-pi-agent-works.vercel.app",
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "余温",
+      "author_handle": "@gkxspace",
+      "publish_time": "5月6日",
+      "post_text": "余温\n@gkxspace\n·\n5月6日\n推特现在最火的就是AI中转站！几乎人均一个，连孙哥都下场做了\nhttp://\nB.AI，尽管有人吐槽“价格不透明、缓存读翻倍、随时加价”……\n\n但这些还是“工具级”竞争，大家只会比谁的价格更低。\n\nWorldClaw 也在搞中转，但同时也在搭建 “Agent经济的操作系统”。\n\n想象一下：\n顯示更多\n引用\nWorldClaw\n@WorldClawAI\n·\n5月5日\n0:42\nToday, WorldClaw launches WorldRouter with @worldlibertyfi, one simple account to access 300+ AI models with competitive fees*.\n\nNo more jumping between ChatGPT, Claude and all the others. Same power, way cheaper.\n\nThis is your first step into the WorldClaw AgentOS.\n\n\n 付費合作關係\n10\n2\n11\n1.7萬",
+      "text": "推特现在最火的就是AI中转站！几乎人均一个，连孙哥都下场做了 http:// B.AI，尽管有人吐槽“价格不透明、缓存读翻倍、随时加价”…… 但这些还是“工具级”竞争，大家只会比谁的价格更低。 WorldClaw 也在搞中转，但同时也在搭建 “Agent经济的操作系统”。 想象一下： 顯示更多 引用 WorldClaw @WorldClawAI · 5月5日 0:42 Today, WorldClaw launches WorldRouter with @worldlibertyfi, one simple account to access 300+ AI models with competitive fees*. No more jumping between ChatGPT, Claude and all the others. Same power, way cheaper. This is your first step into the WorldClaw AgentOS. 付費合作關係 10 2 11 1.7萬",
+      "url": "https://x.com/gkxspace/status/2051955060372877421",
+      "captured_at": "2026-05-27T17:19:05.830Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 10,
+        "reposts": 2,
+        "likes": 11,
         "bookmarks": null,
-        "views": null
+        "views": 17000
       },
-      "author_handle": "@cellinlab",
-      "publish_time": "5月26日"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 10,
+          "reposts": 2,
+          "likes": 11,
+          "bookmarks": null,
+          "views": 17000
+        },
+        "after": {
+          "replies": 10,
+          "reposts": 2,
+          "likes": 11,
+          "bookmarks": null,
+          "views": 17000
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "5月5日\n0:42\nToday, WorldClaw launches WorldRouter with @worldlibertyfi, one simple account to access 300+ AI models with competitive fees*.\nNo more jumping between ChatGPT, Claude and all the others. Same power, way cheaper.\nThis is your first step into the WorldClaw AgentOS.\n付費合作關係\n10\n2\n11\n1.7萬",
+        "hotScore": 45
+      },
+      "hotScore": 45,
+      "timestampConfidence": "high",
+      "engagementSummary": "score: 45；回覆 10、轉發 2、喜歡 11、收藏 未取得、觀看 17000",
+      "summary": "推特现在最火的就是AI中转站！几乎人均一个，连孙哥都下场做了 http:// B.AI，尽管有人吐槽“价格不透明、缓存读翻倍、随时加价”…… 但这些还是“工具级”竞争，大家只会...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Productivity",
+        "Step-by-step"
+      ],
+      "emotion_types": [
+        "Excitement",
+        "FOMO",
+        "Surprise"
+      ],
+      "cta_type": "comment",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 32,
+      "viral_reason": "具收藏與工具價值；具新奇感或反轉",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
     },
     {
       "index": 8,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "小众软件\n@appinn\n·\n1 小時\n没卡没资源？复旦NLP直接把免费GPU塞进AI，科研全自动时代来了！ https://appinn.com/fudan-nlp-gpu-ai-agent/",
-      "text": "小众软件\n@appinn\n·\n1 小時\n没卡没资源？复旦NLP直接把免费GPU塞进AI，科研全自动时代来了！ https://appinn.com/fudan-nlp-gpu-ai-agent/",
-      "url": "https://appinn.com/fudan-nlp-gpu-ai-agent/",
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "Vince 聊开发",
+      "author_handle": "@vincemask",
+      "publish_time": null,
+      "post_text": "Vince 聊开发\n@vincemask\n·\n12 小時\nAnthropic 的 AI 工程师刚放出了一场直播大师课，讲怎么把一整套生产级 AI Agent 团队交付上线。\n\nAnthropic 团队亲自讲的建议看下\n\n她聊了这些：\n\n1、三个核心组件：大脑（人格）、双手（环境）、会话\n2、服务端循环，页面刷新也不会崩\n3、Agent 团队上线速度快 10–15 倍\n4、为什么大多数 Agent\n顯示更多\n引用\nMovez\n@0xMovez\n·\n22 小時\nAnthropic AI engineer just dropped a live masterclass on how to ship a team of production‑ready AI agents.\n\n37 minutes. Free. From the Anthropic team.\n\nhere’s what she covers:\n\n• 3 building blocks: brain, hands, sessions\n• server-side loop, so nothing breaks on refresh\n• agent  x.com/0xCodez/status…\n1\n7\n24\n2,945",
+      "text": "Anthropic 的 AI 工程师刚放出了一场直播大师课，讲怎么把一整套生产级 AI Agent 团队交付上线。 Anthropic 团队亲自讲的建议看下 她聊了这些： 1、三个核心组件：大脑（人格）、双手（环境）、会话 2、服务端循环，页面刷新也不会崩 3、Agent 团队上线速度快 10–15 倍 4、为什么大多数 Agent 顯示更多 引用 Movez @0xMovez · 22 小時 Anthropic AI engineer just dropped a live masterclass on how to ship a team of production‑ready AI agents. 37 minutes. Free. From the Anthropic team. here’s what she covers: • 3 building blocks: brain, hands, sessions • server-side loop, so nothing breaks on refresh • agent x.com/0xCodez/status… 1 7 24 2,945",
+      "url": "https://x.com/vincemask/status/2059504087453048922",
+      "captured_at": "2026-05-27T17:19:07.965Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 1,
+        "reposts": 7,
+        "likes": 24,
         "bookmarks": null,
-        "views": null
+        "views": 2945
       },
-      "author_handle": "@appinn",
-      "publish_time": "1 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 1,
+          "reposts": 7,
+          "likes": 24,
+          "bookmarks": null,
+          "views": 2945
+        },
+        "after": {
+          "replies": 1,
+          "reposts": 7,
+          "likes": 24,
+          "bookmarks": null,
+          "views": 2945
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "Anthropic AI engineer just dropped a live masterclass on how to ship a team of production‑ready AI agents.\n37 minutes. Free. From the Anthropic team.\nhere’s what she covers:\n• 3 building blocks: brain, hands, sessions\n• server-side loop, so nothing breaks on refresh\n• agent  x.com/0xCodez/status…\n1\n7\n24\n2,945",
+        "hotScore": 41
+      },
+      "hotScore": 41,
+      "timestampConfidence": "medium",
+      "engagementSummary": "score: 41；回覆 1、轉發 7、喜歡 24、收藏 未取得、觀看 2945",
+      "summary": "Anthropic 的 AI 工程师刚放出了一场直播大师课，讲怎么把一整套生产级 AI Agent 团队交付上线。 Anthropic 团队亲自讲的建议看下 她聊了这些： 1、...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Curiosity",
+        "Productivity",
+        "Step-by-step"
+      ],
+      "emotion_types": [
+        "FOMO",
+        "Surprise"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 32,
+      "viral_reason": "具收藏與工具價值；具新奇感或反轉",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
     },
     {
       "index": 9,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "OriginAI\n@Origin_AI_01\n·\n4 小時\nMost AI agents fail for one reason:\nPeople build them without a system.\nA good AI agent is not just a prompt.\nIt’s a structured pipeline from idea → execution.\nHere’s the framework that actually works:\nDefine the job\nWhat problem is the agent solving?\nWho is the end user?",
-      "text": "OriginAI\n@Origin_AI_01\n·\n4 小時\nMost AI agents fail for one reason:\nPeople build them without a system.\nA good AI agent is not just a prompt.\nIt’s a structured pipeline from idea → execution.\nHere’s the framework that actually works:\nDefine the job\nWhat problem is the agent solving?\nWho is the end user?",
-      "url": null,
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "高军",
+      "author_handle": "@GoJun315",
+      "publish_time": "5月9日",
+      "post_text": "高军\n@GoJun315\n·\n5月9日\n检测 AI Agent 有没有在说谎或产生幻觉，现在只需一条命令就能搞定。\n\niFixAi 是一个全新的开源检测工具，专门用来给模型进行全方位的“安全体检”。\n\n它会给 AI 做 32 项深度体检，查查它有没有胡说八道、越权搞破坏或者偷偷瞒报信息，最后直接打出一个 A 到 F 的分数。\n顯示更多\n4\n1\n11\n898",
+      "text": "检测 AI Agent 有没有在说谎或产生幻觉，现在只需一条命令就能搞定。 iFixAi 是一个全新的开源检测工具，专门用来给模型进行全方位的“安全体检”。 它会给 AI 做 32 项深度体检，查查它有没有胡说八道、越权搞破坏或者偷偷瞒报信息，最后直接打出一个 A 到 F 的分数。 顯示更多 4 1 11 898",
+      "url": "https://x.com/GoJun315/status/2053059906207613227",
+      "captured_at": "2026-05-27T17:18:57.358Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 4,
+        "reposts": 1,
+        "likes": 11,
         "bookmarks": null,
-        "views": null
+        "views": 898
       },
-      "author_handle": "@Origin_AI_01",
-      "publish_time": "4 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 4,
+          "reposts": 1,
+          "likes": 11,
+          "bookmarks": null,
+          "views": 898
+        },
+        "after": {
+          "replies": 4,
+          "reposts": 1,
+          "likes": 11,
+          "bookmarks": null,
+          "views": 898
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "·\n5月9日\n检测 AI Agent 有没有在说谎或产生幻觉，现在只需一条命令就能搞定。\niFixAi 是一个全新的开源检测工具，专门用来给模型进行全方位的“安全体检”。\n它会给 AI 做 32 项深度体检，查查它有没有胡说八道、越权搞破坏或者偷偷瞒报信息，最后直接打出一个 A 到 F 的分数。\n顯示更多\n4\n1\n11\n898",
+        "hotScore": 25
+      },
+      "hotScore": 25,
+      "timestampConfidence": "high",
+      "engagementSummary": "score: 25；回覆 4、轉發 1、喜歡 11、收藏 未取得、觀看 898",
+      "summary": "检测 AI Agent 有没有在说谎或产生幻觉，现在只需一条命令就能搞定。 iFixAi 是一个全新的开源检测工具，专门用来给模型进行全方位的“安全体检”。 它会给 AI 做 ...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Productivity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
     },
     {
       "index": 10,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "蓝狐\n@lanhubiji\n·\n7 小時\nPieverse AI网关直接和BNB Chain的“代理生存包”（Agent survival Pack）打通，本质上是将“大脑”和“钱包/支付”进行整合。\nAI agent之前“大脑”和“钱包/支付”往往是分开的。\n现在，Pieverse将其打通，一个安全网关，可以同时整合AI模型（大脑）+钱包/支付。\n主要功能是，用钱包直接充值、生成“限额API",
-      "text": "蓝狐\n@lanhubiji\n·\n7 小時\nPieverse AI网关直接和BNB Chain的“代理生存包”（Agent survival Pack）打通，本质上是将“大脑”和“钱包/支付”进行整合。\nAI agent之前“大脑”和“钱包/支付”往往是分开的。\n现在，Pieverse将其打通，一个安全网关，可以同时整合AI模型（大脑）+钱包/支付。\n主要功能是，用钱包直接充值、生成“限额API",
-      "url": null,
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "Jason Zhu",
+      "author_handle": "@GoSailGlobal",
+      "publish_time": null,
+      "post_text": "Jason Zhu\n@GoSailGlobal\n·\n15 小時\n刷到一个被严重低估的开源项目：\nAnthropic-Cybersecurity-Skills（GitHub 9.6k ）\n\n一句话：把\"高级安全分析师的脑子\"打包成了 AI Agent 能调用的标准化 skills\n\n· 754 个结构化网络安全 skill \n· 覆盖 26 个安全领域（云安全、威胁狩猎、恶意软件分析、DFIR、红队…） \n· 每个 skill 同时映射到 5\n顯示更多\n4\n21\n99\n6,968",
+      "text": "刷到一个被严重低估的开源项目： Anthropic-Cybersecurity-Skills（GitHub 9.6k ） 一句话：把\"高级安全分析师的脑子\"打包成了 AI Agent 能调用的标准化 skills · 754 个结构化网络安全 skill · 覆盖 26 个安全领域（云安全、威胁狩猎、恶意软件分析、DFIR、红队…） · 每个 skill 同时映射到 5 顯示更多 4 21 99 6,968",
+      "url": "https://x.com/GoSailGlobal/status/2059446178467426703",
+      "captured_at": "2026-05-27T17:18:57.363Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
+        "replies": 4,
+        "reposts": 21,
+        "likes": 99,
         "bookmarks": null,
-        "views": null
+        "views": 6968
       },
-      "author_handle": "@lanhubiji",
-      "publish_time": "7 小時"
+      "engagementParseDebug": {
+        "before": {
+          "replies": 4,
+          "reposts": 21,
+          "likes": 99,
+          "bookmarks": null,
+          "views": 6968
+        },
+        "after": {
+          "replies": 4,
+          "reposts": 21,
+          "likes": 99,
+          "bookmarks": null,
+          "views": 6968
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "Anthropic-Cybersecurity-Skills（GitHub 9.6k ）\n一句话：把\"高级安全分析师的脑子\"打包成了 AI Agent 能调用的标准化 skills\n· 754 个结构化网络安全 skill\n· 覆盖 26 个安全领域（云安全、威胁狩猎、恶意软件分析、DFIR、红队…）\n· 每个 skill 同时映射到 5\n顯示更多\n4\n21\n99\n6,968",
+        "hotScore": 153
+      },
+      "hotScore": 153,
+      "timestampConfidence": "low",
+      "engagementSummary": "score: 153；回覆 4、轉發 21、喜歡 99、收藏 未取得、觀看 6968",
+      "summary": "刷到一个被严重低估的开源项目： Anthropic-Cybersecurity-Skills（GitHub 9.6k ） 一句话：把\"高级安全分析师的脑子\"打包成了 AI Ag...",
+      "qualityScore": 76,
+      "qualitySignals": [
+        "資訊密度高",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "觀點不明確"
+      ],
+      "isCollectible": true,
+      "hook_types": [
+        "Curiosity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "click_link",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
     },
     {
       "index": 11,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "pieverse\n@pieverse_io\n·\n5月25日\n🦾 Agent Survival Pack from @BNBCHAIN is now live with Pieverse AI Gateway!\nAccess leading frontier models from OpenAI, Anthropic, DeepSeek, Meta, and more through one secure gateway with wallet funding, scoped API keys, usage limits, and spend tracking.\nTo celebrate launch,",
-      "text": "pieverse\n@pieverse_io\n·\n5月25日\n🦾 Agent Survival Pack from @BNBCHAIN is now live with Pieverse AI Gateway!\nAccess leading frontier models from OpenAI, Anthropic, DeepSeek, Meta, and more through one secure gateway with wallet funding, scoped API keys, usage limits, and spend tracking.\nTo celebrate launch,",
-      "url": null,
-      "captured_at": "2026-05-27T16:44:02.977Z",
-      "source_method": "computer_use_manual_text_import",
+      "author": "meng shao",
+      "author_handle": "@shao__meng",
+      "publish_time": null,
+      "post_text": "meng shao\n@shao__meng\n·\n3 小時\nAI Agent 协作编排层：Alook \n@alook_ai\n \n\nAlook 把 Claude Code、Codex、OpenCode 等本地 CLI agent 组织成一支「可管理的 AI 团队」——有角色、邮箱、任务板、日历和可追溯的执行记录 。\n\n开源地址：\n\nhttps://\ngithub.com/alookai/alook\n\n核心命题：换一条组织轴\nAlook\n顯示更多\n引用\nSumanth\n@Sumanth_077\n·\n3 小時\nRun your personal AI company with a team of AI agents!\n\nAlook is an open-source collaboration platform for AI coding agents. Self-hosted and local-first.\n\nThe setup: Define an org structure. Give each agent a role - dev, ops, research, whatever you need. Set reporting lines.\n1\n12\n1,222",
+      "text": "AI Agent 协作编排层：Alook @alook_ai Alook 把 Claude Code、Codex、OpenCode 等本地 CLI agent 组织成一支「可管理的 AI 团队」——有角色、邮箱、任务板、日历和可追溯的执行记录 。 开源地址： https:// github.com/alookai/alook 核心命题：换一条组织轴 Alook 顯示更多 引用 Sumanth @Sumanth_077 · 3 小時 Run your personal AI company with a team of AI agents! Alook is an open-source collaboration platform for AI coding agents. Self-hosted and local-first. The setup: Define an org structure. Give each agent a role - dev, ops, research, whatever you need. Set reporting lines. 1 12 1,222",
+      "url": "https://x.com/shao__meng/status/2059639640647500263",
+      "captured_at": "2026-05-27T17:18:57.371Z",
+      "source_method": "article[data-testid=\"tweet\"]",
       "metrics": {
         "replies": null,
         "reposts": null,
@@ -223,8 +764,692 @@
         "bookmarks": null,
         "views": null
       },
-      "author_handle": "@pieverse_io",
-      "publish_time": "5月25日"
+      "engagementParseDebug": {
+        "before": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "after": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "sourceMethods": [
+          "x numeric tail ignored (3 values)"
+        ],
+        "rawTail": "Sumanth\n@Sumanth_077\n·\n3 小時\nRun your personal AI company with a team of AI agents!\nAlook is an open-source collaboration platform for AI coding agents. Self-hosted and local-first.\nThe setup: Define an org structure. Give each agent a role - dev, ops, research, whatever you need. Set reporting lines.\n1\n12\n1,222",
+        "hotScore": null
+      },
+      "hotScore": null,
+      "timestampConfidence": "medium",
+      "engagementSummary": "互動數未取得；score: null",
+      "summary": "AI Agent 协作编排层：Alook @alook_ai Alook 把 Claude Code、Codex、OpenCode 等本地 CLI agent 组织成一支「可管...",
+      "qualityScore": 76,
+      "qualitySignals": [
+        "資訊密度高",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "觀點不明確"
+      ],
+      "isCollectible": true,
+      "hook_types": [
+        "Curiosity"
+      ],
+      "emotion_types": [
+        "Surprise"
+      ],
+      "cta_type": "click_link",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "具新奇感或反轉",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
+    },
+    {
+      "index": 12,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "Y11",
+      "author_handle": "@seclink",
+      "publish_time": null,
+      "post_text": "Y11\n@seclink\n·\n14 小時\n回覆 \n@seclink\n2. OpenRouter 估值翻倍至 13 亿美元\n\n  来源: TechCrunch | 约 8.6 小时前\n\n  关键信息：\n  - AI 从训练 → 推理 → Agent 的趋势转移\n  - OpenRouter 作为 AI 模型网关，提供 400+ 模型访问\n  - 声称 800万全球用户，处理 100万亿 tokens\n\n  信息差价值: 国内对 OpenRouter\n顯示更多\n1\n1,468",
+      "text": "2. OpenRouter 估值翻倍至 13 亿美元 来源: TechCrunch | 约 8.6 小时前 关键信息： - AI 从训练 → 推理 → Agent 的趋势转移 - OpenRouter 作为 AI 模型网关，提供 400+ 模型访问 - 声称 800万全球用户，处理 100万亿 tokens 信息差价值: 国内对 OpenRouter 顯示更多 1 1,468",
+      "url": "https://x.com/seclink/status/2059473108851884035",
+      "captured_at": "2026-05-27T17:18:57.380Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "after": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "sourceMethods": [
+          "x numeric tail ignored (2 values)"
+        ],
+        "rawTail": "2. OpenRouter 估值翻倍至 13 亿美元\n来源: TechCrunch | 约 8.6 小时前\n关键信息：\n- AI 从训练 → 推理 → Agent 的趋势转移\n- OpenRouter 作为 AI 模型网关，提供 400+ 模型访问\n- 声称 800万全球用户，处理 100万亿 tokens\n信息差价值: 国内对 OpenRouter\n顯示更多\n1\n1,468",
+        "hotScore": null
+      },
+      "hotScore": null,
+      "timestampConfidence": "low",
+      "engagementSummary": "互動數未取得；score: null",
+      "summary": "2. OpenRouter 估值翻倍至 13 亿美元 来源: TechCrunch | 约 8.6 小时前 关键信息： - AI 从训练 → 推理 → Agent 的趋势转移 ...",
+      "qualityScore": 48,
+      "qualitySignals": [
+        "資訊密度高",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "觀點不明確",
+        "轉化價值低"
+      ],
+      "isCollectible": true,
+      "hook_types": [
+        "Curiosity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
+    },
+    {
+      "index": 13,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "松果先森",
+      "author_handle": "@songguoxiansen",
+      "publish_time": "3月19日",
+      "post_text": "松果先森\n@songguoxiansen\n·\n3月19日\n看了LibTV官网，和下面的教程\n\n野心很大，不仅仅是视频工具了，更像的是视频创作平台，一站式创作\n\n有3大亮点：\n\n1、开创性的双入口设计：人类与AI Agent的协同创作\n\n除了提供网页版的无限画布，还开放了AI Agent的入口：通过标准化的Skill，OpenClaw（小龙虾）、Claude Code等AI\n顯示更多\n4\n4\n19\n6,299",
+      "text": "看了LibTV官网，和下面的教程 野心很大，不仅仅是视频工具了，更像的是视频创作平台，一站式创作 有3大亮点： 1、开创性的双入口设计：人类与AI Agent的协同创作 除了提供网页版的无限画布，还开放了AI Agent的入口：通过标准化的Skill，OpenClaw（小龙虾）、Claude Code等AI 顯示更多 4 4 19 6,299",
+      "url": "https://x.com/songguoxiansen/status/2034466788008947845",
+      "captured_at": "2026-05-27T17:18:57.384Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": 4,
+        "reposts": 4,
+        "likes": 19,
+        "bookmarks": null,
+        "views": 6299
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": 4,
+          "reposts": 4,
+          "likes": 19,
+          "bookmarks": null,
+          "views": 6299
+        },
+        "after": {
+          "replies": 4,
+          "reposts": 4,
+          "likes": 19,
+          "bookmarks": null,
+          "views": 6299
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "看了LibTV官网，和下面的教程\n野心很大，不仅仅是视频工具了，更像的是视频创作平台，一站式创作\n有3大亮点：\n1、开创性的双入口设计：人类与AI Agent的协同创作\n除了提供网页版的无限画布，还开放了AI Agent的入口：通过标准化的Skill，OpenClaw（小龙虾）、Claude Code等AI\n顯示更多\n4\n4\n19\n6,299",
+        "hotScore": 39
+      },
+      "hotScore": 39,
+      "timestampConfidence": "high",
+      "engagementSummary": "score: 39；回覆 4、轉發 4、喜歡 19、收藏 未取得、觀看 6299",
+      "summary": "看了LibTV官网，和下面的教程 野心很大，不仅仅是视频工具了，更像的是视频创作平台，一站式创作 有3大亮点： 1、开创性的双入口设计：人类与AI Agent的协同创作 除了提...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Productivity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
+    },
+    {
+      "index": 14,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "Ahmed E.",
+      "author_handle": "@aelshimy_",
+      "publish_time": null,
+      "post_text": "Ahmed E.\n@aelshimy_\n·\n58 分鐘\n回覆 \n@shinzui\nthis is exactly the gap we’re thinking about at dart.\n\nan ai-native workspace can’t just be “chat with the knowledge base.”\n\nthe agent has to live in the workflow: assigned to tasks, producing output, handing work back, and leaving a trail the team can inspect.\n1\n11",
+      "text": "this is exactly the gap we’re thinking about at dart. an ai-native workspace can’t just be “chat with the knowledge base.” the agent has to live in the workflow: assigned to tasks, producing output, handing work back, and leaving a trail the team can inspect. 1 11",
+      "url": "https://x.com/aelshimy_/status/2059671192118653040",
+      "captured_at": "2026-05-27T17:19:01.557Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "after": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "sourceMethods": [
+          "x numeric tail ignored (2 values)"
+        ],
+        "rawTail": "@aelshimy_\n·\n58 分鐘\n回覆\n@shinzui\nthis is exactly the gap we’re thinking about at dart.\nan ai-native workspace can’t just be “chat with the knowledge base.”\nthe agent has to live in the workflow: assigned to tasks, producing output, handing work back, and leaving a trail the team can inspect.\n1\n11",
+        "hotScore": null
+      },
+      "hotScore": null,
+      "timestampConfidence": "low",
+      "engagementSummary": "互動數未取得；score: null",
+      "summary": "this is exactly the gap we’re thinking about at dart. an ai-native workspace can’t just ...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Productivity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
+    },
+    {
+      "index": 15,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "Egor K.",
+      "author_handle": "@egorkabantsov",
+      "publish_time": null,
+      "post_text": "Egor K.\n@egorkabantsov\n·\n7 小時\nHi, I'm new to X and looking to #connect with #founders, #buildinpublic builders & devtool people.\n\nespecially interested in: \n B2B SaaS & early-stage startups \n AI coding agents, terminals & MCPs\n Cursor, Claude Code, Codex & workflows\n\nSay hi in replies. Let's be mutuals\n30\n22\n868",
+      "text": "Hi, I'm new to X and looking to #connect with #founders, #buildinpublic builders & devtool people. especially interested in: B2B SaaS & early-stage startups AI coding agents, terminals & MCPs Cursor, Claude Code, Codex & workflows Say hi in replies. Let's be mutuals 30 22 868",
+      "url": "https://x.com/egorkabantsov/status/2059579165142032894",
+      "captured_at": "2026-05-27T17:19:01.562Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "after": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "sourceMethods": [
+          "x numeric tail ignored (3 values)"
+        ],
+        "rawTail": "7 小時\nHi, I'm new to X and looking to #connect with #founders, #buildinpublic builders & devtool people.\nespecially interested in:\nB2B SaaS & early-stage startups\nAI coding agents, terminals & MCPs\nCursor, Claude Code, Codex & workflows\nSay hi in replies. Let's be mutuals\n30\n22\n868",
+        "hotScore": null
+      },
+      "hotScore": null,
+      "timestampConfidence": "low",
+      "engagementSummary": "互動數未取得；score: null",
+      "summary": "Hi, I'm new to X and looking to #connect with #founders, #buildinpublic builders & devto...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Productivity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "save",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
+    },
+    {
+      "index": 16,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "freeCodeCamp.org",
+      "author_handle": "@freeCodeCamp",
+      "publish_time": null,
+      "post_text": "freeCodeCamp.org\n@freeCodeCamp\n·\n21 小時\nModern systems generate a ton of logs - and these are key to understanding issues with the system.\n\nBut reading and understanding all this data requires a lot of effort and time. This is where an AI agent can help.\n\nIn this guide, \n@manishmshiva\n teaches you how to build and deploy\n顯示更多\n5\n29\n222\n8,144",
+      "text": "Modern systems generate a ton of logs - and these are key to understanding issues with the system. But reading and understanding all this data requires a lot of effort and time. This is where an AI agent can help. In this guide, @manishmshiva teaches you how to build and deploy 顯示更多 5 29 222 8,144",
+      "url": "https://x.com/freeCodeCamp/status/2059364211340243457",
+      "captured_at": "2026-05-27T17:19:03.673Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": 5,
+        "reposts": 29,
+        "likes": 222,
+        "bookmarks": null,
+        "views": 8144
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": 5,
+          "reposts": 29,
+          "likes": 222,
+          "bookmarks": null,
+          "views": 8144
+        },
+        "after": {
+          "replies": 5,
+          "reposts": 29,
+          "likes": 222,
+          "bookmarks": null,
+          "views": 8144
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "Modern systems generate a ton of logs - and these are key to understanding issues with the system.\nBut reading and understanding all this data requires a lot of effort and time. This is where an AI agent can help.\nIn this guide,\n@manishmshiva\nteaches you how to build and deploy\n顯示更多\n5\n29\n222\n8,144",
+        "hotScore": 295
+      },
+      "hotScore": 295,
+      "timestampConfidence": "low",
+      "engagementSummary": "score: 295；回覆 5、轉發 29、喜歡 222、收藏 未取得、觀看 8144",
+      "summary": "Modern systems generate a ton of logs - and these are key to understanding issues with t...",
+      "qualityScore": 100,
+      "qualitySignals": [
+        "資訊密度高",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Curiosity",
+        "Controversy",
+        "Productivity",
+        "Step-by-step"
+      ],
+      "emotion_types": [
+        "Inspiration"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "具收藏與工具價值；有反常識或爭議觀點",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
+    },
+    {
+      "index": 17,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "GitHubDaily",
+      "author_handle": "@GitHub_Daily",
+      "publish_time": "5月13日",
+      "post_text": "GitHubDaily\n@GitHub_Daily\n·\n5月13日\n让 AI Agent 访问多个外部服务，要对接不同的 SDK 和 API，还是不同的调用逻辑，维护起来很头疼。\n\n最近看到 Mirage 这个项目，挺有意思的。它把所有外部服务统一套在一个虚拟文件系统，让 AI 智能体用命令就能操作所有数据源。\n\n就是说，把 S3、Google Drive、Slack、GitHub、Redis\n顯示更多\n7\n2\n13\n4,155",
+      "text": "让 AI Agent 访问多个外部服务，要对接不同的 SDK 和 API，还是不同的调用逻辑，维护起来很头疼。 最近看到 Mirage 这个项目，挺有意思的。它把所有外部服务统一套在一个虚拟文件系统，让 AI 智能体用命令就能操作所有数据源。 就是说，把 S3、Google Drive、Slack、GitHub、Redis 顯示更多 7 2 13 4,155",
+      "url": "https://x.com/GitHub_Daily/status/2054350928845873203",
+      "captured_at": "2026-05-27T17:19:07.970Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": 7,
+        "reposts": 2,
+        "likes": 13,
+        "bookmarks": null,
+        "views": 4155
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": 7,
+          "reposts": 2,
+          "likes": 13,
+          "bookmarks": null,
+          "views": 4155
+        },
+        "after": {
+          "replies": 7,
+          "reposts": 2,
+          "likes": 13,
+          "bookmarks": null,
+          "views": 4155
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "·\n5月13日\n让 AI Agent 访问多个外部服务，要对接不同的 SDK 和 API，还是不同的调用逻辑，维护起来很头疼。\n最近看到 Mirage 这个项目，挺有意思的。它把所有外部服务统一套在一个虚拟文件系统，让 AI 智能体用命令就能操作所有数据源。\n就是说，把 S3、Google Drive、Slack、GitHub、Redis\n顯示更多\n7\n2\n13\n4,155",
+        "hotScore": 38
+      },
+      "hotScore": 38,
+      "timestampConfidence": "high",
+      "engagementSummary": "score: 38；回覆 7、轉發 2、喜歡 13、收藏 未取得、觀看 4155",
+      "summary": "让 AI Agent 访问多个外部服务，要对接不同的 SDK 和 API，还是不同的调用逻辑，维护起来很头疼。 最近看到 Mirage 这个项目，挺有意思的。它把所有外部服务统...",
+      "qualityScore": 76,
+      "qualitySignals": [
+        "資訊密度高",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "觀點不明確"
+      ],
+      "isCollectible": true,
+      "hook_types": [
+        "Curiosity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "click_link",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈",
+        "高資訊密度"
+      ],
+      "signal_score": 28,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
+    },
+    {
+      "index": 18,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "LangChain",
+      "author_handle": "@LangChain",
+      "publish_time": null,
+      "post_text": "LangChain\n@LangChain\n·\n1 小時\n \n@Lyft\n accelerated agent development from 6 months to just a few weeks with LangGraph and LangSmith.\n\n Hallucinations decreased by 20%\n AI Resolution rate up by 16%\n3\n3\n17\n1,497",
+      "text": "@Lyft accelerated agent development from 6 months to just a few weeks with LangGraph and LangSmith. Hallucinations decreased by 20% AI Resolution rate up by 16% 3 3 17 1,497",
+      "url": "https://x.com/LangChain/status/2059659923953172924",
+      "captured_at": "2026-05-27T17:18:59.471Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": 3,
+        "reposts": 3,
+        "likes": 17,
+        "bookmarks": null,
+        "views": 1497
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": 3,
+          "reposts": 3,
+          "likes": 17,
+          "bookmarks": null,
+          "views": 1497
+        },
+        "after": {
+          "replies": 3,
+          "reposts": 3,
+          "likes": 17,
+          "bookmarks": null,
+          "views": 1497
+        },
+        "sourceMethods": [
+          "x numeric tail"
+        ],
+        "rawTail": "·\n1 小時\n@Lyft\naccelerated agent development from 6 months to just a few weeks with LangGraph and LangSmith.\nHallucinations decreased by 20%\nAI Resolution rate up by 16%\n3\n3\n17\n1,497",
+        "hotScore": 32
+      },
+      "hotScore": 32,
+      "timestampConfidence": "low",
+      "engagementSummary": "score: 32；回覆 3、轉發 3、喜歡 17、收藏 未取得、觀看 1497",
+      "summary": "@Lyft accelerated agent development from 6 months to just a few weeks with LangGraph and...",
+      "qualityScore": 36,
+      "qualitySignals": [
+        "資訊量中等",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "觀點不明確",
+        "轉化價值低"
+      ],
+      "isCollectible": false,
+      "hook_types": [
+        "Curiosity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈"
+      ],
+      "signal_score": 20,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
+    },
+    {
+      "index": 19,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "Jenny Park",
+      "author_handle": "@createwithjenny",
+      "publish_time": null,
+      "post_text": "Jenny Park\n@createwithjenny\n·\n1 小時\n回覆 \n@egorkabantsov\nHi Egor, same here. I’m building around AI apps + agent workflows and trying to connect with more builders/product people. Happy to swap notes on Codex/Claude workflows.\n1\n1\n14",
+      "text": "Hi Egor, same here. I’m building around AI apps + agent workflows and trying to connect with more builders/product people. Happy to swap notes on Codex/Claude workflows. 1 1 14",
+      "url": "https://x.com/createwithjenny/status/2059668025897582782",
+      "captured_at": "2026-05-27T17:19:03.670Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "after": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "sourceMethods": [
+          "x numeric tail ignored (3 values)"
+        ],
+        "rawTail": "Jenny Park\n@createwithjenny\n·\n1 小時\n回覆\n@egorkabantsov\nHi Egor, same here. I’m building around AI apps + agent workflows and trying to connect with more builders/product people. Happy to swap notes on Codex/Claude workflows.\n1\n1\n14",
+        "hotScore": null
+      },
+      "hotScore": null,
+      "timestampConfidence": "low",
+      "engagementSummary": "互動數未取得；score: null",
+      "summary": "Hi Egor, same here. I’m building around AI apps + agent workflows and trying to connect ...",
+      "qualityScore": 88,
+      "qualitySignals": [
+        "資訊量中等",
+        "觀點明確",
+        "可轉化成內容靈感",
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [],
+      "isCollectible": true,
+      "hook_types": [
+        "Productivity"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "try",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈"
+      ],
+      "signal_score": 20,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「前後對比 + 具體流程 + 可複製步驟」"
+    },
+    {
+      "index": 20,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "author": "Eric Haley",
+      "author_handle": "@EricHaley88",
+      "publish_time": null,
+      "post_text": "Eric Haley\n@EricHaley88\n·\n34 分鐘\n回覆 \n@alphafox\nDoing construction on a stadium.... while also talking to my AI agent which is working on a project for me at home.\n1\n3",
+      "text": "Doing construction on a stadium.... while also talking to my AI agent which is working on a project for me at home. 1 3",
+      "url": "https://x.com/EricHaley88/status/2059677152279183731",
+      "captured_at": "2026-05-27T17:19:07.968Z",
+      "source_method": "article[data-testid=\"tweet\"]",
+      "metrics": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "engagementParseDebug": {
+        "before": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "after": {
+          "replies": null,
+          "reposts": null,
+          "likes": null,
+          "bookmarks": null,
+          "views": null
+        },
+        "sourceMethods": [
+          "x numeric tail ignored (2 values)"
+        ],
+        "rawTail": "Eric Haley\n@EricHaley88\n·\n34 分鐘\n回覆\n@alphafox\nDoing construction on a stadium.... while also talking to my AI agent which is working on a project for me at home.\n1\n3",
+        "hotScore": null
+      },
+      "hotScore": null,
+      "timestampConfidence": "low",
+      "engagementSummary": "互動數未取得；score: null",
+      "summary": "Doing construction on a stadium.... while also talking to my AI agent which is working o...",
+      "qualityScore": 20,
+      "qualitySignals": [
+        "有具體例子或數字",
+        "Hook 可辨識"
+      ],
+      "qualityFlags": [
+        "低資訊量",
+        "觀點不明確",
+        "轉化價值低"
+      ],
+      "isCollectible": false,
+      "hook_types": [
+        "Personal Story"
+      ],
+      "emotion_types": [
+        "FOMO"
+      ],
+      "cta_type": "none",
+      "viral_signals": [
+        "強 Hook",
+        "情緒強烈"
+      ],
+      "signal_score": 20,
+      "viral_reason": "主題與 AI Agent 熱度相關，但需要更強 Hook 才容易擴散",
+      "remix_angle": "改寫成「反常識觀察 + 具體例子 + 行動建議」"
     }
-  ]
+  ],
+  "normalized_at": "2026-05-27T17:19:15.925Z"
 }

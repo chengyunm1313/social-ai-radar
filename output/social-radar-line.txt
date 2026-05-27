@@ -1,0 +1,16 @@
+Social AI Radar 今日快報
+主題：Agent 工程化部署、Agent 學習路線、AI Agent 工作流
+
+TOP 5：
+1. @GeminiApp｜4154｜Q48｜Gemini Spark is your new 24/7 personal AI agent. Gi…
+2. @GitHub_Daily｜804｜Q100｜用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特…
+3. @freeCodeCamp｜295｜Q100｜Modern systems generate a ton of logs - and these a…
+4. @Luckyjudy666｜177｜Q100｜Github狂揽19万星，AI Agent的优化系统来了！ ECC是一个用于优化 AI 编程助手性能的…
+5. @shinzui｜42｜Q100｜I’m a huge Notion fan. I use it for almost everythi…
+
+內容靈感：
+1. 你的 AI Agent 不是能跑就好，真正要測的是它在哪些情境會失敗。
+2. 我把 AI Agent workflow 拆成 4 層：任務、工具、記憶、驗證。少一層都不穩。
+3. 如果今天從 0 開始學 AI Agent，我會先照 4 階段路線，而不是先追框架。
+
+資料：phase3_playwright_manual_read_only，20 篇

@@ -1,0 +1,485 @@
+{
+  "generated_at": "2026-05-27T17:19:15.926Z",
+  "engagementParseDebug": [
+    {
+      "index": 1,
+      "author": "@Luckyjudy666",
+      "url": "https://x.com/Luckyjudy666/status/2059443635859738879",
+      "before": {
+        "replies": 45,
+        "reposts": 4,
+        "likes": 34,
+        "bookmarks": null,
+        "views": 3053
+      },
+      "after": {
+        "replies": 45,
+        "reposts": 4,
+        "likes": 34,
+        "bookmarks": null,
+        "views": 3053
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "白嫖党最爱，\n这个github项目整理了全球最优质的、完全免费的软件和应用程序，\n他帮助用户省去在海量网络信息中筛选安全、好用软件的时间。\n这个项目的分类极为详尽，几乎覆盖了我们使用电脑的方方面面。\n1. 开发者工具 ：\n包括 API x.com/Luckyjudy666/s…\n45\n4\n34\n3,053",
+      "hotScore": 177
+    },
+    {
+      "index": 2,
+      "author": "@GitHub_Daily",
+      "url": "https://x.com/GitHub_Daily/status/2050062696612258108",
+      "before": {
+        "replies": 34,
+        "reposts": 94,
+        "likes": 514,
+        "bookmarks": null,
+        "views": 39000
+      },
+      "after": {
+        "replies": 34,
+        "reposts": 94,
+        "likes": 514,
+        "bookmarks": null,
+        "views": 39000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n5月1日\n用 Agent 自动化浏览网页，动不动就被网站识别为机器人，各种反检测插件用了一圈，还是被识别出指纹特征。\n最近刷到 camofox-browser 这个项目，直接在浏览器底层伪装指纹，不是靠 JavaScript 补丁去糊弄检测。\n基于 Camoufox 封装了一套专为 AI\n顯示更多\n34\n94\n514\n3.9萬",
+      "hotScore": 804
+    },
+    {
+      "index": 3,
+      "author": "@libukai",
+      "url": "https://x.com/libukai/status/2029366552655741103",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (1 values)"
+      ],
+      "rawTail": "@libukai\n·\n3月5日\n今天 openai 发了下面这个新玩意，算是官方下场做多 Agent 任务编排了。\n不过这个新产品不是重点，倒是某篇新闻稿中的一句话逗乐我了：目前它们都偏向于理念展示，功能还比较简陋，但它指向了下一个发展的方向，人类如何更好的培养和管理AI，并克服微操冲动是新的重要命题。\n我感觉这篇新闻稿应该是\n顯示更多\nGitHub - openai/symphony: Symphony turns project work into isolated, autonomous implementation...\n來自 github.com\n7,101",
+      "hotScore": null
+    },
+    {
+      "index": 4,
+      "author": "@higgsfield",
+      "url": "https://x.com/higgsfield/status/2059337370114375969",
+      "before": {
+        "replies": 70,
+        "reposts": 87,
+        "likes": 603,
+        "bookmarks": null,
+        "views": 62000
+      },
+      "after": {
+        "replies": 70,
+        "reposts": 87,
+        "likes": 603,
+        "bookmarks": null,
+        "views": 62000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "@higgsfield\n·\n23 小時\nSanji shares his Higgsfield Supercomputer playbook to run marketing end-to-end.\nHe lets the agent analyze his niche, find the winning formula, generate 100+ variations, and run A/B tests at scale, with the agent learning from every run.\nHow do you use Supercomputer for scaling?\n70\n87\n603\n6.2萬",
+      "hotScore": 987
+    },
+    {
+      "index": 5,
+      "author": "@GeminiApp",
+      "url": "https://x.com/GeminiApp/status/2056792333132460322",
+      "before": {
+        "replies": 110,
+        "reposts": 546,
+        "likes": 2732,
+        "bookmarks": null,
+        "views": 710000
+      },
+      "after": {
+        "replies": 110,
+        "reposts": 546,
+        "likes": 2732,
+        "bookmarks": null,
+        "views": 710000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "@GeminiApp\n·\n5月20日\nGemini Spark is your new 24/7 personal AI agent.\nGive it a task and it works autonomously in the background, even if your phone and laptop are turned off. You choose to turn it on and it's designed to check with you before taking major actions. #GoogleIO\n來自 google.com\n110\n546\n2,732\n71萬",
+      "hotScore": 4154
+    },
+    {
+      "index": 6,
+      "author": "@shinzui",
+      "url": "https://x.com/shinzui/status/2059470634758054346",
+      "before": {
+        "replies": 8,
+        "reposts": 1,
+        "likes": 16,
+        "bookmarks": null,
+        "views": 8298
+      },
+      "after": {
+        "replies": 8,
+        "reposts": 1,
+        "likes": 16,
+        "bookmarks": null,
+        "views": 8298
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "引用\nIvan Zhao\n@ivanhzhao\n·\n15 小時\nThis is Notion today (and the direction we are doubling down to build/rebuild) x.com/nbaschez/statu…\n8\n1\n16\n8,298",
+      "hotScore": 42
+    },
+    {
+      "index": 7,
+      "author": "@gkxspace",
+      "url": "https://x.com/gkxspace/status/2051955060372877421",
+      "before": {
+        "replies": 10,
+        "reposts": 2,
+        "likes": 11,
+        "bookmarks": null,
+        "views": 17000
+      },
+      "after": {
+        "replies": 10,
+        "reposts": 2,
+        "likes": 11,
+        "bookmarks": null,
+        "views": 17000
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "5月5日\n0:42\nToday, WorldClaw launches WorldRouter with @worldlibertyfi, one simple account to access 300+ AI models with competitive fees*.\nNo more jumping between ChatGPT, Claude and all the others. Same power, way cheaper.\nThis is your first step into the WorldClaw AgentOS.\n付費合作關係\n10\n2\n11\n1.7萬",
+      "hotScore": 45
+    },
+    {
+      "index": 8,
+      "author": "@vincemask",
+      "url": "https://x.com/vincemask/status/2059504087453048922",
+      "before": {
+        "replies": 1,
+        "reposts": 7,
+        "likes": 24,
+        "bookmarks": null,
+        "views": 2945
+      },
+      "after": {
+        "replies": 1,
+        "reposts": 7,
+        "likes": 24,
+        "bookmarks": null,
+        "views": 2945
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "Anthropic AI engineer just dropped a live masterclass on how to ship a team of production‑ready AI agents.\n37 minutes. Free. From the Anthropic team.\nhere’s what she covers:\n• 3 building blocks: brain, hands, sessions\n• server-side loop, so nothing breaks on refresh\n• agent  x.com/0xCodez/status…\n1\n7\n24\n2,945",
+      "hotScore": 41
+    },
+    {
+      "index": 9,
+      "author": "@GoJun315",
+      "url": "https://x.com/GoJun315/status/2053059906207613227",
+      "before": {
+        "replies": 4,
+        "reposts": 1,
+        "likes": 11,
+        "bookmarks": null,
+        "views": 898
+      },
+      "after": {
+        "replies": 4,
+        "reposts": 1,
+        "likes": 11,
+        "bookmarks": null,
+        "views": 898
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n5月9日\n检测 AI Agent 有没有在说谎或产生幻觉，现在只需一条命令就能搞定。\niFixAi 是一个全新的开源检测工具，专门用来给模型进行全方位的“安全体检”。\n它会给 AI 做 32 项深度体检，查查它有没有胡说八道、越权搞破坏或者偷偷瞒报信息，最后直接打出一个 A 到 F 的分数。\n顯示更多\n4\n1\n11\n898",
+      "hotScore": 25
+    },
+    {
+      "index": 10,
+      "author": "@GoSailGlobal",
+      "url": "https://x.com/GoSailGlobal/status/2059446178467426703",
+      "before": {
+        "replies": 4,
+        "reposts": 21,
+        "likes": 99,
+        "bookmarks": null,
+        "views": 6968
+      },
+      "after": {
+        "replies": 4,
+        "reposts": 21,
+        "likes": 99,
+        "bookmarks": null,
+        "views": 6968
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "Anthropic-Cybersecurity-Skills（GitHub 9.6k ）\n一句话：把\"高级安全分析师的脑子\"打包成了 AI Agent 能调用的标准化 skills\n· 754 个结构化网络安全 skill\n· 覆盖 26 个安全领域（云安全、威胁狩猎、恶意软件分析、DFIR、红队…）\n· 每个 skill 同时映射到 5\n顯示更多\n4\n21\n99\n6,968",
+      "hotScore": 153
+    },
+    {
+      "index": 11,
+      "author": "@shao__meng",
+      "url": "https://x.com/shao__meng/status/2059639640647500263",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (3 values)"
+      ],
+      "rawTail": "Sumanth\n@Sumanth_077\n·\n3 小時\nRun your personal AI company with a team of AI agents!\nAlook is an open-source collaboration platform for AI coding agents. Self-hosted and local-first.\nThe setup: Define an org structure. Give each agent a role - dev, ops, research, whatever you need. Set reporting lines.\n1\n12\n1,222",
+      "hotScore": null
+    },
+    {
+      "index": 12,
+      "author": "@seclink",
+      "url": "https://x.com/seclink/status/2059473108851884035",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (2 values)"
+      ],
+      "rawTail": "2. OpenRouter 估值翻倍至 13 亿美元\n来源: TechCrunch | 约 8.6 小时前\n关键信息：\n- AI 从训练 → 推理 → Agent 的趋势转移\n- OpenRouter 作为 AI 模型网关，提供 400+ 模型访问\n- 声称 800万全球用户，处理 100万亿 tokens\n信息差价值: 国内对 OpenRouter\n顯示更多\n1\n1,468",
+      "hotScore": null
+    },
+    {
+      "index": 13,
+      "author": "@songguoxiansen",
+      "url": "https://x.com/songguoxiansen/status/2034466788008947845",
+      "before": {
+        "replies": 4,
+        "reposts": 4,
+        "likes": 19,
+        "bookmarks": null,
+        "views": 6299
+      },
+      "after": {
+        "replies": 4,
+        "reposts": 4,
+        "likes": 19,
+        "bookmarks": null,
+        "views": 6299
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "看了LibTV官网，和下面的教程\n野心很大，不仅仅是视频工具了，更像的是视频创作平台，一站式创作\n有3大亮点：\n1、开创性的双入口设计：人类与AI Agent的协同创作\n除了提供网页版的无限画布，还开放了AI Agent的入口：通过标准化的Skill，OpenClaw（小龙虾）、Claude Code等AI\n顯示更多\n4\n4\n19\n6,299",
+      "hotScore": 39
+    },
+    {
+      "index": 14,
+      "author": "@aelshimy_",
+      "url": "https://x.com/aelshimy_/status/2059671192118653040",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (2 values)"
+      ],
+      "rawTail": "@aelshimy_\n·\n58 分鐘\n回覆\n@shinzui\nthis is exactly the gap we’re thinking about at dart.\nan ai-native workspace can’t just be “chat with the knowledge base.”\nthe agent has to live in the workflow: assigned to tasks, producing output, handing work back, and leaving a trail the team can inspect.\n1\n11",
+      "hotScore": null
+    },
+    {
+      "index": 15,
+      "author": "@egorkabantsov",
+      "url": "https://x.com/egorkabantsov/status/2059579165142032894",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (3 values)"
+      ],
+      "rawTail": "7 小時\nHi, I'm new to X and looking to #connect with #founders, #buildinpublic builders & devtool people.\nespecially interested in:\nB2B SaaS & early-stage startups\nAI coding agents, terminals & MCPs\nCursor, Claude Code, Codex & workflows\nSay hi in replies. Let's be mutuals\n30\n22\n868",
+      "hotScore": null
+    },
+    {
+      "index": 16,
+      "author": "@freeCodeCamp",
+      "url": "https://x.com/freeCodeCamp/status/2059364211340243457",
+      "before": {
+        "replies": 5,
+        "reposts": 29,
+        "likes": 222,
+        "bookmarks": null,
+        "views": 8144
+      },
+      "after": {
+        "replies": 5,
+        "reposts": 29,
+        "likes": 222,
+        "bookmarks": null,
+        "views": 8144
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "Modern systems generate a ton of logs - and these are key to understanding issues with the system.\nBut reading and understanding all this data requires a lot of effort and time. This is where an AI agent can help.\nIn this guide,\n@manishmshiva\nteaches you how to build and deploy\n顯示更多\n5\n29\n222\n8,144",
+      "hotScore": 295
+    },
+    {
+      "index": 17,
+      "author": "@GitHub_Daily",
+      "url": "https://x.com/GitHub_Daily/status/2054350928845873203",
+      "before": {
+        "replies": 7,
+        "reposts": 2,
+        "likes": 13,
+        "bookmarks": null,
+        "views": 4155
+      },
+      "after": {
+        "replies": 7,
+        "reposts": 2,
+        "likes": 13,
+        "bookmarks": null,
+        "views": 4155
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n5月13日\n让 AI Agent 访问多个外部服务，要对接不同的 SDK 和 API，还是不同的调用逻辑，维护起来很头疼。\n最近看到 Mirage 这个项目，挺有意思的。它把所有外部服务统一套在一个虚拟文件系统，让 AI 智能体用命令就能操作所有数据源。\n就是说，把 S3、Google Drive、Slack、GitHub、Redis\n顯示更多\n7\n2\n13\n4,155",
+      "hotScore": 38
+    },
+    {
+      "index": 18,
+      "author": "@LangChain",
+      "url": "https://x.com/LangChain/status/2059659923953172924",
+      "before": {
+        "replies": 3,
+        "reposts": 3,
+        "likes": 17,
+        "bookmarks": null,
+        "views": 1497
+      },
+      "after": {
+        "replies": 3,
+        "reposts": 3,
+        "likes": 17,
+        "bookmarks": null,
+        "views": 1497
+      },
+      "sourceMethods": [
+        "x numeric tail"
+      ],
+      "rawTail": "·\n1 小時\n@Lyft\naccelerated agent development from 6 months to just a few weeks with LangGraph and LangSmith.\nHallucinations decreased by 20%\nAI Resolution rate up by 16%\n3\n3\n17\n1,497",
+      "hotScore": 32
+    },
+    {
+      "index": 19,
+      "author": "@createwithjenny",
+      "url": "https://x.com/createwithjenny/status/2059668025897582782",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (3 values)"
+      ],
+      "rawTail": "Jenny Park\n@createwithjenny\n·\n1 小時\n回覆\n@egorkabantsov\nHi Egor, same here. I’m building around AI apps + agent workflows and trying to connect with more builders/product people. Happy to swap notes on Codex/Claude workflows.\n1\n1\n14",
+      "hotScore": null
+    },
+    {
+      "index": 20,
+      "author": "@EricHaley88",
+      "url": "https://x.com/EricHaley88/status/2059677152279183731",
+      "before": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "after": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "sourceMethods": [
+        "x numeric tail ignored (2 values)"
+      ],
+      "rawTail": "Eric Haley\n@EricHaley88\n·\n34 分鐘\n回覆\n@alphafox\nDoing construction on a stadium.... while also talking to my AI agent which is working on a project for me at home.\n1\n3",
+      "hotScore": null
+    }
+  ]
+}

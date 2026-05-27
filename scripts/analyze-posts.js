@@ -2,6 +2,9 @@ import fs from "node:fs/promises";
 
 const INPUT_PATH = "input/x-ai-agent-raw.json";
 const OUTPUT_PATH = "output/social-radar-report.md";
+const LINE_OUTPUT_PATH = "output/social-radar-line.txt";
+const LINE_JSON_OUTPUT_PATH = "output/social-radar-line.json";
+const ENGAGEMENT_DEBUG_PATH = "output/debug-engagement-parse.json";
 
 async function main() {
   await fs.mkdir("output", { recursive: true });
@@ -11,24 +14,57 @@ async function main() {
     .map((post) => analyzePost(post))
     .sort((a, b) => b.signal_score - a.signal_score);
 
+  const normalizedRaw = {
+    ...raw,
+    schema_version: "0.3",
+    normalized_at: new Date().toISOString(),
+    posts: posts.map((post, index) => ({
+      ...post,
+      index: index + 1
+    }))
+  };
+
+  await fs.writeFile(INPUT_PATH, JSON.stringify(normalizedRaw, null, 2) + "\n");
+  await fs.writeFile(ENGAGEMENT_DEBUG_PATH, JSON.stringify(buildEngagementDebug(posts), null, 2) + "\n");
   await fs.writeFile(OUTPUT_PATH, renderReport(raw, posts) + "\n");
+  await fs.writeFile(LINE_OUTPUT_PATH, renderLineBrief(raw, posts) + "\n");
+  await fs.writeFile(LINE_JSON_OUTPUT_PATH, JSON.stringify(renderLineJson(raw, posts), null, 2) + "\n");
   console.log(`[analyze-posts] Read ${posts.length} posts from ${INPUT_PATH}`);
+  console.log(`[analyze-posts] Wrote ${ENGAGEMENT_DEBUG_PATH}`);
   console.log(`[analyze-posts] Wrote ${OUTPUT_PATH}`);
+  console.log(`[analyze-posts] Wrote ${LINE_OUTPUT_PATH}`);
+  console.log(`[analyze-posts] Wrote ${LINE_JSON_OUTPUT_PATH}`);
 }
 
 function analyzePost(post) {
   const text = normalizeText(stripXMetadata(post.text));
-  const metrics = normalizeMetrics(post.metrics);
+  const engagement = normalizeEngagement(post, text);
+  const metrics = engagement.metrics;
+  const hotScore = calculateHotScore(metrics);
+  const timestampConfidence = classifyTimestampConfidence(post);
+  const engagementSummary = summarizeEngagement(metrics, hotScore);
   const hookTypes = classifyHook(text);
   const emotionTypes = classifyEmotion(text);
   const ctaType = classifyCta(text);
+  const quality = scoreQuality(text, hookTypes, ctaType);
   const viralSignals = scoreSignals(metrics, text, hookTypes, emotionTypes);
 
   return {
     ...post,
     text,
     metrics,
+    hotScore,
+    engagementParseDebug: {
+      ...engagement.debug,
+      hotScore
+    },
+    timestampConfidence,
+    engagementSummary,
     summary: summarize(text),
+    qualityScore: quality.score,
+    qualitySignals: quality.signals,
+    qualityFlags: quality.flags,
+    isCollectible: quality.isCollectible,
     hook_types: hookTypes,
     emotion_types: emotionTypes,
     cta_type: ctaType,
@@ -37,6 +73,32 @@ function analyzePost(post) {
     viral_reason: inferViralReason(text, metrics, hookTypes, emotionTypes, viralSignals.labels),
     remix_angle: inferRemixAngle(text, hookTypes, ctaType)
   };
+}
+
+function calculateHotScore(metrics) {
+  const coreMetrics = [metrics.likes, metrics.reposts, metrics.replies];
+  if (coreMetrics.every((value) => value == null)) return null;
+  return (metrics.likes ?? 0) + (metrics.reposts ?? 0) * 2 + (metrics.replies ?? 0) * 3;
+}
+
+function classifyTimestampConfidence(post) {
+  const timestamp = extractTimestampValue(post);
+  if (!timestamp) return "low";
+  if (/^\d{4}[-/年]\d{1,2}[-/月]\d{1,2}|^\d{1,2}月\d{1,2}日/.test(timestamp)) return "high";
+  if (/^\d+\s*(?:秒|分鐘|小時|天|日|週|周)(?:前)?$/.test(timestamp)) return "medium";
+  return "medium";
+}
+
+function extractTimestampValue(post) {
+  const direct = String(post.publish_time ?? post.published_at ?? post.created_at ?? "").trim();
+  if (direct) return direct;
+  const text = String(post.text ?? post.post_text ?? "");
+  return text.match(/(\d{4}[-/年]\d{1,2}[-/月]\d{1,2}|\d{1,2}月\d{1,2}日|\d+\s*(?:秒|分鐘|小時|天|日|週|周)(?:前)?)/)?.[1] ?? "";
+}
+
+function summarizeEngagement(metrics, hotScore) {
+  if (hotScore == null) return "互動數未取得；score: null";
+  return `score: ${hotScore}；回覆 ${formatMetric(metrics.replies)}、轉發 ${formatMetric(metrics.reposts)}、喜歡 ${formatMetric(metrics.likes)}、收藏 ${formatMetric(metrics.bookmarks)}、觀看 ${formatMetric(metrics.views)}`;
 }
 
 function stripXMetadata(value) {
@@ -67,18 +129,172 @@ function normalizeText(value) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
 }
 
+function normalizeEngagement(post, text) {
+  const before = normalizeMetrics(post.metrics);
+  const rawText = String(post.post_text ?? post.text ?? text ?? "");
+  const fromLabels = parseLabeledMetrics(rawText);
+  const fromTail = parseXMetricTail(rawText);
+  const parsed = mergeMetrics(fromLabels.metrics, fromTail.metrics);
+  const beforeHasMetrics = hasAnyMetric(before);
+  const parsedHasMetrics = hasAnyMetric(parsed);
+  const beforeLooksLikeUnknownZeros = ["replies", "reposts", "likes", "views"].every((key) => before[key] === 0 || before[key] == null);
+  const metrics = parsedHasMetrics
+    ? beforeLooksLikeUnknownZeros
+      ? parsed
+      : mergeMetrics(before, parsed, { preferFirst: true })
+    : beforeLooksLikeUnknownZeros || !beforeHasMetrics
+      ? emptyMetrics()
+      : before;
+
+  return {
+    metrics,
+    debug: {
+      before,
+      after: metrics,
+      sourceMethods: [
+        ...fromLabels.methods,
+        ...fromTail.methods
+      ],
+      rawTail: rawText.split(/\r?\n/).map((line) => line.trim()).filter(Boolean).slice(-10).join("\n")
+    }
+  };
+}
+
 function normalizeMetrics(metrics = {}) {
   return {
-    replies: metrics.replies ?? 0,
-    reposts: metrics.reposts ?? 0,
-    likes: metrics.likes ?? 0,
-    bookmarks: metrics.bookmarks ?? 0,
-    views: metrics.views ?? 0
+    replies: normalizeMetricValue(metrics.replies),
+    reposts: normalizeMetricValue(metrics.reposts),
+    likes: normalizeMetricValue(metrics.likes),
+    bookmarks: normalizeMetricValue(metrics.bookmarks),
+    views: normalizeMetricValue(metrics.views)
+  };
+}
+
+function normalizeMetricValue(value) {
+  if (value == null || value === "") return null;
+  if (typeof value === "number") return Number.isFinite(value) ? value : null;
+  return parseCount(value);
+}
+
+function parseLabeledMetrics(text) {
+  const methods = [];
+  const metrics = {
+    replies: metricNearLabel(text, ["replies", "reply", "回覆", "則回覆"]),
+    reposts: metricNearLabel(text, ["reposts", "repost", "retweets", "retweet", "轉貼", "轉發", "次轉發"]),
+    likes: metricNearLabel(text, ["likes", "like", "喜歡", "個喜歡"]),
+    bookmarks: metricNearLabel(text, ["bookmarks", "bookmark", "書籤", "收藏", "個書籤"]),
+    views: metricNearLabel(text, ["views", "view", "觀看", "次觀看", "次瀏覽"])
+  };
+  if (hasAnyMetric(metrics)) methods.push("labeled engagement text");
+  return { metrics, methods };
+}
+
+function metricNearLabel(text, labels) {
+  const labelPattern = labels.map(escapeRegex).join("|");
+  const numberPattern = "([0-9][0-9,]*(?:\\.[0-9]+)?\\s*(?:萬|K|M)?)";
+  const normalized = String(text ?? "");
+  const beforeLabel = new RegExp(`${numberPattern}\\s*(?:${labelPattern})`, "i");
+  const afterLabel = new RegExp(`(?:${labelPattern})\\s*${numberPattern}`, "i");
+  const match = normalized.match(beforeLabel) ?? normalized.match(afterLabel);
+  return match ? parseCount(match[1]) : null;
+}
+
+function parseXMetricTail(text) {
+  const lines = String(text ?? "")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const values = [];
+
+  for (let index = lines.length - 1; index >= 0; index -= 1) {
+    const line = lines[index];
+    if (!isMetricToken(line)) {
+      if (values.length > 0) break;
+      continue;
+    }
+    values.unshift(parseCount(line));
+  }
+
+  if (values.length < 4) {
+    return {
+      metrics: emptyMetrics(),
+      methods: values.length > 0 ? [`x numeric tail ignored (${values.length} values)`] : []
+    };
+  }
+
+  const [replies, reposts, likes, views] = values.slice(-4);
+  return {
+    metrics: {
+      replies,
+      reposts,
+      likes,
+      bookmarks: null,
+      views
+    },
+    methods: ["x numeric tail"]
+  };
+}
+
+function isMetricToken(value) {
+  return /^[0-9][0-9,]*(?:\.[0-9]+)?\s*(?:萬|K|M)?$/i.test(String(value ?? "").trim());
+}
+
+function mergeMetrics(primary = emptyMetrics(), fallback = emptyMetrics(), options = {}) {
+  const preferFirst = options.preferFirst ?? true;
+  const keys = ["replies", "reposts", "likes", "bookmarks", "views"];
+  return Object.fromEntries(keys.map((key) => {
+    const first = primary[key];
+    const second = fallback[key];
+    return [key, preferFirst ? (first ?? second ?? null) : (second ?? first ?? null)];
+  }));
+}
+
+function emptyMetrics() {
+  return {
+    replies: null,
+    reposts: null,
+    likes: null,
+    bookmarks: null,
+    views: null
+  };
+}
+
+function hasAnyMetric(metrics) {
+  return Object.values(metrics ?? {}).some((value) => value != null);
+}
+
+function parseCount(value) {
+  const raw = String(value ?? "").trim().replace(/,/g, "");
+  const number = Number.parseFloat(raw);
+  if (Number.isNaN(number)) return null;
+  if (raw.includes("萬")) return Math.round(number * 10_000);
+  if (/K/i.test(raw)) return Math.round(number * 1_000);
+  if (/M/i.test(raw)) return Math.round(number * 1_000_000);
+  return Math.round(number);
+}
+
+function formatMetric(value) {
+  return value == null ? "未取得" : value;
+}
+
+function escapeRegex(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function buildEngagementDebug(posts) {
+  return {
+    generated_at: new Date().toISOString(),
+    engagementParseDebug: posts.map((post, index) => ({
+      index: index + 1,
+      author: post.author_handle ?? post.author ?? "unknown",
+      url: post.url ?? null,
+      ...post.engagementParseDebug
+    }))
   };
 }
 
 function scoreSignals(metrics, text, hookTypes, emotionTypes) {
-  const engagement = metrics.likes + metrics.reposts * 2 + metrics.replies * 1.5 + metrics.bookmarks * 1.25;
+  const engagement = (metrics.likes ?? 0) + (metrics.reposts ?? 0) * 2 + (metrics.replies ?? 0) * 1.5 + (metrics.bookmarks ?? 0) * 1.25;
   const replyRate = metrics.views ? metrics.replies / metrics.views : 0;
   const repostRate = metrics.views ? metrics.reposts / metrics.views : 0;
   const engagementRate = metrics.views ? engagement / metrics.views : 0;
@@ -130,6 +346,102 @@ function scoreSignals(metrics, text, hookTypes, emotionTypes) {
     repost_rate: repostRate,
     engagement_rate: engagementRate
   };
+}
+
+function scoreQuality(text, hookTypes, ctaType) {
+  const signals = [];
+  const flags = [];
+  let score = 0;
+
+  if (hasHighInformationDensity(text)) {
+    score += 28;
+    signals.push("資訊密度高");
+  } else if (text.length >= 120) {
+    score += 16;
+    signals.push("資訊量中等");
+  } else {
+    flags.push("低資訊量");
+  }
+
+  if (hasClearPointOfView(text, hookTypes)) {
+    score += 24;
+    signals.push("觀點明確");
+  } else {
+    flags.push("觀點不明確");
+  }
+
+  if (isConvertibleToContentIdea(text, hookTypes, ctaType)) {
+    score += 28;
+    signals.push("可轉化成內容靈感");
+  } else {
+    flags.push("轉化價值低");
+  }
+
+  if (hasSpecificEvidence(text)) {
+    score += 12;
+    signals.push("有具體例子或數字");
+  }
+
+  if (hookTypes.length > 0) {
+    score += 8;
+    signals.push("Hook 可辨識");
+  }
+
+  if (isPureAdOrGiveaway(text)) {
+    score -= 45;
+    flags.push("疑似純廣告或抽獎");
+  } else if (isPromotional(text)) {
+    score -= 18;
+    flags.push("偏促銷");
+  }
+
+  if (isLowInformationPost(text)) {
+    score -= 25;
+    if (!flags.includes("低資訊量")) flags.push("低資訊量");
+  }
+
+  const normalizedScore = clamp(Math.round(score), 0, 100);
+
+  return {
+    score: normalizedScore,
+    signals,
+    flags,
+    isCollectible: normalizedScore >= 45 && !flags.includes("疑似純廣告或抽獎")
+  };
+}
+
+function hasClearPointOfView(text, hookTypes) {
+  return hookTypes.some((type) => ["Controversy", "Fear", "Productivity", "Step-by-step", "Money", "AI Replacement"].includes(type)) ||
+    /不是|其實|反而|難的是|關鍵|本質|我認為|我覺得|重點|should|need to|the key|not .* but/i.test(text);
+}
+
+function isConvertibleToContentIdea(text, hookTypes, ctaType) {
+  if (ctaType === "follow") return false;
+  if (hookTypes.some((type) => ["Fear", "Productivity", "Step-by-step", "Controversy", "Money"].includes(type))) return true;
+  return /workflow|framework|guide|tutorial|checklist|roadmap|deploy|security|open source|github|工作流|框架|教程|指南|清單|部署|安全|開源|优化|檢測|協作/i.test(text);
+}
+
+function hasSpecificEvidence(text) {
+  return /\d|github|http|open source|repo|benchmark|case|example|項|個|層|步|星|開源|案例|工具|框架/i.test(text);
+}
+
+function isPureAdOrGiveaway(text) {
+  const lower = text.toLowerCase();
+  return /giveaway|airdrop|reward pool|rewards campaign|claim now|抽獎|空投|白名單|邀请码|邀請碼|限時領取|免費領|轉發.*抽|关注.*抽|追蹤.*抽/.test(lower);
+}
+
+function isPromotional(text) {
+  const lower = text.toLowerCase();
+  return /sign up|join now|use my code|promo|discount|campaign|register|邀請碼|註冊|報名|優惠|活動|申請資格/.test(lower);
+}
+
+function isLowInformationPost(text) {
+  const compactText = String(text ?? "").replace(/\s+/g, " ").trim();
+  return compactText.length < 90 || /^(check this out|gm|wow|nice|launching soon|coming soon|跟隨)/i.test(compactText);
+}
+
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
 }
 
 function classifyHook(text) {
@@ -228,6 +540,22 @@ function renderReport(raw, posts) {
   lines.push(`- hasTimestampCount: ${dataStatus.hasTimestampCount}`);
   lines.push(`- isFallback: ${dataStatus.isFallback}`);
   lines.push("");
+  lines.push("## 今日 TOP 10 熱門貼文");
+  lines.push("");
+  renderHotPostTable(posts).forEach((line) => lines.push(line));
+  lines.push("");
+  lines.push("## 爆文模式分析");
+  lines.push("");
+  renderViralPatternAnalysis(posts).forEach((line) => lines.push(line));
+  lines.push("");
+  lines.push("## 可模仿貼文模板");
+  lines.push("");
+  renderImitationTemplates(posts).forEach((line) => lines.push(line));
+  lines.push("");
+  lines.push("## 資料限制說明");
+  lines.push("");
+  renderDataLimitations(dataStatus, posts).forEach((line) => lines.push(line));
+  lines.push("");
   lines.push(`資料來源：${raw.platform ?? "x"} / ${raw.collection_mode ?? "unknown"}`);
   lines.push(`搜尋 URL：${raw.url ?? ""}`);
   lines.push(`擷取時間：${raw.captured_at ?? "unknown"}`);
@@ -325,11 +653,137 @@ function renderReport(raw, posts) {
   return lines.join("\n");
 }
 
+function renderHotPostTable(posts) {
+  if (posts.length === 0) return ["資料不足。"];
+
+  const lines = [
+    "| 排名 | score | qualityScore | 作者 | 互動摘要 | 時間信心 | 一句話摘要 |",
+    "| --- | ---: | ---: | --- | --- | --- | --- |"
+  ];
+
+  topByHotScore(posts).slice(0, 10).forEach((post, index) => {
+    lines.push(
+      `| ${index + 1} | ${formatScore(post.hotScore)} | ${post.qualityScore} | ${post.author_handle ?? post.author ?? "unknown"} | ${escapeTable(post.engagementSummary)} | ${post.timestampConfidence} | ${escapeTable(post.summary)} |`
+    );
+  });
+
+  return lines;
+}
+
+function renderViralPatternAnalysis(posts) {
+  if (posts.length === 0) return ["- 資料不足，無法判斷爆文模式。"];
+
+  const patterns = new Map();
+  for (const post of posts.slice(0, 10)) {
+    const key = post.hook_types.join(" + ");
+    const current = patterns.get(key) ?? { count: 0, example: post, hotScore: 0 };
+    current.count += 1;
+    current.hotScore += post.hotScore ?? 0;
+    if ((post.hotScore ?? -1) > (current.example.hotScore ?? -1)) current.example = post;
+    patterns.set(key, current);
+  }
+
+  return [...patterns.entries()]
+    .sort((a, b) => b[1].hotScore - a[1].hotScore)
+    .slice(0, 5)
+    .map(([pattern, data]) => `- ${pattern}：出現 ${data.count} 次，代表貼文 ${data.example.author_handle ?? data.example.author ?? "unknown"}；可用「${data.example.remix_angle}」重寫。`);
+}
+
+function renderImitationTemplates(posts) {
+  const templates = [
+    "「多數人以為 AI Agent 卡在模型，其實卡在 ______。我把它拆成 4 層：____、____、____、____。」",
+    "「我測了 ______ 類 AI Agent 工具，真正值得收藏的是這 3 個判準：____、____、____。」",
+    "「如果你今天才開始做 AI Agent，不要先追框架，先照這條路線：第 1 步____，第 2 步____，第 3 步____。」"
+  ];
+
+  if (posts.some((post) => post.hook_types.includes("Fear"))) {
+    templates.unshift("「你的 AI Agent 會失敗，不是因為模型弱，而是少了這個檢查：____。」");
+  }
+
+  return templates.slice(0, 4).map((template) => `- ${template}`);
+}
+
+function renderDataLimitations(dataStatus, posts) {
+  const lowTimestampCount = posts.filter((post) => post.timestampConfidence === "low").length;
+  const missingMetricCount = posts.filter((post) =>
+    ["replies", "reposts", "likes"].some((key) => post.metrics[key] == null)
+  ).length;
+  const unknownScoreCount = posts.filter((post) => post.hotScore == null).length;
+
+  return [
+    `- 本報告依 ${dataStatus.inputFile} 產生，sourceMode 為 ${dataStatus.sourceMode}。`,
+    `- timestampConfidence 為 low 的貼文共 ${lowTimestampCount} 篇；時間排序只能作輔助判斷。`,
+    `- replies/reposts/likes 任一欄位未取得的貼文共 ${missingMetricCount} 篇；若三項核心互動數都未取得，score 會顯示 null。`,
+    `- 互動數未取得、無法計算 hotScore 的貼文共 ${unknownScoreCount} 篇；這些貼文會排在已取得互動數的貼文後方。`,
+    `- qualityScore 低於 45 或疑似純廣告、抽獎的貼文不進入 LINE TOP 5；目前可收錄貼文共 ${posts.filter((post) => post.isCollectible).length} 篇。`,
+    "- X 頁面可見範圍與平台排序會影響樣本，結果適合做內容雷達，不等同全量社群統計。"
+  ];
+}
+
+function topByHotScore(posts) {
+  return [...posts].sort((a, b) => {
+    const aHasScore = a.hotScore != null;
+    const bHasScore = b.hotScore != null;
+    if (aHasScore !== bHasScore) return aHasScore ? -1 : 1;
+    if (aHasScore && bHasScore && b.hotScore !== a.hotScore) return b.hotScore - a.hotScore;
+    return timestampSortValue(b) - timestampSortValue(a) || b.signal_score - a.signal_score;
+  });
+}
+
+function topByLineScore(posts) {
+  const collectible = posts.filter((post) => post.isCollectible);
+  const pool = collectible.length > 0 ? collectible : posts;
+  const maxHotScore = Math.max(1, ...pool.map((post) => post.hotScore ?? 0));
+
+  return [...pool]
+    .map((post) => ({
+      ...post,
+      lineScore: calculateLineScore(post, maxHotScore)
+    }))
+    .sort((a, b) => b.lineScore - a.lineScore || timestampSortValue(b) - timestampSortValue(a) || b.signal_score - a.signal_score);
+}
+
+function calculateLineScore(post, maxHotScore) {
+  const hotScore = post.hotScore ?? 0;
+  const normalizedHotScore = maxHotScore > 0 ? (hotScore / maxHotScore) * 100 : 0;
+  return Math.round((normalizedHotScore * 0.6 + (post.qualityScore ?? 0) * 0.4) * 10) / 10;
+}
+
+function timestampSortValue(post) {
+  const value = extractTimestampValue(post);
+  if (!value) return 0;
+  const capturedAt = Date.parse(post.captured_at ?? "") || Date.now();
+  const relative = value.match(/^(\d+)\s*(秒|分鐘|小時|天|日|週|周)(?:前)?$/);
+  if (relative) {
+    const amount = Number(relative[1]);
+    const unit = relative[2];
+    const multipliers = {
+      秒: 1_000,
+      分鐘: 60_000,
+      小時: 3_600_000,
+      天: 86_400_000,
+      日: 86_400_000,
+      週: 604_800_000,
+      周: 604_800_000
+    };
+    return capturedAt - amount * multipliers[unit];
+  }
+
+  const monthDay = value.match(/^(\d{1,2})月(\d{1,2})日$/);
+  if (monthDay) {
+    const year = new Date(capturedAt).getFullYear();
+    return new Date(year, Number(monthDay[1]) - 1, Number(monthDay[2])).getTime();
+  }
+
+  const parsed = Date.parse(value.replace("年", "-").replace("月", "-").replace("日", ""));
+  return Number.isNaN(parsed) ? 0 : parsed;
+}
+
 function buildDataStatus(raw, posts) {
   const sourceMode = raw.collection_mode ?? "unknown";
   const envFallback = process.env.SOCIAL_RADAR_IS_FALLBACK;
   const inputFile = envFallback === "true" ? (raw.source_input ?? "input/manual-x.txt") : INPUT_PATH;
-  const isManualSource = /manual/i.test(sourceMode) || /manual-x\.txt$/.test(inputFile);
+  const isManualSource = /manual-x\.txt$/.test(inputFile);
 
   return {
     generatedAt: new Date().toISOString(),
@@ -337,9 +791,83 @@ function buildDataStatus(raw, posts) {
     inputFile,
     totalPosts: posts.length,
     unknownAuthorCount: posts.filter((post) => !(post.author_handle ?? post.author)).length,
-    hasTimestampCount: posts.filter((post) => Boolean(post.publish_time ?? post.published_at ?? post.created_at)).length,
+    hasTimestampCount: posts.filter((post) => post.timestampConfidence !== "low").length,
     isFallback: envFallback === "true" || (envFallback !== "false" && isManualSource)
   };
+}
+
+function renderLineBrief(raw, posts) {
+  const payload = renderLineJson(raw, posts);
+  const topics = payload.topics.join("、") || "資料不足";
+  const topPosts = payload.topPosts;
+  const ideas = payload.contentIdeas;
+
+  const lines = [];
+  lines.push(payload.title);
+  lines.push(`主題：${topics}`);
+  lines.push("");
+  lines.push("TOP 5：");
+
+  if (topPosts.length === 0) {
+    lines.push("1. 資料不足，請重新擷取。");
+  } else {
+    topPosts.forEach((post, index) => {
+      lines.push(`${index + 1}. ${post.author}｜${formatScore(post.hotScore)}｜Q${post.qualityScore}｜${compact(post.summary, 52)}`);
+    });
+  }
+
+  lines.push("");
+  lines.push("內容靈感：");
+  ideas.forEach((idea, index) => lines.push(`${index + 1}. ${compact(idea, 72)}`));
+
+  lines.push("");
+  lines.push(`資料：${payload.sourceStatus.sourceMode}，${payload.sourceStatus.totalPosts} 篇`);
+
+  const text = lines.join("\n");
+  return text.length <= 1000 ? text : `${text.slice(0, 997)}...`;
+}
+
+function renderLineJson(raw, posts) {
+  const dataStatus = buildDataStatus(raw, posts);
+  const topics = inferTopics(posts).slice(0, 3);
+  const topPosts = topByLineScore(posts).slice(0, 5);
+
+  return {
+    title: "Social AI Radar 今日快報",
+    generatedAt: new Date().toISOString(),
+    topics: topics.map((topic) => topic.name),
+    topPosts: topPosts.map((post, index) => ({
+      rank: index + 1,
+      author: post.author_handle ?? post.author ?? "unknown",
+      url: post.url ?? null,
+      summary: post.summary,
+      hotScore: post.hotScore,
+      qualityScore: post.qualityScore,
+      lineScore: post.lineScore,
+      qualitySignals: post.qualitySignals ?? [],
+      qualityFlags: post.qualityFlags ?? [],
+      hookTypes: post.hook_types ?? [],
+      emotionTypes: post.emotion_types ?? [],
+      engagementSummary: post.engagementSummary
+    })),
+    contentIdeas: buildPostIdeas(posts).slice(0, 3),
+    sourceStatus: {
+      ...dataStatus,
+      inputFile: dataStatus.inputFile,
+      totalPosts: posts.length,
+      collectiblePosts: posts.filter((post) => post.isCollectible).length,
+      scoring: "lineScore = normalizedHotScore * 0.6 + qualityScore * 0.4"
+    }
+  };
+}
+
+function compact(value, maxLength) {
+  const text = String(value ?? "").replace(/\s+/g, " ").trim();
+  return text.length <= maxLength ? text : `${text.slice(0, maxLength - 1)}…`;
+}
+
+function formatScore(value) {
+  return value == null ? "score: null" : value;
 }
 
 function inferTopics(posts) {
