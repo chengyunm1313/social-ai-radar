@@ -1,0 +1,66 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - link "Threads" [ref=e7] [cursor=pointer]:
+      - /url: /
+      - img "Threads" [ref=e9]
+    - generic [ref=e11]:
+      - link "首頁" [ref=e13] [cursor=pointer]:
+        - /url: /
+        - img "首頁" [ref=e17]
+      - link "搜尋" [ref=e21] [cursor=pointer]:
+        - /url: /search
+        - img "搜尋" [ref=e25]
+      - button "建立" [ref=e28] [cursor=pointer]:
+        - img "建立" [ref=e32]
+      - button "通知" [ref=e35] [cursor=pointer]:
+        - img "通知" [ref=e39]
+      - button "個人檔案" [ref=e42] [cursor=pointer]:
+        - img "個人檔案" [ref=e46]
+    - generic [ref=e49]:
+      - button "置頂" [ref=e51] [cursor=pointer]:
+        - img "置頂" [ref=e55]
+      - button "更多 更多" [ref=e57] [cursor=pointer]:
+        - generic [ref=e58]:
+          - img "更多" [ref=e60]
+          - img "更多" [ref=e64]
+  - generic [ref=e73]:
+    - generic [ref=e75]:
+      - generic [ref=e83]:
+        - button "返回" [ref=e86] [cursor=pointer]:
+          - img "返回" [ref=e90]
+        - link "直欄標題" [ref=e93] [cursor=pointer]:
+          - /url: /search?q=ChatGPT%20OpenAI%20AI%20Agent%20MCP%20Claude%20Code%20Cursor
+          - heading "ChatGPT OpenAI AI Agent MCP Claude Code Cursor" [level=1] [ref=e94]:
+            - generic [ref=e95]: ChatGPT OpenAI AI Agent MCP Claude Code Cursor
+        - button "更多" [ref=e98] [cursor=pointer]:
+          - img "更多" [ref=e101]
+      - region "直欄內文" [ref=e104]:
+        - generic [ref=e111]: 查無結果。
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - generic [ref=e114]: 登入或註冊 Threads
+        - generic [ref=e115]: 查看人們談論的主題，並加入對話。
+        - button "Instagram 載入中…… 載入中……" [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]:
+            - img "Instagram" [ref=e118]
+            - generic [ref=e120]:
+              - status "載入中……" [ref=e121]
+              - status "載入中……" [ref=e122]
+        - link "改以用戶名稱登入" [ref=e124] [cursor=pointer]:
+          - /url: /login?show_choice_screen=false
+      - contentinfo [ref=e125]:
+        - list [ref=e126]:
+          - listitem [ref=e127]:
+            - generic [ref=e128]: © 2026
+          - listitem [ref=e129]:
+            - link "《Threads 使用條款》" [ref=e131] [cursor=pointer]:
+              - /url: https://l.threads.com/?u=https%3A%2F%2Fhelp.instagram.com%2F769983657850450&e=AUDU8x1ob6C5-mkOPrHQTHt5Hqd_8j1mp5UrUjG-ftsgJm9Q-6awDOPH3za_cXTvi9UC93N5VQdkaWODfUqXHGpWVqafLc-e32I_7R8_k-WvHXAaSi7z-1kjS4ACu0aATpibvkwIeMGuTDIO
+          - listitem [ref=e132]:
+            - link "《隱私政策》" [ref=e134] [cursor=pointer]:
+              - /url: https://l.threads.com/?u=https%3A%2F%2Fhelp.instagram.com%2F515230437301944&e=AUDU8x1ob6C5-mkOPrHQTHt5Hqd_8j1mp5UrUjG-ftsgJm9Q-6awDOPH3za_cXTvi9UC93N5VQdkaWODfUqXHGpWVqafLc-e32I_7R8_k-WvHXAaSi7z-1kjS4ACu0aATpibvkwIeMGuTDIO
+          - listitem [ref=e135]:
+            - link "《Cookie 政策》" [ref=e137] [cursor=pointer]:
+              - /url: https://l.threads.com/?u=https%3A%2F%2Fhelp.instagram.com%2F1896641480634370%2F&e=AUDU8x1ob6C5-mkOPrHQTHt5Hqd_8j1mp5UrUjG-ftsgJm9Q-6awDOPH3za_cXTvi9UC93N5VQdkaWODfUqXHGpWVqafLc-e32I_7R8_k-WvHXAaSi7z-1kjS4ACu0aATpibvkwIeMGuTDIO
+          - listitem [ref=e138]:
+            - button "回報問題" [ref=e139] [cursor=pointer]:
+              - generic [ref=e140]: 回報問題

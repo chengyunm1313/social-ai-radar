@@ -1,0 +1,90 @@
+- generic [ref=e3]:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - dialog:
+            - group [active] [ref=e4]:
+              - dialog [ref=e6]:
+                - img "Loading spinner" [ref=e12]
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e20]:
+          - heading "正發生." [level=1] [ref=e21]
+          - img "Loading spinner" [ref=e27]
+        - img [ref=e31]
+      - navigation "頁尾" [ref=e35]:
+        - generic [ref=e36]:
+          - link "關於" [ref=e37] [cursor=pointer]:
+            - /url: https://about.x.com
+          - generic [ref=e38]: "|"
+        - generic [ref=e39]:
+          - link "下載 X 應用程式" [ref=e40] [cursor=pointer]:
+            - /url: https://help.x.com/using-x/download-the-x-app
+          - generic [ref=e41]: "|"
+        - generic [ref=e42]:
+          - link "Grok" [ref=e43] [cursor=pointer]:
+            - /url: https://grok.com/
+          - generic [ref=e44]: "|"
+        - generic [ref=e45]:
+          - link "說明中心" [ref=e46] [cursor=pointer]:
+            - /url: https://help.x.com
+          - generic [ref=e47]: "|"
+        - generic [ref=e48]:
+          - link "服務條款" [ref=e49] [cursor=pointer]:
+            - /url: https://x.com/tos
+          - generic [ref=e50]: "|"
+        - generic [ref=e51]:
+          - link "隱私政策" [ref=e52] [cursor=pointer]:
+            - /url: https://x.com/privacy
+          - generic [ref=e53]: "|"
+        - generic [ref=e54]:
+          - link "Cookie 使用政策" [ref=e55] [cursor=pointer]:
+            - /url: https://support.x.com/articles/20170514
+          - generic [ref=e56]: "|"
+        - generic [ref=e57]:
+          - link "協助工具" [ref=e58] [cursor=pointer]:
+            - /url: https://help.x.com/resources/accessibility
+          - generic [ref=e59]: "|"
+        - generic [ref=e60]:
+          - link "廣告資訊" [ref=e61] [cursor=pointer]:
+            - /url: https://business.x.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo
+          - generic [ref=e62]: "|"
+        - generic [ref=e63]:
+          - link "部落格" [ref=e64] [cursor=pointer]:
+            - /url: https://blog.x.com
+          - generic [ref=e65]: "|"
+        - generic [ref=e66]:
+          - link "人才招募" [ref=e67] [cursor=pointer]:
+            - /url: https://careers.x.com
+          - generic [ref=e68]: "|"
+        - generic [ref=e69]:
+          - link "品牌資源" [ref=e70] [cursor=pointer]:
+            - /url: https://about.x.com/press/brand-assets
+          - generic [ref=e71]: "|"
+        - generic [ref=e72]:
+          - link "廣告" [ref=e73] [cursor=pointer]:
+            - /url: https://ads.x.com/?ref=gl-tw-tw-twitter-advertise
+          - generic [ref=e74]: "|"
+        - generic [ref=e75]:
+          - link "行銷" [ref=e76] [cursor=pointer]:
+            - /url: https://marketing.x.com
+          - generic [ref=e77]: "|"
+        - generic [ref=e78]:
+          - link "X 商業版" [ref=e79] [cursor=pointer]:
+            - /url: https://business.x.com/?ref=web-twc-ao-gbl-twitterforbusiness&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=twitterforbusiness
+          - generic [ref=e80]: "|"
+        - generic [ref=e81]:
+          - link "開發人員" [ref=e82] [cursor=pointer]:
+            - /url: https://developer.x.com
+          - generic [ref=e83]: "|"
+        - generic [ref=e84]:
+          - link "新聞" [ref=e85] [cursor=pointer]:
+            - /url: https://x.com/i/jf/stories/home
+          - generic [ref=e86]: "|"
+        - generic [ref=e87]:
+          - link "設定" [ref=e88] [cursor=pointer]:
+            - /url: /settings
+          - generic [ref=e89]: "|"
+        - generic [ref=e90]: © 2026 X Corp.

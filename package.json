@@ -1,0 +1,36 @@
+{
+  "name": "social-ai-radar",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Social AI Radar Phase 3: Playwright semi-automated public post collection and analysis.",
+  "type": "module",
+  "scripts": {
+    "scrape:x": "node scripts/scrape-x.js",
+    "import:manual:x": "node scripts/import-manual-x.js",
+    "analyze": "node scripts/analyze-posts.js",
+    "radar:x": "npm run scrape:x && npm run analyze",
+    "radar:hybrid:x": "node scripts/import-manual-x.js && npm run analyze",
+    "radar": "npm run radar:x"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengyunm1313/social-ai-radar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chengyunm1313/social-ai-radar/issues"
+  },
+  "homepage": "https://github.com/chengyunm1313/social-ai-radar#readme"
+}
