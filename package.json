@@ -9,7 +9,7 @@
     "import:manual:x": "node scripts/import-manual-x.js",
     "analyze": "node scripts/analyze-posts.js",
     "radar:x": "npm run scrape:x && npm run analyze",
-    "radar:hybrid:x": "node scripts/import-manual-x.js && npm run analyze",
+    "radar:hybrid:x": "node scripts/radar-hybrid-x.js",
     "radar": "npm run radar:x"
   },
   "engines": {

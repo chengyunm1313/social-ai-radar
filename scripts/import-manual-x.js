@@ -66,6 +66,20 @@ async function main() {
 
 function splitCandidatePosts(text) {
   const normalized = text.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  const lines = normalized
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const lineBlocks = splitByXAuthorRows(lines);
+  if (lineBlocks.length > 0) {
+    return dedupe(
+      lineBlocks
+        .map((block) => block.trim())
+        .filter((block) => looksLikeRelevantPost(block))
+    );
+  }
+
   const rawBlocks = normalized
     .split(/\n{2,}/)
     .map((block) => block.trim())
@@ -98,6 +112,61 @@ function splitCandidatePosts(text) {
     .filter((block) => looksLikeRelevantPost(block));
 
   return dedupe(candidates);
+}
+
+function splitByXAuthorRows(lines) {
+  const starts = [];
+
+  for (let index = 0; index < lines.length; index += 1) {
+    if (!isHandleLine(lines[index])) continue;
+    if (!looksLikeXTimestamp(lines[index + 2]) && lines[index + 1] !== "·") continue;
+
+    const authorIndex = findAuthorLine(lines, index);
+    if (authorIndex === null) continue;
+    starts.push(authorIndex);
+  }
+
+  const blocks = [];
+
+  for (let index = 0; index < starts.length; index += 1) {
+    const start = starts[index];
+    const end = starts[index + 1] ?? lines.length;
+    const blockLines = trimRightRail(lines.slice(start, end))
+      .filter((line) => !isUiNoiseLine(line));
+    const block = blockLines.join("\n").trim();
+    if (block) blocks.push(block);
+  }
+
+  return blocks;
+}
+
+function findAuthorLine(lines, handleIndex) {
+  for (let index = handleIndex - 1; index >= Math.max(0, handleIndex - 4); index -= 1) {
+    if (isUiNoiseLine(lines[index])) continue;
+    if (isHandleLine(lines[index])) continue;
+    if (lines[index] === "·") continue;
+    return index;
+  }
+  return null;
+}
+
+function isHandleLine(line) {
+  return /^@[A-Za-z0-9_]{2,}$/.test(line);
+}
+
+function looksLikeXTimestamp(line = "") {
+  return /^(\d+\s*(?:秒|分鐘|小時)|\d+月\d+日|\d{4}年\d+月\d+日)$/.test(line);
+}
+
+function isUiNoiseLine(line) {
+  return /^(若要查看鍵盤快速鍵，請按問號|查看鍵盤快速鍵|首頁|探索|通知|聊天|Grok|書籤|創作者工作室|Premium|個人資料|更多|發佈|熱門|最新|人物|媒體|列表|查看新貼文|搜尋時間軸|搜尋篩選|來自任何人|你跟隨的人|位置|任何地方|在你附近|進階搜尋|流行趨勢|有什麼新鮮事|台灣 的流行趨勢|商業・金融 · 流行趨勢|跟隨誰|跟隨|顯示更多|引用|參考資料|Machine Learning- Data Science|機器學習-資料科學|服務條款|隱私政策|Cookie 使用政策|協助工具|廣告資訊|© 2026 X Corp\.|長文翻譯前後不一致？|試用 AI 精翻，結合已讀語境，譯文更連貫。|本次免費試用)$/.test(line);
+}
+
+function trimRightRail(lines) {
+  const stopIndex = lines.findIndex((line) =>
+    /^(搜尋篩選|流行趨勢|有什麼新鮮事|跟隨誰|服務條款)$/.test(line)
+  );
+  return stopIndex >= 0 ? lines.slice(0, stopIndex) : lines;
 }
 
 function looksLikeRelevantPost(block) {
@@ -142,7 +211,7 @@ function extractHandle(block) {
 }
 
 function extractPublishTime(block) {
-  return block.match(/(\d+\s*(?:秒|分鐘|小時)前|\d+月\d+日|\d{4}年\d+月\d+日)/)?.[1] ?? null;
+  return block.match(/(\d+\s*(?:秒|分鐘|小時)(?:前)?|\d+月\d+日|\d{4}年\d+月\d+日)/)?.[1] ?? null;
 }
 
 function parseMetrics(block) {

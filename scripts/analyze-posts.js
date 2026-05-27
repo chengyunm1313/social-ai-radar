@@ -17,7 +17,7 @@ async function main() {
 }
 
 function analyzePost(post) {
-  const text = normalizeText(post.text);
+  const text = normalizeText(stripXMetadata(post.text));
   const metrics = normalizeMetrics(post.metrics);
   const hookTypes = classifyHook(text);
   const emotionTypes = classifyEmotion(text);
@@ -37,6 +37,30 @@ function analyzePost(post) {
     viral_reason: inferViralReason(text, metrics, hookTypes, emotionTypes, viralSignals.labels),
     remix_angle: inferRemixAngle(text, hookTypes, ctaType)
   };
+}
+
+function stripXMetadata(value) {
+  const lines = String(value ?? "")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  let index = 0;
+
+  if (lines[index + 1] && /^@[A-Za-z0-9_]{2,}$/.test(lines[index + 1])) {
+    index += 2;
+    if (lines[index] === "·") index += 1;
+    if (/^(\d+\s*(?:秒|分鐘|小時)(?:前)?|\d+月\d+日|\d{4}年\d+月\d+日)$/.test(lines[index])) {
+      index += 1;
+    }
+  }
+
+  if (lines[index] === "回覆") {
+    index += 1;
+    if (/^@[A-Za-z0-9_]{2,}$/.test(lines[index])) index += 1;
+  }
+
+  return lines.slice(index).join("\n");
 }
 
 function normalizeText(value) {
@@ -186,8 +210,23 @@ function inferRemixAngle(text, hookTypes, ctaType) {
 function renderReport(raw, posts) {
   const lines = [];
   const topPosts = posts.slice(0, 10);
+  const dataStatus = buildDataStatus(raw, posts);
 
   lines.push(`# Social AI Radar - X Phase 3`);
+  lines.push("");
+  if (dataStatus.isFallback) {
+    lines.push("> 注意：本報告使用手動輸入資料");
+    lines.push("");
+  }
+  lines.push("## 資料狀態");
+  lines.push("");
+  lines.push(`- generatedAt: ${dataStatus.generatedAt}`);
+  lines.push(`- sourceMode: ${dataStatus.sourceMode}`);
+  lines.push(`- inputFile: ${dataStatus.inputFile}`);
+  lines.push(`- totalPosts: ${dataStatus.totalPosts}`);
+  lines.push(`- unknownAuthorCount: ${dataStatus.unknownAuthorCount}`);
+  lines.push(`- hasTimestampCount: ${dataStatus.hasTimestampCount}`);
+  lines.push(`- isFallback: ${dataStatus.isFallback}`);
   lines.push("");
   lines.push(`資料來源：${raw.platform ?? "x"} / ${raw.collection_mode ?? "unknown"}`);
   lines.push(`搜尋 URL：${raw.url ?? ""}`);
@@ -284,6 +323,23 @@ function renderReport(raw, posts) {
   lines.push("今天優先發「AI Agent 從 demo 到 production 的落差」：開頭用反常識 Hook，正文拆控制層、工具權限、測試、部署，結尾問讀者目前最常卡在哪一段。");
 
   return lines.join("\n");
+}
+
+function buildDataStatus(raw, posts) {
+  const sourceMode = raw.collection_mode ?? "unknown";
+  const envFallback = process.env.SOCIAL_RADAR_IS_FALLBACK;
+  const inputFile = envFallback === "true" ? (raw.source_input ?? "input/manual-x.txt") : INPUT_PATH;
+  const isManualSource = /manual/i.test(sourceMode) || /manual-x\.txt$/.test(inputFile);
+
+  return {
+    generatedAt: new Date().toISOString(),
+    sourceMode,
+    inputFile,
+    totalPosts: posts.length,
+    unknownAuthorCount: posts.filter((post) => !(post.author_handle ?? post.author)).length,
+    hasTimestampCount: posts.filter((post) => Boolean(post.publish_time ?? post.published_at ?? post.created_at)).length,
+    isFallback: envFallback === "true" || (envFallback !== "false" && isManualSource)
+  };
 }
 
 function inferTopics(posts) {

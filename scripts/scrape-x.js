@@ -109,8 +109,11 @@ async function openBrowserSession() {
       throw new Error(
         [
           `無法連到真實 Chrome remote debugging session：${CDP_URL}`,
-          "請先用以下指令啟動一個可被 Playwright 連線的 Chrome：",
+          "Chrome 若已經在執行，macOS 可能只會打開既有工作階段，不會套用 --remote-debugging-port。",
+          "做法 A：完全關閉 Chrome 後，再用以下指令啟動：",
           '/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --remote-debugging-port=9222',
+          "做法 B：保留原本 Chrome，另外開一個獨立 debug profile：",
+          'open -na "Google Chrome" --args --remote-debugging-port=9222 --user-data-dir="$HOME/.social-ai-radar/chrome-debug"',
           "然後在該 Chrome 視窗手動登入 X，再重新執行 npm run radar:x。",
           `原始錯誤：${error.message}`
         ].join("\n")

@@ -3,7 +3,7 @@
   "collection_mode": "hybrid_computer_use_manual_text",
   "platform": "x",
   "keyword": "AI Agent",
-  "captured_at": "2026-05-27T10:19:55.552Z",
+  "captured_at": "2026-05-27T16:44:02.977Z",
   "source_input": "input/manual-x.txt",
   "rules": [
     "使用平常 Chrome 登入 X",
@@ -21,10 +21,10 @@
       "index": 1,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "若要查看鍵盤快速鍵，請按問號\n查看鍵盤快速鍵\n\"AI Agent\" since:2026-05-27 until:2026-05-28\n熱門\n最新\n人物\n媒體\n列表",
-      "text": "若要查看鍵盤快速鍵，請按問號\n查看鍵盤快速鍵\n\"AI Agent\" since:2026-05-27 until:2026-05-28\n熱門\n最新\n人物\n媒體\n列表",
+      "post_text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n8// Banyak yang mulai membandingkan MiMo dengan:\nClaude\nGPT\nDeepSeek\nQwen\nKimi\nKarena Xiaomi bermain agresif di:\n💰 harga murah\n⚡ performa coding\n🧠 token/context besar\n8// 許多人開始將 MiMo 與以下作品比較：\n克勞德\nGPT\n深尋\nQwen\n尋找\n因為小米在以下領域積極參與：\n💰  便宜價格\n⚡  編碼效能\n🧠  大型標記/上下文",
+      "text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n8// Banyak yang mulai membandingkan MiMo dengan:\nClaude\nGPT\nDeepSeek\nQwen\nKimi\nKarena Xiaomi bermain agresif di:\n💰 harga murah\n⚡ performa coding\n🧠 token/context besar\n8// 許多人開始將 MiMo 與以下作品比較：\n克勞德\nGPT\n深尋\nQwen\n尋找\n因為小米在以下領域積極參與：\n💰  便宜價格\n⚡  編碼效能\n🧠  大型標記/上下文",
       "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
@@ -33,17 +33,17 @@
         "bookmarks": null,
         "views": null
       },
-      "author_handle": null,
-      "publish_time": null
+      "author_handle": "@HDN_sol",
+      "publish_time": "2 小時"
     },
     {
       "index": 2,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "查看新貼文\n搜尋時間軸\nHDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n8// Banyak yang mulai membandingkan MiMo dengan:\nClaude\nGPT\nDeepSeek\nQwen\nKimi\nKarena Xiaomi bermain agresif di:\n💰 harga murah\n⚡ performa coding\n🧠 token/context besar\n8// 許多人開始將 MiMo 與以下作品比較：\n克勞德\nGPT\n深尋\nQwen\n尋找",
-      "text": "查看新貼文\n搜尋時間軸\nHDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n8// Banyak yang mulai membandingkan MiMo dengan:\nClaude\nGPT\nDeepSeek\nQwen\nKimi\nKarena Xiaomi bermain agresif di:\n💰 harga murah\n⚡ performa coding\n🧠 token/context besar\n8// 許多人開始將 MiMo 與以下作品比較：\n克勞德\nGPT\n深尋\nQwen\n尋找",
+      "post_text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n9// Apakah MiMo sudah lebih bagus dari Claude?\nBelum sepenuhnya.\nClaude masih unggul di:\nreasoning premium\nwriting natural\nenterprise quality\nTapi untuk:\n✅ coding\n✅ AI agent\n✅ automation\n✅ harga hemat\nMiMo mulai jadi ancaman serius.\n9// MiMo 比 Claude 好嗎？\n不完全是。\n克勞德仍然擅長：\n理性高級\n寫作自然\n企業品質\n但對於：\n✅  編碼\n✅  AI 代理人\n✅  自動化\n✅  成本效益\nMiMo 正逐漸成為嚴重威脅。",
+      "text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n9// Apakah MiMo sudah lebih bagus dari Claude?\nBelum sepenuhnya.\nClaude masih unggul di:\nreasoning premium\nwriting natural\nenterprise quality\nTapi untuk:\n✅ coding\n✅ AI agent\n✅ automation\n✅ harga hemat\nMiMo mulai jadi ancaman serius.\n9// MiMo 比 Claude 好嗎？\n不完全是。\n克勞德仍然擅長：\n理性高級\n寫作自然\n企業品質\n但對於：\n✅  編碼\n✅  AI 代理人\n✅  自動化\n✅  成本效益\nMiMo 正逐漸成為嚴重威脅。",
       "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
@@ -53,16 +53,16 @@
         "views": null
       },
       "author_handle": "@HDN_sol",
-      "publish_time": null
+      "publish_time": "2 小時"
     },
     {
       "index": 3,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "因為小米在以下領域積極參與：\n💰  便宜價格\n⚡  編碼效能\n🧠  大型標記/上下文\nHDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n9// Apakah MiMo sudah lebih bagus dari Claude?\nBelum sepenuhnya.\nClaude masih unggul di:\nreasoning premium\nwriting natural\nenterprise quality\nTapi untuk:\n✅ coding\n✅ AI agent\n✅ automation\n✅ harga hemat\nMiMo mulai jadi ancaman serius.\n9// MiMo 比 Claude 好嗎？\n不完全是。\n克勞德仍然擅長：\n理性高級\n寫作自然\n企業品質",
-      "text": "因為小米在以下領域積極參與：\n💰  便宜價格\n⚡  編碼效能\n🧠  大型標記/上下文\nHDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n9// Apakah MiMo sudah lebih bagus dari Claude?\nBelum sepenuhnya.\nClaude masih unggul di:\nreasoning premium\nwriting natural\nenterprise quality\nTapi untuk:\n✅ coding\n✅ AI agent\n✅ automation\n✅ harga hemat\nMiMo mulai jadi ancaman serius.\n9// MiMo 比 Claude 好嗎？\n不完全是。\n克勞德仍然擅長：\n理性高級\n寫作自然\n企業品質",
+      "post_text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n2// Xiaomi resmi masuk perang AI lewat MiMo, model AI baru yang mulai disebut-sebut sebagai “penantang Claude” 👀\nYang bikin heboh:\n• Harga jauh lebih murah\n• Context window super besar\n• Fokus kuat di coding & AI agent\n2// 小米正式透過 MiMo 正式加入 AI 戰爭，這款新 AI 模型開始被譽為「Claude 挑戰者」  👀\n令人興奮的地方：\n• 價格便宜許多\n• 超大上下文視窗\n• 高度重視程式設計與人工智慧代理",
+      "text": "HDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n2// Xiaomi resmi masuk perang AI lewat MiMo, model AI baru yang mulai disebut-sebut sebagai “penantang Claude” 👀\nYang bikin heboh:\n• Harga jauh lebih murah\n• Context window super besar\n• Fokus kuat di coding & AI agent\n2// 小米正式透過 MiMo 正式加入 AI 戰爭，這款新 AI 模型開始被譽為「Claude 挑戰者」  👀\n令人興奮的地方：\n• 價格便宜許多\n• 超大上下文視窗\n• 高度重視程式設計與人工智慧代理",
       "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
@@ -72,35 +72,16 @@
         "views": null
       },
       "author_handle": "@HDN_sol",
-      "publish_time": null
+      "publish_time": "2 小時"
     },
     {
       "index": 4,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "但對於：\n✅  編碼\n✅  AI 代理人\n✅  自動化\n✅  成本效益\nMiMo 正逐漸成為嚴重威脅。\nHDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n2// Xiaomi resmi masuk perang AI lewat MiMo, model AI baru yang mulai disebut-sebut sebagai “penantang Claude” 👀\nYang bikin heboh:\n• Harga jauh lebih murah\n• Context window super besar\n• Fokus kuat di coding & AI agent\n2// 小米正式透過 MiMo 正式加入 AI 戰爭，這款新 AI 模型開始被譽為「Claude 挑戰者」  👀",
-      "text": "但對於：\n✅  編碼\n✅  AI 代理人\n✅  自動化\n✅  成本效益\nMiMo 正逐漸成為嚴重威脅。\nHDN\n@HDN_sol\n·\n2 小時\n回覆\n@HDN_sol\n2// Xiaomi resmi masuk perang AI lewat MiMo, model AI baru yang mulai disebut-sebut sebagai “penantang Claude” 👀\nYang bikin heboh:\n• Harga jauh lebih murah\n• Context window super besar\n• Fokus kuat di coding & AI agent\n2// 小米正式透過 MiMo 正式加入 AI 戰爭，這款新 AI 模型開始被譽為「Claude 挑戰者」  👀",
+      "post_text": "RubelIslam 🟦\n@rubelislam0461\n·\n4 小時\nThe Future of the Onchain Economy\nThe next stage of the onchain economy is starting to look very different. We've seen a clear evolution:\n• Wallets\n• Apps\n• Ecosystems\nNow, we are moving toward agents.\nIntroducing\n@base\nMCP\nImagine connecting your AI agent directly to your\n鏈上經濟的未來\n鏈上經濟的下一階段開始變得大不相同。我們已經看到明顯的演變：\n• 錢包\n• 應用程式\n• 生態系統\n現在，我們正朝著代理人的方向發展。\n介紹\n@base\nMCP\n想像一下，直接將你的 AI 代理連接到你的",
+      "text": "RubelIslam 🟦\n@rubelislam0461\n·\n4 小時\nThe Future of the Onchain Economy\nThe next stage of the onchain economy is starting to look very different. We've seen a clear evolution:\n• Wallets\n• Apps\n• Ecosystems\nNow, we are moving toward agents.\nIntroducing\n@base\nMCP\nImagine connecting your AI agent directly to your\n鏈上經濟的未來\n鏈上經濟的下一階段開始變得大不相同。我們已經看到明顯的演變：\n• 錢包\n• 應用程式\n• 生態系統\n現在，我們正朝著代理人的方向發展。\n介紹\n@base\nMCP\n想像一下，直接將你的 AI 代理連接到你的",
       "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
-      "source_method": "computer_use_manual_text_import",
-      "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "author_handle": "@HDN_sol",
-      "publish_time": null
-    },
-    {
-      "index": 5,
-      "platform": "x",
-      "keyword": "AI Agent",
-      "post_text": "令人興奮的地方：\n• 價格便宜許多\n• 超大上下文視窗\n• 高度重視程式設計與人工智慧代理\nRubelIslam 🟦\n@rubelislam0461\n·\n4 小時\nThe Future of the Onchain Economy\nThe next stage of the onchain economy is starting to look very different. We've seen a clear evolution:\n• Wallets\n• Apps\n• Ecosystems\nNow, we are moving toward agents.",
-      "text": "令人興奮的地方：\n• 價格便宜許多\n• 超大上下文視窗\n• 高度重視程式設計與人工智慧代理\nRubelIslam 🟦\n@rubelislam0461\n·\n4 小時\nThe Future of the Onchain Economy\nThe next stage of the onchain economy is starting to look very different. We've seen a clear evolution:\n• Wallets\n• Apps\n• Ecosystems\nNow, we are moving toward agents.",
-      "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
@@ -110,54 +91,35 @@
         "views": null
       },
       "author_handle": "@rubelislam0461",
-      "publish_time": null
+      "publish_time": "4 小時"
+    },
+    {
+      "index": 5,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "post_text": "Dr. Theophano Mitsa ☦️🇬🇷🇺🇸\n@theomitsa\n·\n3 小時\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\nThe Ultimate Beginners’ Guide to Building an AI Agent in Python!\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\n終極初學者指南：如何在 Python 中打造 AI 代理 ！\nPython 新手打造 AI 代理的終極指南 |邁向資料科學\n來自 towardsdatascience.com",
+      "text": "Dr. Theophano Mitsa ☦️🇬🇷🇺🇸\n@theomitsa\n·\n3 小時\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\nThe Ultimate Beginners’ Guide to Building an AI Agent in Python!\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\n終極初學者指南：如何在 Python 中打造 AI 代理 ！\nPython 新手打造 AI 代理的終極指南 |邁向資料科學\n來自 towardsdatascience.com",
+      "url": "https://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter",
+      "captured_at": "2026-05-27T16:44:02.977Z",
+      "source_method": "computer_use_manual_text_import",
+      "metrics": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "author_handle": "@theomitsa",
+      "publish_time": "3 小時"
     },
     {
       "index": 6,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "Introducing\n@base\nMCP\nImagine connecting your AI agent directly to your\n鏈上經濟的未來\n鏈上經濟的下一階段開始變得大不相同。我們已經看到明顯的演變：\n• 錢包\n• 應用程式\n• 生態系統\n現在，我們正朝著代理人的方向發展。",
-      "text": "Introducing\n@base\nMCP\nImagine connecting your AI agent directly to your\n鏈上經濟的未來\n鏈上經濟的下一階段開始變得大不相同。我們已經看到明顯的演變：\n• 錢包\n• 應用程式\n• 生態系統\n現在，我們正朝著代理人的方向發展。",
-      "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
-      "source_method": "computer_use_manual_text_import",
-      "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "author_handle": "@base",
-      "publish_time": null
-    },
-    {
-      "index": 7,
-      "platform": "x",
-      "keyword": "AI Agent",
-      "post_text": "介紹\n@base\nMCP\n想像一下，直接將你的 AI 代理連接到你的\nMachine Learning- Data Science\n機器學習-資料科學\nDr. Theophano Mitsa ☦️🇬🇷🇺🇸\n@theomitsa\n·\n3 小時\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\nThe Ultimate Beginners’ Guide to Building an AI Agent in Python!\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\n終極初學者指南：如何在 Python 中打造 AI 代理 ！",
-      "text": "介紹\n@base\nMCP\n想像一下，直接將你的 AI 代理連接到你的\nMachine Learning- Data Science\n機器學習-資料科學\nDr. Theophano Mitsa ☦️🇬🇷🇺🇸\n@theomitsa\n·\n3 小時\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\nThe Ultimate Beginners’ Guide to Building an AI Agent in Python!\nhttps://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter\n終極初學者指南：如何在 Python 中打造 AI 代理 ！",
-      "url": "https://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/?utm_campaign=tds%20daily&utm_medium=email&_hsenc=p2ANqtz--DoAhEdB2sYVhxCXu7OqEknz9VLrQAQlHkhJi925VbMCTSBAASieqtL8TF8qYhDg6Fz26jFn16w1fq-qnPfylNisVUjA&_hsmi=420489133&utm_source=newsletter",
-      "captured_at": "2026-05-27T10:19:55.552Z",
-      "source_method": "computer_use_manual_text_import",
-      "metrics": {
-        "replies": null,
-        "reposts": null,
-        "likes": null,
-        "bookmarks": null,
-        "views": null
-      },
-      "author_handle": "@base",
-      "publish_time": null
-    },
-    {
-      "index": 8,
-      "platform": "x",
-      "keyword": "AI Agent",
-      "post_text": "Python 新手打造 AI 代理的終極指南 |邁向資料科學\n來自 towardsdatascience.com\nCell 细胞\n@cellinlab\n·\n7 小時\nCodex 提示词：\n请帮我完成一个详细的教程，主题是 「 Pi Agent 的原理与实现：从零到一实现一个 AI Agent」。",
-      "text": "Python 新手打造 AI 代理的終極指南 |邁向資料科學\n來自 towardsdatascience.com\nCell 细胞\n@cellinlab\n·\n7 小時\nCodex 提示词：\n请帮我完成一个详细的教程，主题是 「 Pi Agent 的原理与实现：从零到一实现一个 AI Agent」。",
-      "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "post_text": "Cell 细胞\n@cellinlab\n·\n7 小時\nCodex 提示词：\n请帮我完成一个详细的教程，主题是 「 Pi Agent 的原理与实现：从零到一实现一个 AI Agent」。\n参考 [earendil-works/pi](https://github.com/earendil-works/pi) 和 https://pi.dev/docs/latest 等，进行联网搜索，先完整理解它的核心原理、架构设计、关键模块和实现链路，然后为它生成一个基于",
+      "text": "Cell 细胞\n@cellinlab\n·\n7 小時\nCodex 提示词：\n请帮我完成一个详细的教程，主题是 「 Pi Agent 的原理与实现：从零到一实现一个 AI Agent」。\n参考 [earendil-works/pi](https://github.com/earendil-works/pi) 和 https://pi.dev/docs/latest 等，进行联网搜索，先完整理解它的核心原理、架构设计、关键模块和实现链路，然后为它生成一个基于",
+      "url": "https://github.com/earendil-works/pi)",
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
@@ -167,16 +129,16 @@
         "views": null
       },
       "author_handle": "@cellinlab",
-      "publish_time": null
+      "publish_time": "7 小時"
     },
     {
-      "index": 9,
+      "index": 7,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "参考 [earendil-works/pi](https://github.com/earendil-works/pi) 和 https://pi.dev/docs/latest 等，进行联网搜索，先完整理解它的核心原理、架构设计、关键模块和实现链路，然后为它生成一个基于\n引用\n參考資料\nCell 细胞\n@cellinlab\n·\n5月26日\n时间线 刷到 好几个 Pi Agent 的推荐，\n让 Codex 帮我学了下，做了个手把手教程",
-      "text": "参考 [earendil-works/pi](https://github.com/earendil-works/pi) 和 https://pi.dev/docs/latest 等，进行联网搜索，先完整理解它的核心原理、架构设计、关键模块和实现链路，然后为它生成一个基于\n引用\n參考資料\nCell 细胞\n@cellinlab\n·\n5月26日\n时间线 刷到 好几个 Pi Agent 的推荐，\n让 Codex 帮我学了下，做了个手把手教程",
-      "url": "https://github.com/earendil-works/pi)",
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "post_text": "Cell 细胞\n@cellinlab\n·\n5月26日\n时间线 刷到 好几个 Pi Agent 的推荐，\n让 Codex 帮我学了下，做了个手把手教程\n👉 Pi Agent 原理与实现：从零到一实现一个 AI Agent\n🔗 在线学习：https://how-pi-agent-works.vercel.app\n🌍 文档源码：https://github.com/cellinlab/how-pi-agent-works",
+      "text": "Cell 细胞\n@cellinlab\n·\n5月26日\n时间线 刷到 好几个 Pi Agent 的推荐，\n让 Codex 帮我学了下，做了个手把手教程\n👉 Pi Agent 原理与实现：从零到一实现一个 AI Agent\n🔗 在线学习：https://how-pi-agent-works.vercel.app\n🌍 文档源码：https://github.com/cellinlab/how-pi-agent-works",
+      "url": "https://how-pi-agent-works.vercel.app",
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
@@ -189,13 +151,13 @@
       "publish_time": "5月26日"
     },
     {
-      "index": 10,
+      "index": 8,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "👉 Pi Agent 原理与实现：从零到一实现一个 AI Agent\n🔗 在线学习：https://how-pi-agent-works.vercel.app\n🌍 文档源码：https://github.com/cellinlab/how-pi-agent-works\n小众软件\n@appinn\n·\n1 小時\n没卡没资源？复旦NLP直接把免费GPU塞进AI，科研全自动时代来了！ https://appinn.com/fudan-nlp-gpu-ai-agent/\nOriginAI\n@Origin_AI_01\n·\n4 小時\nMost AI agents fail for one reason:\nPeople build them without a system.\nA good AI agent is not just a prompt.\nIt’s a structured pipeline from idea → execution.\nHere’s the framework that actually works:\nDefine the job",
-      "text": "👉 Pi Agent 原理与实现：从零到一实现一个 AI Agent\n🔗 在线学习：https://how-pi-agent-works.vercel.app\n🌍 文档源码：https://github.com/cellinlab/how-pi-agent-works\n小众软件\n@appinn\n·\n1 小時\n没卡没资源？复旦NLP直接把免费GPU塞进AI，科研全自动时代来了！ https://appinn.com/fudan-nlp-gpu-ai-agent/\nOriginAI\n@Origin_AI_01\n·\n4 小時\nMost AI agents fail for one reason:\nPeople build them without a system.\nA good AI agent is not just a prompt.\nIt’s a structured pipeline from idea → execution.\nHere’s the framework that actually works:\nDefine the job",
-      "url": "https://how-pi-agent-works.vercel.app",
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "post_text": "小众软件\n@appinn\n·\n1 小時\n没卡没资源？复旦NLP直接把免费GPU塞进AI，科研全自动时代来了！ https://appinn.com/fudan-nlp-gpu-ai-agent/",
+      "text": "小众软件\n@appinn\n·\n1 小時\n没卡没资源？复旦NLP直接把免费GPU塞进AI，科研全自动时代来了！ https://appinn.com/fudan-nlp-gpu-ai-agent/",
+      "url": "https://appinn.com/fudan-nlp-gpu-ai-agent/",
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
@@ -205,16 +167,35 @@
         "views": null
       },
       "author_handle": "@appinn",
-      "publish_time": null
+      "publish_time": "1 小時"
     },
     {
-      "index": 11,
+      "index": 9,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "What problem is the agent solving?\nWho is the end user?\n蓝狐\n@lanhubiji\n·\n7 小時\nPieverse AI网关直接和BNB Chain的“代理生存包”（Agent survival Pack）打通，本质上是将“大脑”和“钱包/支付”进行整合。\nAI agent之前“大脑”和“钱包/支付”往往是分开的。\n现在，Pieverse将其打通，一个安全网关，可以同时整合AI模型（大脑）+钱包/支付。",
-      "text": "What problem is the agent solving?\nWho is the end user?\n蓝狐\n@lanhubiji\n·\n7 小時\nPieverse AI网关直接和BNB Chain的“代理生存包”（Agent survival Pack）打通，本质上是将“大脑”和“钱包/支付”进行整合。\nAI agent之前“大脑”和“钱包/支付”往往是分开的。\n现在，Pieverse将其打通，一个安全网关，可以同时整合AI模型（大脑）+钱包/支付。",
+      "post_text": "OriginAI\n@Origin_AI_01\n·\n4 小時\nMost AI agents fail for one reason:\nPeople build them without a system.\nA good AI agent is not just a prompt.\nIt’s a structured pipeline from idea → execution.\nHere’s the framework that actually works:\nDefine the job\nWhat problem is the agent solving?\nWho is the end user?",
+      "text": "OriginAI\n@Origin_AI_01\n·\n4 小時\nMost AI agents fail for one reason:\nPeople build them without a system.\nA good AI agent is not just a prompt.\nIt’s a structured pipeline from idea → execution.\nHere’s the framework that actually works:\nDefine the job\nWhat problem is the agent solving?\nWho is the end user?",
       "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "captured_at": "2026-05-27T16:44:02.977Z",
+      "source_method": "computer_use_manual_text_import",
+      "metrics": {
+        "replies": null,
+        "reposts": null,
+        "likes": null,
+        "bookmarks": null,
+        "views": null
+      },
+      "author_handle": "@Origin_AI_01",
+      "publish_time": "4 小時"
+    },
+    {
+      "index": 10,
+      "platform": "x",
+      "keyword": "AI Agent",
+      "post_text": "蓝狐\n@lanhubiji\n·\n7 小時\nPieverse AI网关直接和BNB Chain的“代理生存包”（Agent survival Pack）打通，本质上是将“大脑”和“钱包/支付”进行整合。\nAI agent之前“大脑”和“钱包/支付”往往是分开的。\n现在，Pieverse将其打通，一个安全网关，可以同时整合AI模型（大脑）+钱包/支付。\n主要功能是，用钱包直接充值、生成“限额API",
+      "text": "蓝狐\n@lanhubiji\n·\n7 小時\nPieverse AI网关直接和BNB Chain的“代理生存包”（Agent survival Pack）打通，本质上是将“大脑”和“钱包/支付”进行整合。\nAI agent之前“大脑”和“钱包/支付”往往是分开的。\n现在，Pieverse将其打通，一个安全网关，可以同时整合AI模型（大脑）+钱包/支付。\n主要功能是，用钱包直接充值、生成“限额API",
+      "url": null,
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
@@ -224,16 +205,16 @@
         "views": null
       },
       "author_handle": "@lanhubiji",
-      "publish_time": null
+      "publish_time": "7 小時"
     },
     {
-      "index": 12,
+      "index": 11,
       "platform": "x",
       "keyword": "AI Agent",
-      "post_text": "主要功能是，用钱包直接充值、生成“限额API\n引用\npieverse\n@pieverse_io\n·\n5月25日\n🦾 Agent Survival Pack from @BNBCHAIN is now live with Pieverse AI Gateway!\nAccess leading frontier models from OpenAI, Anthropic, DeepSeek, Meta, and more through one secure gateway with wallet funding, scoped API keys, usage limits, and spend tracking.",
-      "text": "主要功能是，用钱包直接充值、生成“限额API\n引用\npieverse\n@pieverse_io\n·\n5月25日\n🦾 Agent Survival Pack from @BNBCHAIN is now live with Pieverse AI Gateway!\nAccess leading frontier models from OpenAI, Anthropic, DeepSeek, Meta, and more through one secure gateway with wallet funding, scoped API keys, usage limits, and spend tracking.",
+      "post_text": "pieverse\n@pieverse_io\n·\n5月25日\n🦾 Agent Survival Pack from @BNBCHAIN is now live with Pieverse AI Gateway!\nAccess leading frontier models from OpenAI, Anthropic, DeepSeek, Meta, and more through one secure gateway with wallet funding, scoped API keys, usage limits, and spend tracking.\nTo celebrate launch,",
+      "text": "pieverse\n@pieverse_io\n·\n5月25日\n🦾 Agent Survival Pack from @BNBCHAIN is now live with Pieverse AI Gateway!\nAccess leading frontier models from OpenAI, Anthropic, DeepSeek, Meta, and more through one secure gateway with wallet funding, scoped API keys, usage limits, and spend tracking.\nTo celebrate launch,",
       "url": null,
-      "captured_at": "2026-05-27T10:19:55.552Z",
+      "captured_at": "2026-05-27T16:44:02.977Z",
       "source_method": "computer_use_manual_text_import",
       "metrics": {
         "replies": null,
