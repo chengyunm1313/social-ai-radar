@@ -2,6 +2,8 @@ Social AI Radar 今日快報
 主題：模型與平台動態、AI Agent 工作流、Agent 學習路線
 最強 topic：模型與平台動態
 最強 keyword：Claude Code
+升溫 topic：AI Agent 工作流
+新興 keyword：暫無
 
 TOP 5：
 1. @ClaudeDevs｜18259｜Q76｜We’ve shipped a security-guidance plugin for Claude…

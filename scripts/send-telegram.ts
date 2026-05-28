@@ -20,6 +20,23 @@ type LinePayload = {
     score?: number;
     highScorePostCount?: number;
   } | null;
+  trends?: {
+    risingTopic?: {
+      name?: string;
+      score?: number;
+      momentum?: number;
+    } | null;
+    risingKeyword?: {
+      keyword?: string;
+      name?: string;
+      score?: number;
+      momentum?: number;
+    } | null;
+    emergingKeywords?: Array<{
+      keyword?: string;
+      score?: number;
+    }>;
+  };
   topPosts?: Array<{
     rank?: number;
     author?: string;
@@ -96,6 +113,8 @@ function formatTelegramMessage(payload: LinePayload) {
   lines.push(`今日主題：${topics}`);
   lines.push(`今日最強 topic：${formatStrongestTopic(payload.strongestTopic)}`);
   lines.push(`今日最強 keyword：${formatStrongestKeyword(payload.strongestKeyword)}`);
+  lines.push(`今日升溫 topic：${formatTrendTopic(payload.trends?.risingTopic)}`);
+  lines.push(`新興 keyword：${formatEmergingKeyword(payload.trends?.emergingKeywords?.[0])}`);
   lines.push("");
   lines.push("TOP 5");
 
@@ -184,6 +203,18 @@ function formatStrongestKeyword(keyword: LinePayload["strongestKeyword"]) {
   if (!keyword?.keyword) return "資料不足";
   const highScoreText = keyword.highScorePostCount == null ? "" : `，高分 ${keyword.highScorePostCount} 篇`;
   return `${keyword.keyword}${keyword.score == null ? "" : `（score ${keyword.score}${highScoreText}）`}`;
+}
+
+function formatTrendTopic(topic: { name?: string; score?: number; momentum?: number } | null | undefined) {
+  if (!topic || typeof topic !== "object" || !("name" in topic) || !topic.name) return "資料不足";
+  const score = "score" in topic && topic.score != null ? `，score ${topic.score}` : "";
+  const momentum = "momentum" in topic && topic.momentum != null ? `，momentum ${topic.momentum}` : "";
+  return `${topic.name}（${[score, momentum].filter(Boolean).join("").replace(/^，/, "")}）`;
+}
+
+function formatEmergingKeyword(keyword: { keyword?: string; score?: number } | undefined) {
+  if (!keyword?.keyword) return "暫無";
+  return `${keyword.keyword}${keyword.score == null ? "" : `（score ${keyword.score}）`}`;
 }
 
 function maskChatId(value: string) {

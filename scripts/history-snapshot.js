@@ -4,6 +4,7 @@ import path from "node:path";
 const LINE_JSON_PATH = "output/social-radar-line.json";
 const RAW_PATH = "input/x-ai-agent-raw.json";
 const HISTORY_DIR = "data/history";
+const TIME_ZONE = process.env.SOCIAL_RADAR_TIMEZONE ?? "Asia/Taipei";
 
 async function main() {
   await fs.mkdir(HISTORY_DIR, { recursive: true });
@@ -70,8 +71,17 @@ function average(values) {
 
 function getSnapshotDate(value) {
   const date = value ? new Date(value) : new Date();
-  if (Number.isNaN(date.getTime())) return new Date().toISOString().slice(0, 10);
-  return date.toISOString().slice(0, 10);
+  if (Number.isNaN(date.getTime())) return formatLocalDate(new Date());
+  return formatLocalDate(date);
+}
+
+function formatLocalDate(date) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: TIME_ZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(date);
 }
 
 main().catch((error) => {

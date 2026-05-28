@@ -8,6 +8,7 @@ const ARTIFACTS = [
   "output/social-radar-report.md",
   "output/social-radar-line.json",
   "output/social-radar-line.txt",
+  "output/trend-analysis.json",
   "output/debug-engagement-parse.json",
   "output/debug-x-page.html",
   "output/debug-x-screenshot.png",
@@ -41,6 +42,18 @@ async function main() {
     {
       name: "radar:hybrid:x",
       command: ["npm", "run", "radar:hybrid:x"]
+    },
+    {
+      name: "history:snapshot",
+      command: ["npm", "run", "history:snapshot"]
+    },
+    {
+      name: "trends:analyze",
+      command: ["npm", "run", "trends:analyze"]
+    },
+    {
+      name: "analyze",
+      command: ["npm", "run", "analyze"]
     },
     {
       name: "radar:line:x",

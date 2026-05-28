@@ -1,7 +1,7 @@
 {
   "title": "Social AI Radar 今日快報",
-  "generatedAt": "2026-05-27T17:55:22.510Z",
-  "runId": "20260528-015328",
+  "generatedAt": "2026-05-27T18:01:36.784Z",
+  "runId": null,
   "topics": [
     "模型與平台動態",
     "AI Agent 工作流",
@@ -64,6 +64,85 @@
       "score": 299.4
     }
   ],
+  "topicStats": [
+    {
+      "name": "模型與平台動態",
+      "postCount": 58,
+      "highScorePostCount": 45,
+      "score": 1991.5
+    },
+    {
+      "name": "AI Agent 工作流",
+      "postCount": 31,
+      "highScorePostCount": 27,
+      "score": 1229.9
+    },
+    {
+      "name": "Agent 學習路線",
+      "postCount": 15,
+      "highScorePostCount": 14,
+      "score": 605.2
+    },
+    {
+      "name": "Agent 工程化部署",
+      "postCount": 13,
+      "highScorePostCount": 11,
+      "score": 496.9
+    },
+    {
+      "name": "Agent 失敗與安全",
+      "postCount": 1,
+      "highScorePostCount": 1,
+      "score": 84.1
+    }
+  ],
+  "trends": {
+    "generatedAt": "2026-05-27T18:01:36.636Z",
+    "windowDays": 7,
+    "snapshotCount": 2,
+    "dateRange": {
+      "from": "2026-05-27",
+      "to": "2026-05-28"
+    },
+    "risingKeyword": {
+      "name": "Claude Code",
+      "keyword": "Claude Code",
+      "score": 472.3,
+      "previousAverage": 472.3,
+      "momentum": 0,
+      "postCount": 10,
+      "highScorePostCount": 9
+    },
+    "risingTopic": {
+      "name": "AI Agent 工作流",
+      "score": 1229.9,
+      "previousAverage": 2,
+      "momentum": 1227.9,
+      "postCount": 31,
+      "highScorePostCount": 27
+    },
+    "sustainedHotTopics": [
+      {
+        "name": "模型與平台動態",
+        "appearances": 2,
+        "averageScore": 1991.5,
+        "highScorePostCount": 45
+      },
+      {
+        "name": "AI Agent 工作流",
+        "appearances": 2,
+        "averageScore": 616,
+        "highScorePostCount": 27
+      },
+      {
+        "name": "Agent 學習路線",
+        "appearances": 2,
+        "averageScore": 303.1,
+        "highScorePostCount": 14
+      }
+    ],
+    "emergingKeywords": []
+  },
   "topPosts": [
     {
       "rank": 1,
@@ -198,8 +277,8 @@
     "AI Agent 開始碰到交易、投資與招聘，但越接近錢，越需要權限邊界。"
   ],
   "sourceStatus": {
-    "generatedAt": "2026-05-27T17:55:22.510Z",
-    "runId": "20260528-015328",
+    "generatedAt": "2026-05-27T18:01:36.783Z",
+    "runId": null,
     "sourceMode": "phase3_playwright_manual_read_only",
     "inputFile": "input/x-ai-agent-raw.json",
     "totalPosts": 60,

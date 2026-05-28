@@ -1,0 +1,156 @@
+{
+  "generatedAt": "2026-05-27T18:01:36.636Z",
+  "windowDays": 7,
+  "snapshotCount": 2,
+  "dateRange": {
+    "from": "2026-05-27",
+    "to": "2026-05-28"
+  },
+  "risingKeyword": {
+    "name": "Claude Code",
+    "keyword": "Claude Code",
+    "score": 472.3,
+    "previousAverage": 472.3,
+    "momentum": 0,
+    "postCount": 10,
+    "highScorePostCount": 9
+  },
+  "risingKeywords": [
+    {
+      "name": "Claude Code",
+      "keyword": "Claude Code",
+      "score": 472.3,
+      "previousAverage": 472.3,
+      "momentum": 0,
+      "postCount": 10,
+      "highScorePostCount": 9
+    },
+    {
+      "name": "AI Agent",
+      "keyword": "AI Agent",
+      "score": 369.1,
+      "previousAverage": 369.1,
+      "momentum": 0,
+      "postCount": 10,
+      "highScorePostCount": 9
+    },
+    {
+      "name": "OpenAI",
+      "keyword": "OpenAI",
+      "score": 330.2,
+      "previousAverage": 330.2,
+      "momentum": 0,
+      "postCount": 10,
+      "highScorePostCount": 9
+    },
+    {
+      "name": "Cursor",
+      "keyword": "Cursor",
+      "score": 320.6,
+      "previousAverage": 320.6,
+      "momentum": 0,
+      "postCount": 10,
+      "highScorePostCount": 6
+    },
+    {
+      "name": "MCP",
+      "keyword": "MCP",
+      "score": 299.4,
+      "previousAverage": 299.4,
+      "momentum": 0,
+      "postCount": 10,
+      "highScorePostCount": 6
+    }
+  ],
+  "risingTopic": {
+    "name": "AI Agent 工作流",
+    "score": 1229.9,
+    "previousAverage": 2,
+    "momentum": 1227.9,
+    "postCount": 31,
+    "highScorePostCount": 27
+  },
+  "risingTopics": [
+    {
+      "name": "AI Agent 工作流",
+      "score": 1229.9,
+      "previousAverage": 2,
+      "momentum": 1227.9,
+      "postCount": 31,
+      "highScorePostCount": 27
+    },
+    {
+      "name": "Agent 學習路線",
+      "score": 605.2,
+      "previousAverage": 1,
+      "momentum": 604.2,
+      "postCount": 15,
+      "highScorePostCount": 14
+    },
+    {
+      "name": "Agent 工程化部署",
+      "score": 496.9,
+      "previousAverage": 0,
+      "momentum": 496.9,
+      "postCount": 13,
+      "highScorePostCount": 11
+    },
+    {
+      "name": "Agent 失敗與安全",
+      "score": 84.1,
+      "previousAverage": 0,
+      "momentum": 84.1,
+      "postCount": 1,
+      "highScorePostCount": 1
+    },
+    {
+      "name": "模型與平台動態",
+      "score": 1991.5,
+      "previousAverage": 1991.5,
+      "momentum": 0,
+      "postCount": 58,
+      "highScorePostCount": 45
+    }
+  ],
+  "sustainedHotTopics": [
+    {
+      "name": "模型與平台動態",
+      "appearances": 2,
+      "averageScore": 1991.5,
+      "highScorePostCount": 45
+    },
+    {
+      "name": "AI Agent 工作流",
+      "appearances": 2,
+      "averageScore": 616,
+      "highScorePostCount": 27
+    },
+    {
+      "name": "Agent 學習路線",
+      "appearances": 2,
+      "averageScore": 303.1,
+      "highScorePostCount": 14
+    }
+  ],
+  "emergingKeywords": [],
+  "latest": {
+    "date": "2026-05-28",
+    "preset": "ai-dev",
+    "strongestTopic": {
+      "name": "模型與平台動態",
+      "postCount": 58,
+      "highScorePostCount": 45,
+      "score": 1991.5
+    },
+    "strongestKeyword": {
+      "keyword": "Claude Code",
+      "name": "Claude Code",
+      "postCount": 10,
+      "highScorePostCount": 9,
+      "score": 472.3
+    },
+    "totalPosts": 60,
+    "avgHotScore": 2011.1,
+    "avgQualityScore": 74.2
+  }
+}

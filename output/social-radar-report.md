@@ -2,8 +2,8 @@
 
 ## 資料狀態
 
-- generatedAt: 2026-05-27T17:55:22.506Z
-- runId: 20260528-015328
+- generatedAt: 2026-05-27T18:01:36.780Z
+- runId: none
 - sourceMode: phase3_playwright_manual_read_only
 - inputFile: input/x-ai-agent-raw.json
 - totalPosts: 60
@@ -49,6 +49,30 @@
 | 4 | Gemini | 10 | 8 | 283.5 |
 | 5 | Cursor | 10 | 6 | 320.6 |
 | 6 | MCP | 10 | 6 | 299.4 |
+
+## Trend Momentum
+
+- 分析期間：2026-05-27 ~ 2026-05-28（2 份快照）
+- 上升最快 keyword：Claude Code（momentum 0，score 472.3）
+- 今日升溫 topic：AI Agent 工作流（momentum 1227.9，score 1229.9）
+
+### Rising Topics
+
+- 1. AI Agent 工作流：momentum 1227.9，score 1229.9
+- 2. Agent 學習路線：momentum 604.2，score 605.2
+- 3. Agent 工程化部署：momentum 496.9，score 496.9
+- 4. Agent 失敗與安全：momentum 84.1，score 84.1
+- 5. 模型與平台動態：momentum 0，score 1991.5
+
+### Emerging Keywords
+
+- 暫無新出現 keyword。
+
+### Sustained Hot Topics
+
+- 1. 模型與平台動態：出現 2 天，平均 score 1991.5
+- 2. AI Agent 工作流：出現 2 天，平均 score 616
+- 3. Agent 學習路線：出現 2 天，平均 score 303.1
 
 ## 爆文模式分析
 

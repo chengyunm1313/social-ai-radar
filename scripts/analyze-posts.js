@@ -5,11 +5,13 @@ const OUTPUT_PATH = "output/social-radar-report.md";
 const LINE_OUTPUT_PATH = "output/social-radar-line.txt";
 const LINE_JSON_OUTPUT_PATH = "output/social-radar-line.json";
 const ENGAGEMENT_DEBUG_PATH = "output/debug-engagement-parse.json";
+const TREND_ANALYSIS_PATH = "output/trend-analysis.json";
 
 async function main() {
   await fs.mkdir("output", { recursive: true });
 
   const raw = JSON.parse(await fs.readFile(INPUT_PATH, "utf8"));
+  const trendAnalysis = await readTrendAnalysis();
   const posts = (raw.posts ?? [])
     .map((post) => analyzePost(post))
     .sort((a, b) => b.signal_score - a.signal_score);
@@ -26,14 +28,23 @@ async function main() {
 
   await fs.writeFile(INPUT_PATH, JSON.stringify(normalizedRaw, null, 2) + "\n");
   await fs.writeFile(ENGAGEMENT_DEBUG_PATH, JSON.stringify(buildEngagementDebug(posts), null, 2) + "\n");
-  await fs.writeFile(OUTPUT_PATH, renderReport(raw, posts) + "\n");
-  await fs.writeFile(LINE_OUTPUT_PATH, renderLineBrief(raw, posts) + "\n");
-  await fs.writeFile(LINE_JSON_OUTPUT_PATH, JSON.stringify(renderLineJson(raw, posts), null, 2) + "\n");
+  await fs.writeFile(OUTPUT_PATH, renderReport(raw, posts, trendAnalysis) + "\n");
+  await fs.writeFile(LINE_OUTPUT_PATH, renderLineBrief(raw, posts, trendAnalysis) + "\n");
+  await fs.writeFile(LINE_JSON_OUTPUT_PATH, JSON.stringify(renderLineJson(raw, posts, trendAnalysis), null, 2) + "\n");
   console.log(`[analyze-posts] Read ${posts.length} posts from ${INPUT_PATH}`);
   console.log(`[analyze-posts] Wrote ${ENGAGEMENT_DEBUG_PATH}`);
   console.log(`[analyze-posts] Wrote ${OUTPUT_PATH}`);
   console.log(`[analyze-posts] Wrote ${LINE_OUTPUT_PATH}`);
   console.log(`[analyze-posts] Wrote ${LINE_JSON_OUTPUT_PATH}`);
+}
+
+async function readTrendAnalysis() {
+  try {
+    return JSON.parse(await fs.readFile(TREND_ANALYSIS_PATH, "utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  }
 }
 
 function analyzePost(post) {
@@ -519,7 +530,7 @@ function inferRemixAngle(text, hookTypes, ctaType) {
   return "改寫成「反常識觀察 + 具體例子 + 行動建議」";
 }
 
-function renderReport(raw, posts) {
+function renderReport(raw, posts, trendAnalysis = null) {
   const lines = [];
   const topPosts = posts.slice(0, 10);
   const dataStatus = buildDataStatus(raw, posts);
@@ -552,6 +563,10 @@ function renderReport(raw, posts) {
   lines.push("## Topic / Keyword 熱度");
   lines.push("");
   renderTopicKeywordStats(topicStats, keywordStats).forEach((line) => lines.push(line));
+  lines.push("");
+  lines.push("## Trend Momentum");
+  lines.push("");
+  renderTrendMomentum(trendAnalysis).forEach((line) => lines.push(line));
   lines.push("");
   lines.push("## 爆文模式分析");
   lines.push("");
@@ -660,6 +675,60 @@ function renderReport(raw, posts) {
   lines.push("今天優先發「AI Agent 從 demo 到 production 的落差」：開頭用反常識 Hook，正文拆控制層、工具權限、測試、部署，結尾問讀者目前最常卡在哪一段。");
 
   return lines.join("\n");
+}
+
+function renderTrendMomentum(trendAnalysis) {
+  if (!trendAnalysis || trendAnalysis.snapshotCount === 0) {
+    return [
+      "- 尚無足夠歷史快照；daily pipeline 會從下一次執行開始累積 `data/history/`。"
+    ];
+  }
+
+  const lines = [];
+  lines.push(`- 分析期間：${trendAnalysis.dateRange?.from ?? "unknown"} ~ ${trendAnalysis.dateRange?.to ?? "unknown"}（${trendAnalysis.snapshotCount} 份快照）`);
+  lines.push(`- 上升最快 keyword：${formatTrendKeyword(trendAnalysis.risingKeyword)}`);
+  lines.push(`- 今日升溫 topic：${formatTrendTopic(trendAnalysis.risingTopic)}`);
+  lines.push("");
+  lines.push("### Rising Topics");
+  lines.push("");
+  if ((trendAnalysis.risingTopics ?? []).length === 0) {
+    lines.push("- 資料不足。");
+  } else {
+    trendAnalysis.risingTopics.slice(0, 5).forEach((topic, index) => {
+      lines.push(`- ${index + 1}. ${topic.name}：momentum ${topic.momentum}，score ${topic.score}`);
+    });
+  }
+  lines.push("");
+  lines.push("### Emerging Keywords");
+  lines.push("");
+  if ((trendAnalysis.emergingKeywords ?? []).length === 0) {
+    lines.push("- 暫無新出現 keyword。");
+  } else {
+    trendAnalysis.emergingKeywords.slice(0, 5).forEach((keyword, index) => {
+      lines.push(`- ${index + 1}. ${keyword.keyword}：score ${keyword.score}，貼文 ${keyword.postCount} 篇`);
+    });
+  }
+  lines.push("");
+  lines.push("### Sustained Hot Topics");
+  lines.push("");
+  if ((trendAnalysis.sustainedHotTopics ?? []).length === 0) {
+    lines.push("- 歷史天數不足，尚無可判定的持續熱門 topic。");
+  } else {
+    trendAnalysis.sustainedHotTopics.slice(0, 5).forEach((topic, index) => {
+      lines.push(`- ${index + 1}. ${topic.name}：出現 ${topic.appearances} 天，平均 score ${topic.averageScore}`);
+    });
+  }
+  return lines;
+}
+
+function formatTrendKeyword(keyword) {
+  if (!keyword?.keyword && !keyword?.name) return "資料不足";
+  return `${keyword.keyword ?? keyword.name}（momentum ${keyword.momentum ?? 0}，score ${keyword.score ?? 0}）`;
+}
+
+function formatTrendTopic(topic) {
+  if (!topic?.name) return "資料不足";
+  return `${topic.name}（momentum ${topic.momentum ?? 0}，score ${topic.score ?? 0}）`;
 }
 
 function renderHotPostTable(posts) {
@@ -901,8 +970,8 @@ function buildDataStatus(raw, posts) {
   };
 }
 
-function renderLineBrief(raw, posts) {
-  const payload = renderLineJson(raw, posts);
+function renderLineBrief(raw, posts, trendAnalysis = null) {
+  const payload = renderLineJson(raw, posts, trendAnalysis);
   const topics = payload.topics.join("、") || "資料不足";
   const topPosts = payload.topPosts;
   const ideas = payload.contentIdeas;
@@ -912,6 +981,8 @@ function renderLineBrief(raw, posts) {
   lines.push(`主題：${topics}`);
   lines.push(`最強 topic：${payload.strongestTopic?.name ?? "資料不足"}`);
   lines.push(`最強 keyword：${payload.strongestKeyword?.keyword ?? "資料不足"}`);
+  lines.push(`升溫 topic：${payload.trends?.risingTopic?.name ?? "資料不足"}`);
+  lines.push(`新興 keyword：${payload.trends?.emergingKeywords?.[0]?.keyword ?? "暫無"}`);
   lines.push("");
   lines.push("TOP 5：");
 
@@ -934,7 +1005,7 @@ function renderLineBrief(raw, posts) {
   return text.length <= 1000 ? text : `${text.slice(0, 997)}...`;
 }
 
-function renderLineJson(raw, posts) {
+function renderLineJson(raw, posts, trendAnalysis = null) {
   const dataStatus = buildDataStatus(raw, posts);
   const topicStats = buildTopicStats(posts);
   const keywordStats = buildKeywordStats(posts);
@@ -949,6 +1020,8 @@ function renderLineJson(raw, posts) {
     strongestTopic: topicStats[0] ?? null,
     strongestKeyword: keywordStats[0] ?? null,
     keywordStats,
+    topicStats,
+    trends: normalizeTrendForPayload(trendAnalysis),
     topPosts: topPosts.map((post, index) => ({
       rank: index + 1,
       author: post.author_handle ?? post.author ?? "unknown",
@@ -974,6 +1047,29 @@ function renderLineJson(raw, posts) {
       keywords: dataStatus.keywords,
       scoring: "lineScore = normalizedHotScore * 0.6 + qualityScore * 0.4"
     }
+  };
+}
+
+function normalizeTrendForPayload(trendAnalysis) {
+  if (!trendAnalysis) {
+    return {
+      snapshotCount: 0,
+      risingKeyword: null,
+      risingTopic: null,
+      sustainedHotTopics: [],
+      emergingKeywords: []
+    };
+  }
+
+  return {
+    generatedAt: trendAnalysis.generatedAt,
+    windowDays: trendAnalysis.windowDays,
+    snapshotCount: trendAnalysis.snapshotCount,
+    dateRange: trendAnalysis.dateRange,
+    risingKeyword: trendAnalysis.risingKeyword ?? null,
+    risingTopic: trendAnalysis.risingTopic ?? null,
+    sustainedHotTopics: trendAnalysis.sustainedHotTopics ?? [],
+    emergingKeywords: trendAnalysis.emergingKeywords ?? []
   };
 }
 

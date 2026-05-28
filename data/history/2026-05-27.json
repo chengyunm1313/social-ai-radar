@@ -1,0 +1,140 @@
+{
+  "date": "2026-05-27",
+  "runId": "20260528-015328",
+  "preset": "ai-dev",
+  "keywords": [
+    "AI Agent",
+    "Claude Code",
+    "Cursor",
+    "MCP",
+    "OpenAI",
+    "Gemini"
+  ],
+  "strongestTopic": {
+    "name": "模型與平台動態",
+    "postCount": 58,
+    "highScorePostCount": 45,
+    "score": 1991.5
+  },
+  "strongestKeyword": {
+    "keyword": "Claude Code",
+    "name": "Claude Code",
+    "postCount": 10,
+    "highScorePostCount": 9,
+    "score": 472.3
+  },
+  "keywordStats": [
+    {
+      "keyword": "Claude Code",
+      "name": "Claude Code",
+      "postCount": 10,
+      "highScorePostCount": 9,
+      "score": 472.3
+    },
+    {
+      "keyword": "AI Agent",
+      "name": "AI Agent",
+      "postCount": 10,
+      "highScorePostCount": 9,
+      "score": 369.1
+    },
+    {
+      "keyword": "OpenAI",
+      "name": "OpenAI",
+      "postCount": 10,
+      "highScorePostCount": 9,
+      "score": 330.2
+    },
+    {
+      "keyword": "Gemini",
+      "name": "Gemini",
+      "postCount": 10,
+      "highScorePostCount": 8,
+      "score": 283.5
+    },
+    {
+      "keyword": "Cursor",
+      "name": "Cursor",
+      "postCount": 10,
+      "highScorePostCount": 6,
+      "score": 320.6
+    },
+    {
+      "keyword": "MCP",
+      "name": "MCP",
+      "postCount": 10,
+      "highScorePostCount": 6,
+      "score": 299.4
+    }
+  ],
+  "topicStats": [
+    {
+      "name": "模型與平台動態",
+      "postCount": 58,
+      "highScorePostCount": 0,
+      "score": 1991.5
+    },
+    {
+      "name": "AI Agent 工作流",
+      "postCount": 0,
+      "highScorePostCount": 0,
+      "score": 2
+    },
+    {
+      "name": "Agent 學習路線",
+      "postCount": 0,
+      "highScorePostCount": 0,
+      "score": 1
+    }
+  ],
+  "topPosts": [
+    {
+      "rank": 1,
+      "author": "@ClaudeDevs",
+      "summary": "We’ve shipped a security-guidance plugin for Claude Code that helps identify and fix vul...",
+      "hotScore": 18259,
+      "qualityScore": 76,
+      "lineScore": 84.1,
+      "url": "https://x.com/ClaudeDevs/status/2059385239781384341"
+    },
+    {
+      "rank": 2,
+      "author": "@cursor_ai",
+      "summary": "Introducing Composer 2.5, our most powerful model yet. It's more intelligent, better at ...",
+      "hotScore": 20401,
+      "qualityScore": 48,
+      "lineScore": 79.2,
+      "url": "https://x.com/cursor_ai/status/2056415413077233983"
+    },
+    {
+      "rank": 3,
+      "author": "@rubenhassid",
+      "summary": "Instead of watching Netflix tonight. Spend a day mastering Claude here: http:// claude10...",
+      "hotScore": 10376,
+      "qualityScore": 100,
+      "lineScore": 70.5,
+      "url": "https://x.com/rubenhassid/status/2047918531363442770"
+    },
+    {
+      "rank": 4,
+      "author": "@OpenAIDevs",
+      "summary": "Codex anywhere and everywhere, all the time. Now your Mac doesn’t have to be unlocked fo...",
+      "hotScore": 11778,
+      "qualityScore": 48,
+      "lineScore": 53.8,
+      "url": "https://x.com/OpenAIDevs/status/2057536706778378692"
+    },
+    {
+      "rank": 5,
+      "author": "@jiroucaigou",
+      "summary": "想玩明白Claude Code，看这篇入门资源合集就够了 Claude Code就是一个拥有无限智能的超级助手 人都会有好点子，但因为各种限制无法变成实际成果 有了CC，普通人...",
+      "hotScore": 2929,
+      "qualityScore": 100,
+      "lineScore": 48.6,
+      "url": "https://x.com/jiroucaigou/status/2042800854387036274"
+    }
+  ],
+  "avgHotScore": 2011.1,
+  "avgQualityScore": 74.2,
+  "totalPosts": 60
+}

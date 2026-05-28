@@ -1,6 +1,6 @@
 {
   "name": "social-ai-radar",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "description": "Social AI Radar Phase 3: Playwright semi-automated public post collection and analysis.",
   "type": "module",
@@ -13,6 +13,8 @@
     "radar:line:x": "node scripts/line-x.js",
     "radar:send:telegram": "node scripts/send-telegram.ts",
     "radar:daily:x": "node scripts/radar-daily-x.js",
+    "history:snapshot": "node scripts/history-snapshot.js",
+    "trends:analyze": "node scripts/analyze-trends.js",
     "radar": "npm run radar:x"
   },
   "engines": {
