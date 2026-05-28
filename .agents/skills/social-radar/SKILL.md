@@ -1,3 +1,8 @@
+---
+name: social-radar
+description: 分析 X、Threads、Facebook 的公開 AI / Tech 熱門貼文，整理 Hook、情緒、CTA、爆紅原因、趨勢與可模仿內容結構。使用者要求 Social Radar、社群爆文分析、AI 趨勢雷達、熱門貼文拆解或內容靈感報告時使用。
+---
+
 # Social Radar Skill
 
 ## Purpose
